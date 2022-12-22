@@ -16,12 +16,27 @@ for collection in cat.get_collections():
     dataset = {}
     output = out_dir + "/" + data["id"] + ".json"
     with open(output, "w") as f:
-        json.dump(data, f, indent=True)
+        json.dump(data, f, indent=4)
 
     dataset["title"] = data["title"]
     dataset["id"] = data["id"]
     dataset["description"] = data["msft:short_description"]
-    dataset["license"] = data["license"]
+
+    dataset["bbox"] = ", ".join(
+        [str(coord) for coord in data["extent"]["spatial"]["bbox"][0]]
+    )
+
+    state_date = data["extent"]["temporal"]["interval"][0][0]
+    if state_date:
+        dataset["start_date"] = state_date.split("T")[0]
+    else:
+        dataset["start_date"] = ""
+
+    end_date = data["extent"]["temporal"]["interval"][0][1]
+    if end_date:
+        dataset["end_date"] = end_date.split("T")[0]
+    else:
+        dataset["end_date"] = ""
 
     if "msft:group_id" in data:
         dataset["group_id"] = data["msft:group_id"]
@@ -30,24 +45,26 @@ for collection in cat.get_collections():
     dataset["container"] = data["msft:container"]
     dataset["storage_account"] = data["msft:storage_account"]
 
-    dataset["keywords"] = data["keywords"]
-    dataset["providers"] = [provider["name"] for provider in data["providers"]]
+    dataset["keywords"] = ", ".join(data["keywords"])
+    dataset["providers"] = ", ".join(
+        [provider["name"] for provider in data["providers"]]
+    )
+
+    dataset["license"] = data["license"]
+
     dataset["link"] = data["links"][0]["href"]
 
-    dataset["bbox"] = data["extent"]["spatial"]["bbox"][0]
-    dataset["temporal"] = data["extent"]["temporal"]["interval"][0]
-
     if "cube:variables" in data:
-        dataset["variables"] = list(data["cube:variables"].keys())
+        dataset["variables"] = ", ".join(list(data["cube:variables"].keys()))
     else:
         dataset["variables"] = ""
     if "cube:dimensions" in data:
-        dataset["dimensions"] = list(data["cube:dimensions"].keys())
+        dataset["dimensions"] = ", ".join(list(data["cube:dimensions"].keys()))
     else:
         dataset["dimensions"] = ""
 
     if "item_assets" in data:
-        dataset["assets"] = list(data["item_assets"].keys())
+        dataset["assets"] = ", ".join(list(data["item_assets"].keys()))
     else:
         dataset["assets"] = ""
 
@@ -59,4 +76,6 @@ df = pd.DataFrame(datasets)
 df["title"] = df["title"].apply(lambda x: x.title() if x[0].islower() else x)
 df.sort_values(by=["title"], inplace=True)
 df.to_csv("pc_catalog.tsv", index=False, sep="\t")
-df.to_json("pc_catalog.json", orient="records", indent=4)
+
+with open("pc_catalog.json", "w") as f:
+    json.dump(df.to_dict("records"), f, indent=4)
