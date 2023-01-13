@@ -112,10 +112,10 @@
     ],
     "summaries": {
         "noaa_mrms_qpe:pass": [
-            1
+            2
         ],
         "noaa_mrms_qpe:period": [
-            1
+            24
         ],
         "noaa_mrms_qpe:region": [
             "CONUS",
@@ -158,7 +158,7 @@
     "msft:group_id": "noaa-mrms-qpe",
     "msft:container": "mrms-cogs",
     "msft:storage_account": "mrms",
-    "msft:short_description": "Integrated multi-sensor cumulative precipation estimate for the past 24 hours with a 2-hour latency.",
+    "msft:short_description": "Integrated multi-sensor cumulative precipitation estimate for the past 24 hours with a 2-hour latency.",
     "extent": {
         "spatial": {
             "bbox": [
