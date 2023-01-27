@@ -135,6 +135,7 @@
     "msft:container": "usgs-3dep-cogs",
     "msft:storage_account": "usgslidareuwest",
     "msft:short_description": "3DEP Lidar collection for the Digital Terrain Model (DTM) Cloud Optimized Geotiffs (COGs) using PDAL's filters.smrf.",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

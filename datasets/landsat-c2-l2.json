@@ -998,6 +998,7 @@
     "msft:container": "landsat-c2",
     "msft:storage_account": "landsateuwest",
     "msft:short_description": "Landsat Collection 2 Level-2 data from the Thematic Mapper (TM) onboard Landsat 4 and 5, the Enhanced Thematic Mapper Plus (ETM+) onboard Landsat 7, and the Operational Land Imager (OLI) and Thermal Infrared Sensor (TIRS) onboard Landsat 8 and 9.",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

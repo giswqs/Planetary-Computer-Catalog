@@ -4250,6 +4250,7 @@
     "msft:container": "usgs-gap",
     "msft:storage_account": "ai4edataeuwest",
     "msft:short_description": "U.S.-wide land cover information for 2011",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

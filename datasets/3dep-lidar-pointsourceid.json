@@ -135,6 +135,7 @@
     "msft:container": "usgs-3dep-cogs",
     "msft:storage_account": "usgslidareuwest",
     "msft:short_description": "3DEP Lidar collection for Cloud Optimized Geotiffs (COGs) using PDAL's PointSourceId dimension.",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

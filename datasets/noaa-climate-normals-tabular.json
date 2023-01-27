@@ -1,0 +1,224 @@
+{
+    "type": "Collection",
+    "id": "noaa-climate-normals-tabular",
+    "stac_version": "1.0.0",
+    "description": "The [NOAA United States Climate Normals](https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals) provide information about typical climate conditions for thousands of weather station locations across the United States. Normals act both as a ruler to compare current weather and as a predictor of conditions in the near future. The official normals are calculated for a uniform 30 year period, and consist of annual/seasonal, monthly, daily, and hourly averages and statistics of temperature, precipitation, and other climatological variables for each weather station. \n\nNOAA produces Climate Normals in accordance with the [World Meteorological Organization](https://public.wmo.int/en) (WMO), of which the United States is a member. The WMO requires each member nation to compute 30-year meteorological quantity averages at least every 30 years, and recommends an update each decade, in part to incorporate newer weather stations. The 1991\u20132020 U.S. Climate Normals are the latest in a series of decadal normals first produced in the 1950s. \n\nThis Collection contains tabular weather variable data at weather station locations in GeoParquet format, converted from the source CSV files. The source NetCDF files are delivered to Azure as part of the [NOAA Open Data Dissemination (NODD) Program](https://www.noaa.gov/information-technology/open-data-dissemination).\n\nData are provided for annual/seasonal, monthly, daily, and hourly frequencies for the following time periods:\n\n- Legacy 30-year normals (1981\u20132010)\n- Supplemental 15-year normals (2006\u20132020)\n",
+    "links": [
+        {
+            "rel": "items",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/noaa-climate-normals-tabular/items",
+            "type": "application/geo+json"
+        },
+        {
+            "rel": "parent",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/",
+            "type": "application/json"
+        },
+        {
+            "rel": "root",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1",
+            "type": "application/json",
+            "title": "Microsoft Planetary Computer STAC API"
+        },
+        {
+            "rel": "self",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/noaa-climate-normals-tabular",
+            "type": "application/json"
+        },
+        {
+            "rel": "cite-as",
+            "href": "https://doi.org/10.1175/BAMS-D-11-00197.1"
+        },
+        {
+            "rel": "cite-as",
+            "href": "https://doi.org/10.1175/BAMS-D-11-00173.1"
+        },
+        {
+            "rel": "about",
+            "href": "https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals",
+            "type": "text/html",
+            "title": "NOAA U.S. Climate Normals Landing Page"
+        },
+        {
+            "rel": "license",
+            "href": "https://www.noaa.gov/information-technology/open-data-dissemination",
+            "type": "text/html",
+            "title": "NOAA Open Data Dissemination"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://planetarycomputer.microsoft.com/dataset/noaa-climate-normals-tabular",
+            "type": "text/html",
+            "title": "Human readable dataset overview and reference"
+        }
+    ],
+    "stac_extensions": [
+        "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+        "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
+        "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+    ],
+    "title": "NOAA US Tabular Climate Normals",
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/noaa-climate-normals-tabular-thumb.png",
+            "type": "image/png",
+            "title": "NOAA U.S. Tabular Climate Normals Thumbnail",
+            "roles": [
+                "thumbnail"
+            ]
+        },
+        "geoparquet-items": {
+            "href": "abfs://items/noaa-climate-normals-tabular.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "msft:partition_info": {
+                "is_partitioned": false
+            },
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
+            ]
+        }
+    },
+    "keywords": [
+        "NOAA",
+        "Climate Normals",
+        "Weather",
+        "Surface Observations",
+        "Climatology",
+        "CONUS"
+    ],
+    "providers": [
+        {
+            "name": "NOAA National Centers for Environmental Information",
+            "roles": [
+                "producer",
+                "processor",
+                "licensor"
+            ],
+            "url": "https://www.ncei.noaa.gov/"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "processor",
+                "host"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        }
+    ],
+    "summaries": {
+        "noaa_climate_normals:period": [
+            "1981-2010",
+            "1991-2020",
+            "2006-2020"
+        ],
+        "noaa_climate_normals:frequency": [
+            "hourly",
+            "daily",
+            "monthly",
+            "annualseasonal"
+        ]
+    },
+    "item_assets": {
+        "geoparquet": {
+            "type": "application/x-parquet",
+            "roles": [
+                "data"
+            ],
+            "title": "Dataset root",
+            "table:storage_options": {
+                "account_name": "noaanormals"
+            }
+        }
+    },
+    "msft:region": "eastus",
+    "table:tables": [
+        {
+            "name": "1981_2010-hourly",
+            "description": "Hourly Climate Normals for Period 1981-2010"
+        },
+        {
+            "name": "1981_2010-daily",
+            "description": "Daily Climate Normals for Period 1981-2010"
+        },
+        {
+            "name": "1981_2010-monthly",
+            "description": "Monthly Climate Normals for Period 1981-2010"
+        },
+        {
+            "name": "1981_2010-annualseasonal",
+            "description": "Annual/Seasonal Climate Normals for Period 1981-2010"
+        },
+        {
+            "name": "1991_2020-hourly",
+            "description": "Hourly Climate Normals for Period 1991-2020"
+        },
+        {
+            "name": "1991_2020-daily",
+            "description": "Daily Climate Normals for Period 1991-2020"
+        },
+        {
+            "name": "1991_2020-monthly",
+            "description": "Monthly Climate Normals for Period 1991-2020"
+        },
+        {
+            "name": "1991_2020-annualseasonal",
+            "description": "Annual/Seasonal Climate Normals for Period 1991-2020"
+        },
+        {
+            "name": "2006_2020-hourly",
+            "description": "Hourly Climate Normals for Period 2006-2020"
+        },
+        {
+            "name": "2006_2020-daily",
+            "description": "Daily Climate Normals for Period 2006-2020"
+        },
+        {
+            "name": "2006_2020-monthly",
+            "description": "Monthly Climate Normals for Period 2006-2020"
+        },
+        {
+            "name": "2006_2020-annualseasonal",
+            "description": "Annual/Seasonal Climate Normals for Period 2006-2020"
+        }
+    ],
+    "msft:group_id": "noaa-climate-normals",
+    "msft:container": "climate-normals-geoparquet",
+    "sci:publications": [
+        {
+            "doi": "10.1175/BAMS-D-11-00197.1",
+            "citation": "Arguez, A., I. Durre, S. Applequist, R. Vose, M. Squires, X. Yin, R. Heim, and T. Owen, 2012: NOAA's 1981-2010 climate normals: An overview. Bull. Amer. Meteor. Soc., 93, 1687-1697. DOI: 10.1175/BAMS-D-11-00197.1."
+        },
+        {
+            "doi": "10.1175/BAMS-D-11-00173.1",
+            "citation": "Applequist, S., A. Arguez, I. Durre, M. Squires, R. Vose, and X. Yin, 2012: 1981-2010 U.S. Hourly Normals. Bulletin of the American Meteorological Society, 93, 1637-1640. DOI: 10.1175/BAMS-D-11-00173.1."
+        }
+    ],
+    "msft:storage_account": "noaanormals",
+    "msft:short_description": "Tabular Climate Normal data for over 15,000 United States weather station locations in GeoParquet format.",
+    "extent": {
+        "spatial": {
+            "bbox": [
+                [
+                    -177.38333,
+                    -14.3306,
+                    174.1,
+                    71.3214
+                ]
+            ]
+        },
+        "temporal": {
+            "interval": [
+                [
+                    "1981-01-01T00:00:00Z",
+                    "2020-12-31T23:59:59Z"
+                ]
+            ]
+        }
+    },
+    "license": "proprietary"
+}

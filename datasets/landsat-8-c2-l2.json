@@ -470,6 +470,7 @@
     "msft:container": "landsat-c2",
     "msft:storage_account": "landsateuwest",
     "msft:short_description": "Landsat 8 has captured 30m-resolution imagery of the Earth since 2013.  This dataset contains global, atmospherically-corrected imagery from Landsat Collection 2.",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

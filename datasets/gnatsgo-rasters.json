@@ -579,6 +579,7 @@
     "msft:container": "gnatsgo-stac",
     "msft:storage_account": "soils",
     "msft:short_description": "Raster data for the gridded National Soil Survey Geographic Database (gNATSGO), a USDA-NRCS Soil & Plant Science Division (SPSD) composite database that provides complete coverage of the best available soils information for all areas of the United States and Island Territories.",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

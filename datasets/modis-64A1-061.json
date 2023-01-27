@@ -217,6 +217,7 @@
     ],
     "msft:storage_account": "modiseuwest",
     "msft:short_description": "MODIS Burned Area Monthly",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

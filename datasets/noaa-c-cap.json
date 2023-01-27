@@ -272,6 +272,7 @@
     "msft:container": "noaa-c-cap",
     "msft:storage_account": "ai4edataeuwest",
     "msft:short_description": "Periodic coastal landcover classifications back to 1975",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

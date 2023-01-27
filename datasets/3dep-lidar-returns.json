@@ -135,6 +135,7 @@
     "msft:container": "usgs-3dep-cogs",
     "msft:storage_account": "usgslidareuwest",
     "msft:short_description": "3DEP Lidar collection for the Cloud Optimized Geotiffs (COGs) based on the ReturnNumber dimension.",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

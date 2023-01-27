@@ -206,6 +206,7 @@
     "msft:container": "mobi",
     "msft:storage_account": "ai4edataeuwest",
     "msft:short_description": "Habitat information for 2,216 imperiled species occurring in the continental United States",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

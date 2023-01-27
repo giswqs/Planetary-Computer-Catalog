@@ -216,6 +216,7 @@
     ],
     "msft:storage_account": "modiseuwest",
     "msft:short_description": "MODIS Snow Cover 8-day",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

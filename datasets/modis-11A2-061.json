@@ -332,6 +332,7 @@
     ],
     "msft:storage_account": "modiseuwest",
     "msft:short_description": "MODIS Land Surface Temperature/Emissivity 8-Day",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

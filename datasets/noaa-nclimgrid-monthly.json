@@ -181,6 +181,7 @@
     ],
     "msft:storage_account": "nclimgridwesteurope",
     "msft:short_description": "Gridded surface observations of monthly temperature and precipitation for the continental United States",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

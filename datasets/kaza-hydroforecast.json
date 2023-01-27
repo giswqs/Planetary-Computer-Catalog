@@ -170,6 +170,7 @@
     "msft:container": "hydroforecast",
     "msft:storage_account": "ai4edataeuwest",
     "msft:short_description": "Seasonal river flow forecasts for the Kwando and Upper Zambezi rivers in the KAZA region of Africa, produced by Upstream Tech's HydroForecast model.",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

@@ -240,6 +240,7 @@
     "msft:container": "jrc-gsw",
     "msft:storage_account": "ai4edataeuwest",
     "msft:short_description": "Global surface water distribution and dynamics from 1984 to 2020",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

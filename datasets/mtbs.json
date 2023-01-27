@@ -163,6 +163,7 @@
     "msft:container": "cpdata",
     "msft:storage_account": "cpdataeuwest",
     "msft:short_description": "Annual burn severity mosaics for the continental United States and Alaska",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

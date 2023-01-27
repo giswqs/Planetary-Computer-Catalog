@@ -353,6 +353,7 @@
     ],
     "msft:storage_account": "modiseuwest",
     "msft:short_description": "MODIS Vegetation Indices 16-Day (500m)",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

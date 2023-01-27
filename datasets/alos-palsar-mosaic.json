@@ -238,6 +238,7 @@
     "msft:container": "palsar",
     "msft:storage_account": "https://pceo.blob.core.windows.net/",
     "msft:short_description": "Global 25m resolution SAR image mosaic.",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

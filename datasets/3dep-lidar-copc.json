@@ -111,6 +111,7 @@
     "msft:container": "usgs-3dep-copc",
     "msft:storage_account": "usgslidareuwest",
     "msft:short_description": "Nationwide Lidar point cloud data in COPC format.",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

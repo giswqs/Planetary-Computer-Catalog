@@ -262,6 +262,7 @@
     ],
     "msft:storage_account": "modiseuwest",
     "msft:short_description": "MODIS Snow Cover Daily",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

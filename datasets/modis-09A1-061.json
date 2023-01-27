@@ -410,6 +410,7 @@
     ],
     "msft:storage_account": "modiseuwest",
     "msft:short_description": "MODIS Surface Reflectance 8-Day (500m)",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

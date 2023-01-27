@@ -355,6 +355,7 @@
     "msft:container": "gbif",
     "msft:storage_account": "ai4edataeuwest",
     "msft:short_description": "Global biodiversity observation records, documenting over 1.6 billion species occurrences",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

@@ -175,6 +175,7 @@
     "msft:container": "naip",
     "msft:storage_account": "naipeuwest",
     "msft:short_description": "NAIP provides US-wide, high-resolution aerial imagery.  This dataset includes NAIP images from 2010 to the present.",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

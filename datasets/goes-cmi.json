@@ -71,7 +71,7 @@
             ]
         },
         "tilejson": {
-            "href": "https://planetarycomputer.microsoft.com/api/data/v1/collection/tilejson.json?collection=goes-cmi&expression=C02_2km_wm%2C0.45%2AC02_2km_wm%2B0.1%2AC03_2km_wm%2B0.45%2AC01_2km_wm%2CC01_2km_wm&nodata=-1&rescale=1%2C1000&color_formula=Gamma+RGB+2.5+Saturation+1.4+Sigmoidal+RGB+2+0.7&resampling=bilinear",
+            "href": "https://planetarycomputer.microsoft.com/api/data/v1/collection/tilejson.json?collection=goes-cmi&expression=C02_2km_wm%2C0.45%2AC02_2km_wm%2B0.1%2AC03_2km_wm%2B0.45%2AC01_2km_wm%2CC01_2km_wm&nodata=-1&rescale=1%2C1000&color_formula=Gamma+RGB+2.5+Saturation+1.4+Sigmoidal+RGB+2+0.7&resampling=bilinear&format=png",
             "type": "application/json",
             "title": "Mosaic TileJSON with default rendering",
             "roles": [
@@ -838,6 +838,7 @@
     "msft:container": "noaa-goes-cogs",
     "msft:storage_account": "goeseuwest",
     "msft:short_description": "High temporal cadence cloud and moisture imagery over the Western Hemisphere from the Advanced Baseline Imager (ABI) instrument.",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

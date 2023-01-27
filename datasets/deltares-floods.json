@@ -256,6 +256,7 @@
     },
     "msft:storage_account": "deltaresfloodssa",
     "msft:short_description": "Global estimates of coastal inundation under various sea level rise conditions and return periods.",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

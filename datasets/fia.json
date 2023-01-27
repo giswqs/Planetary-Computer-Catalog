@@ -322,6 +322,7 @@
     "msft:container": "cpdata",
     "msft:storage_account": "cpdataeuwest",
     "msft:short_description": "Status and trends on U.S. forest location, health, growth, mortality, and production, from the U.S. Forest Service's Forest Inventory and Analysis (FIA) program",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

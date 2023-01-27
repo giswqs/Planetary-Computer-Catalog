@@ -129,6 +129,7 @@
     "msft:container": "hrea",
     "msft:storage_account": "hreadatasa",
     "msft:short_description": "Settlement-level measures of electricity access, reliability, and usage derived from VIIRS satellite imagery",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

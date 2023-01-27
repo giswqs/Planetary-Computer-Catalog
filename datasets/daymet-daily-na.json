@@ -672,6 +672,7 @@
     ],
     "msft:storage_account": "daymeteuwest",
     "msft:short_description": "Daily surface weather data on a 1-km grid for North America",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

@@ -507,6 +507,7 @@
     ],
     "msft:storage_account": "modiseuwest",
     "msft:short_description": "MODIS Nadir BRDF-Adjusted Reflectance (NBAR) Daily",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

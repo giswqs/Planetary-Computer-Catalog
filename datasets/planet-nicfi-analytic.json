@@ -169,6 +169,7 @@
     "msft:container": "nicfi",
     "msft:storage_account": "planet",
     "msft:short_description": "Planet's high-resolution, analysis-ready mosaics of the world's tropics",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

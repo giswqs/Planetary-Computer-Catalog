@@ -335,6 +335,7 @@
     },
     "msft:storage_account": "deltaresreservoirssa",
     "msft:short_description": "Historical daily reservoir variations.",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

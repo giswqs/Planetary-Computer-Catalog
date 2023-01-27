@@ -528,6 +528,7 @@
     "msft:container": "sentinel2-l2",
     "msft:storage_account": "sentinel2l2a01",
     "msft:short_description": "The Sentinel-2 program provides global imagery in thirteen spectral bands at 10m-60m resolution and a revisit time of approximately five days.  This dataset contains the global Sentinel-2 archive, from 2016 to the present, processed to L2A (bottom-of-atmosphere).",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

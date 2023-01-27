@@ -555,6 +555,7 @@
     "msft:container": "landsat-c2",
     "msft:storage_account": "landsateuwest",
     "msft:short_description": "Landsat Collection 2 Level-1 data from the Multispectral Scanner System (MSS) onboard Landsat 1 through Landsat 5.",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

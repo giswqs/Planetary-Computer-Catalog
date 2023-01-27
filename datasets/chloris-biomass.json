@@ -158,6 +158,7 @@
     "msft:container": "chloris-biomass",
     "msft:storage_account": "ai4edataeuwest",
     "msft:short_description": "The Chloris Global Biomass 2003 - 2019 dataset provides estimates of stock and change in aboveground biomass for Earth's terrestrial woody vegetation ecosystems during the period 2003 - 2019, at annual time steps. The global dataset has a circa 4.6 km spatial resolution.",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

@@ -11,6 +11,7 @@ cat = Client.open(endpoint)
 datasets = []
 
 for collection in cat.get_all_collections():
+    link = collection.get_self_href()
     data = collection.to_dict()
     print(data["id"])
     dataset = {}
@@ -43,7 +44,9 @@ for collection in cat.get_all_collections():
     else:
         dataset["group_id"] = ""
     dataset["container"] = data["msft:container"]
-    dataset["storage_account"] = data["msft:storage_account"]
+
+    if "msft:storage_account" in data:
+        dataset["storage_account"] = data["msft:storage_account"]
 
     dataset["keywords"] = ", ".join(data["keywords"])
     dataset["providers"] = ", ".join(
@@ -52,7 +55,7 @@ for collection in cat.get_all_collections():
 
     dataset["license"] = data["license"]
 
-    dataset["link"] = data["links"][0]["href"]
+    dataset["link"] = link
 
     if "cube:variables" in data:
         dataset["variables"] = ", ".join(list(data["cube:variables"].keys()))

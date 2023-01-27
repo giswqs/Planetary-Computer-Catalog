@@ -135,6 +135,7 @@
     "msft:container": "cpdata",
     "msft:storage_account": "cpdataeuwest",
     "msft:short_description": "Global maps of aboveground and belowground biomass carbon density for the year 2010 at 300m resolution",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

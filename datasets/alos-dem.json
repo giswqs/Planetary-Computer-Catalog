@@ -122,6 +122,7 @@
     "msft:container": "alos-dem",
     "msft:storage_account": "ai4edataeuwest",
     "msft:short_description": "ALOS World 3D is a global digital surface model (DSM) with a horizontal resolution of approximately 30 meters, constructed from the Panchromatic Remote-sensing Instrument for Stereo Mapping (PRISM) on board Advanced Land Observing Satellite (ALOS).",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

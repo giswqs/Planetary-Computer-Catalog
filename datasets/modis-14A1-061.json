@@ -385,6 +385,7 @@
     ],
     "msft:storage_account": "modiseuwest",
     "msft:short_description": "MODIS Thermal Anomalies/Fire Daily",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

@@ -127,6 +127,7 @@
     "msft:container": "3dep",
     "msft:storage_account": "ai4edataeuwest",
     "msft:short_description": "U.S.-wide digital elevation data at horizontal resolutions ranging from one to sixty meters",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

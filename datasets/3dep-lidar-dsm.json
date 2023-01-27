@@ -132,6 +132,7 @@
     "msft:container": "usgs-3dep-cogs",
     "msft:storage_account": "usgslidareuwest",
     "msft:short_description": "3DEP Lidar collection for the Digital Surface Model (DSM) Cloud Optimized Geotiffs (COGs).",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

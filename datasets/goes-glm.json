@@ -342,6 +342,7 @@
     "msft:container": "noaa-goes-geoparquet",
     "msft:storage_account": "goeseuwest",
     "msft:short_description": "Continuous lightning detection over the Western Hemisphere from the Geostationary Lightning Mapper (GLM) instrument.",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

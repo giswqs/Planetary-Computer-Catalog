@@ -169,6 +169,7 @@
     "msft:container": "palsar",
     "msft:storage_account": "https://pceo.blob.core.windows.net/",
     "msft:short_description": "Global 25m resolution map classifying \"forest\" and \"non-forest\" landcover.",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

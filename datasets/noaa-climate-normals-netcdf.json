@@ -1,0 +1,159 @@
+{
+    "type": "Collection",
+    "id": "noaa-climate-normals-netcdf",
+    "stac_version": "1.0.0",
+    "description": "The [NOAA Gridded United States Climate Normals](https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals#tab-1027) provide a continuous grid of temperature and precipitation data across the contiguous United States (CONUS). The grids are derived from NOAA's [NClimGrid dataset](https://planetarycomputer.microsoft.com/dataset/group/noaa-nclimgrid), and resolutions (nominal 5x5 kilometer) and spatial extents (CONUS) therefore match that of NClimGrid. Monthly, seasonal, and annual gridded normals are computed from simple averages of the NClimGrid data and are provided for three time-periods: 1901\u20132020, 1991\u20132020, and 2006\u20132020. Daily gridded normals are smoothed for a smooth transition from one day to another and are provided for two time-periods: 1991\u20132020, and 2006\u20132020.\n\nNOAA produces Climate Normals in accordance with the [World Meteorological Organization](https://public.wmo.int/en) (WMO), of which the United States is a member. The WMO requires each member nation to compute 30-year meteorological quantity averages at least every 30 years, and recommends an update each decade, in part to incorporate newer weather stations. The 1991\u20132020 U.S. Climate Normals are the latest in a series of decadal normals first produced in the 1950s. \n\nThe data in this Collection are the original NetCDF files provided by NOAA's National Centers for Environmental Information. This Collection contains gridded data for the following frequencies and time periods:\n\n- Annual, seasonal, and monthly normals\n    - 100-year (1901\u20132000)\n    - 30-year (1991\u20132020)\n    - 15-year (2006\u20132020)\n- Daily normals\n    - 30-year (1991\u20132020)\n    - 15-year (2006\u20132020)\n\nFor most use-cases, we recommend using the [`noaa-climate-normals-gridded`](https://planetarycomputer.microsoft.com/dataset/noaa-climate-normals-gridded) collection, which contains the same data in Cloud Optimized GeoTIFF format. The NetCDF files are delivered to Azure as part of the [NOAA Open Data Dissemination (NODD) Program](https://www.noaa.gov/information-technology/open-data-dissemination).\n",
+    "links": [
+        {
+            "rel": "items",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/noaa-climate-normals-netcdf/items",
+            "type": "application/geo+json"
+        },
+        {
+            "rel": "parent",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/",
+            "type": "application/json"
+        },
+        {
+            "rel": "root",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1",
+            "type": "application/json",
+            "title": "Microsoft Planetary Computer STAC API"
+        },
+        {
+            "rel": "self",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/noaa-climate-normals-netcdf",
+            "type": "application/json"
+        },
+        {
+            "rel": "about",
+            "href": "https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals",
+            "type": "text/html",
+            "title": "NOAA U.S. Climate Normals Landing Page"
+        },
+        {
+            "rel": "license",
+            "href": "https://www.noaa.gov/information-technology/open-data-dissemination",
+            "type": "text/html",
+            "title": "NOAA Open Data Dissemination"
+        },
+        {
+            "rel": "about",
+            "href": "https://www.ncei.noaa.gov/sites/default/files/2022-04/Readme_Monthly_Gridded_Normals.pdf",
+            "type": "application/pdf",
+            "title": "Readme for Monthly Gridded Normals"
+        },
+        {
+            "rel": "about",
+            "href": "https://www.ncei.noaa.gov/sites/default/files/2022-04/Documentation_Monthly_Gridded_Normals.pdf",
+            "type": "application/pdf",
+            "title": "Documentation for Monthly Gridded Normals"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://planetarycomputer.microsoft.com/dataset/noaa-climate-normals-netcdf",
+            "type": "text/html",
+            "title": "Human readable dataset overview and reference"
+        }
+    ],
+    "stac_extensions": [
+        "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json"
+    ],
+    "title": "NOAA US Gridded Climate Normals (NetCDF)",
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/noaa-climate-normals-netcdf-thumb.png",
+            "type": "image/png",
+            "title": "NOAA U.S. Gridded Climate Normals (NetCDF) Thumbnail",
+            "roles": [
+                "thumbnail"
+            ]
+        },
+        "geoparquet-items": {
+            "href": "abfs://items/noaa-climate-normals-netcdf.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "msft:partition_info": {
+                "is_partitioned": false
+            },
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
+            ]
+        }
+    },
+    "keywords": [
+        "NOAA",
+        "Climate Normals",
+        "Weather",
+        "Surface Observations",
+        "Climatology",
+        "CONUS"
+    ],
+    "providers": [
+        {
+            "name": "NOAA National Centers for Environmental Information",
+            "roles": [
+                "producer",
+                "processor",
+                "licensor"
+            ],
+            "url": "https://www.ncei.noaa.gov/"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        }
+    ],
+    "summaries": {
+        "noaa_climate_normals:period": [
+            "1901-2000",
+            "1991-2020",
+            "2006-2020"
+        ],
+        "noaa_climate_normals:frequency": [
+            "daily",
+            "monthly"
+        ]
+    },
+    "item_assets": {
+        "netcdf": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ]
+        }
+    },
+    "msft:region": "eastus",
+    "msft:group_id": "noaa-climate-normals",
+    "msft:container": "gridded-normals",
+    "msft:storage_account": "noaanormals",
+    "msft:short_description": "Gridded Climate Normals for the contiguous United States in the original NetCDF format provided by NOAA's National Centers for Environmental Information.",
+    "extent": {
+        "spatial": {
+            "bbox": [
+                [
+                    -124.708333,
+                    24.541666,
+                    -66.999995,
+                    49.375001
+                ]
+            ]
+        },
+        "temporal": {
+            "interval": [
+                [
+                    "1901-01-01T00:00:00Z",
+                    "2020-12-31T23:59:59Z"
+                ]
+            ]
+        }
+    },
+    "license": "proprietary"
+}

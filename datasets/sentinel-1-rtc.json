@@ -255,6 +255,7 @@
     "msft:storage_account": "sentinel1euwestrtc",
     "msft:requires_account": true,
     "msft:short_description": "Radiometrically terrain corrected SAR imagery derived from the Sentinel 1 Level 1 GRD product.",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

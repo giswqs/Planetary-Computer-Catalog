@@ -436,6 +436,7 @@
     },
     "msft:storage_account": "ai4edataeuwest",
     "msft:short_description": "The Integrated Multi-satellitE Retrievals for GPM (IMERG) algorithm combines information from the GPM satellite constellation to estimate precipitation over the majority of the Earth's surface.",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

@@ -180,6 +180,7 @@
     "msft:container": "drcog-lulc",
     "msft:storage_account": "landcoverdata",
     "msft:short_description": "2018 and 2020 Land Use/Land Cover classification of the Denver, Colorado region.",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

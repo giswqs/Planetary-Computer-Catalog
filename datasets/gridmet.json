@@ -505,6 +505,7 @@
     },
     "msft:storage_account": "ai4edataeuwest",
     "msft:short_description": "Daily high-spatial resolution surface meteorological data covering the contiguous United States from 1979 to the present",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

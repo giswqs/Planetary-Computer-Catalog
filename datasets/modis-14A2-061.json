@@ -231,6 +231,7 @@
     ],
     "msft:storage_account": "modiseuwest",
     "msft:short_description": "MODIS Thermal Anomalies/Fire 8-Day",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

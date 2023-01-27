@@ -135,6 +135,7 @@
     "msft:container": "usgs-3dep-cogs",
     "msft:storage_account": "usgslidareuwest",
     "msft:short_description": "3DEP Lidar collection for the Height Above Ground (HAG or Elevation) Cloud Optimized Geotiffs (COGs). All USGS HAG COG STAC items will be associated with this STAC collection.",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

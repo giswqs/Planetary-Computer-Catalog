@@ -606,6 +606,7 @@
     ],
     "msft:storage_account": "daymeteuwest",
     "msft:short_description": "Annual climate summaries on a 1-km grid for Hawaii",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

@@ -1,0 +1,151 @@
+{
+    "type": "Collection",
+    "id": "fws-nwi",
+    "stac_version": "1.0.0",
+    "description": "The Wetlands Data Layer is the product of over 45 years of work by the National Wetlands Inventory (NWI) and its collaborators and currently contains more than 35 million wetland and deepwater features. This dataset, covering the conterminous United States, Hawaii, Puerto Rico, the Virgin Islands, Guam, the major Northern Mariana Islands and Alaska, continues to grow at a rate of 50 to 100 million acres annually as data are updated.\n\n**NOTE:** Due to the variation in use and analysis of this data by the end user, each  state's wetlands data extends beyond the state boundary. Each state includes wetlands data that intersect the 1:24,000 quadrangles that contain part of that state (1:2,000,000 source data). This allows the user to clip the data to their specific analysis datasets. Beware that two adjacent states will contain some of the same data along their borders.\n\nFor more information, visit the National Wetlands Inventory [homepage](https://www.fws.gov/program/national-wetlands-inventory).\n\n## STAC Metadata\n\nIn addition to the `zip` asset in every STAC item, each item has its own assets unique to its wetlands. In general, each item will have several assets, each linking to a [geoparquet](https://github.com/opengeospatial/geoparquet) asset with data for the entire region or a sub-region within that state. Use the `cloud-optimized` [role](https://github.com/radiantearth/stac-spec/blob/master/item-spec/item-spec.md#asset-roles) to select just the geoparquet assets. See the Example Notebook for more.",
+    "links": [
+        {
+            "rel": "items",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/fws-nwi/items",
+            "type": "application/geo+json"
+        },
+        {
+            "rel": "parent",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/",
+            "type": "application/json"
+        },
+        {
+            "rel": "root",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1",
+            "type": "application/json",
+            "title": "Microsoft Planetary Computer STAC API"
+        },
+        {
+            "rel": "self",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/fws-nwi",
+            "type": "application/json"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://www.fws.gov/wetlands/Data/metadata/FWS_Wetlands.xml",
+            "type": "application/xml",
+            "title": "Wetlands metadata"
+        },
+        {
+            "rel": "about",
+            "href": "https://www.fws.gov/sites/default/files/documents/national-wetlands-inventory-fact-sheet.pdf",
+            "type": "application/pdf",
+            "title": "Project Fact Sheet"
+        },
+        {
+            "rel": "about",
+            "href": "https://www.fws.gov/program/national-wetlands-inventory",
+            "type": "text/html",
+            "title": "Project Landing Page"
+        },
+        {
+            "rel": "license",
+            "href": "http://www.usa.gov/publicdomain/label/1.0/",
+            "type": "text/html",
+            "title": "US Public Domain"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://planetarycomputer.microsoft.com/dataset/fws-nwi",
+            "type": "text/html",
+            "title": "Human readable dataset overview and reference"
+        }
+    ],
+    "stac_extensions": [
+        "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json"
+    ],
+    "title": "FWS National Wetlands Inventory",
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/fws-nwi-thumb.png",
+            "type": "image/png",
+            "title": "FWS National Wetlands Inventory thumbnail",
+            "roles": [
+                "thumbnail"
+            ]
+        }
+    },
+    "keywords": [
+        "USFWS",
+        "Wetlands",
+        "United States"
+    ],
+    "providers": [
+        {
+            "name": "U.S. Fish and Wildlife Service",
+            "description": "The U.S. Fish and Wildlife Service is the principal federal agency tasked with providing information to the public on the extent and status of the nation's wetland and deepwater habitats, as well as changes to these habitats over time.",
+            "roles": [
+                "producer",
+                "licensor"
+            ],
+            "url": "https://www.fws.gov",
+            "email": "wetlands_team@fws.gov"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        }
+    ],
+    "summaries": {
+        "fws_nwi:content": [
+            "riparian",
+            "historic_wetlands",
+            "wetlands"
+        ]
+    },
+    "item_assets": {
+        "zip": {
+            "type": "application/zip",
+            "roles": [
+                "data",
+                "archive",
+                "source"
+            ]
+        }
+    },
+    "msft:container": "fws-nwi",
+    "msft:storage_account": "ai4edataeuwest",
+    "msft:short_description": "Vector dataset containing wetlands boundaries and identification across the United States.",
+    "msft:region": "westeurope",
+    "extent": {
+        "spatial": {
+            "bbox": [
+                [
+                    -64.54958,
+                    13.16667,
+                    144.6,
+                    71.99633
+                ],
+                [
+                    144.6,
+                    13.16667,
+                    180.0,
+                    71.99633
+                ],
+                [
+                    -180.0,
+                    13.16667,
+                    -64.54958,
+                    71.99633
+                ]
+            ]
+        },
+        "temporal": {
+            "interval": [
+                [
+                    "2022-10-01T00:00:00Z",
+                    "2022-10-01T00:00:00Z"
+                ]
+            ]
+        }
+    },
+    "license": "proprietary"
+}

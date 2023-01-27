@@ -236,6 +236,7 @@
     ],
     "msft:storage_account": "modiseuwest",
     "msft:short_description": "MODIS Net Evapotranspiration Yearly Gap-Filled",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

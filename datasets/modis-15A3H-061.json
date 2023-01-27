@@ -233,6 +233,7 @@
     ],
     "msft:storage_account": "modiseuwest",
     "msft:short_description": "MODIS Leaf Area Index/FPAR 4-Day",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

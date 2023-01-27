@@ -210,6 +210,7 @@
     "msft:container": "io-lulc",
     "msft:storage_account": "ai4edataeuwest",
     "msft:short_description": "Global land cover information for 2020 at 10m resolution",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

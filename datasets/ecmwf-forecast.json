@@ -127,6 +127,7 @@
     "msft:container": "ecmwf",
     "msft:storage_account": "ai4edatauewest",
     "msft:short_description": "ECMWF Open Data (Real Time) forecasts",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

@@ -263,6 +263,7 @@
     "msft:container": "us-census",
     "msft:storage_account": "ai4edataeuwest",
     "msft:short_description": "United States population counts at various levels of cartographic aggregation",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [

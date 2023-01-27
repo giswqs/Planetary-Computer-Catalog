@@ -35,6 +35,12 @@
             "href": "https://planetarycomputer.microsoft.com/dataset/aster-l1t",
             "type": "text/html",
             "title": "Human readable dataset overview and reference"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://planetarycomputer.microsoft.com/dataset/aster-l1t",
+            "type": "text/html",
+            "title": "Human readable dataset overview and reference"
         }
     ],
     "stac_extensions": [
@@ -274,6 +280,38 @@
                     "center_wavelength": 11.3,
                     "full_width_half_max": 0.7
                 }
+            ],
+            "raster:bands": [
+                {
+                    "name": "TIR_Band10",
+                    "nodata": 0,
+                    "data_type": "uint16",
+                    "spatial_resolution": 90
+                },
+                {
+                    "name": "TIR_Band11",
+                    "nodata": 0,
+                    "data_type": "uint16",
+                    "spatial_resolution": 90
+                },
+                {
+                    "name": "TIR_Band12",
+                    "nodata": 0,
+                    "data_type": "uint16",
+                    "spatial_resolution": 90
+                },
+                {
+                    "name": "TIR_Band13",
+                    "nodata": 0,
+                    "data_type": "uint16",
+                    "spatial_resolution": 90
+                },
+                {
+                    "name": "TIR_Band14",
+                    "nodata": 0,
+                    "data_type": "uint16",
+                    "spatial_resolution": 90
+                }
             ]
         },
         "xml": {
@@ -338,6 +376,44 @@
                     "center_wavelength": 2.395,
                     "full_width_half_max": 0.07
                 }
+            ],
+            "raster:bands": [
+                {
+                    "name": "SWIR_Band4",
+                    "nodata": 0,
+                    "data_type": "uint8",
+                    "spatial_resolution": 30
+                },
+                {
+                    "name": "SWIR_Band5",
+                    "nodata": 0,
+                    "data_type": "uint8",
+                    "spatial_resolution": 30
+                },
+                {
+                    "name": "SWIR_Band6",
+                    "nodata": 0,
+                    "data_type": "uint8",
+                    "spatial_resolution": 30
+                },
+                {
+                    "name": "SWIR_Band7",
+                    "nodata": 0,
+                    "data_type": "uint8",
+                    "spatial_resolution": 30
+                },
+                {
+                    "name": "SWIR_Band8",
+                    "nodata": 0,
+                    "data_type": "uint8",
+                    "spatial_resolution": 30
+                },
+                {
+                    "name": "SWIR_Band9",
+                    "nodata": 0,
+                    "data_type": "uint8",
+                    "spatial_resolution": 30
+                }
             ]
         },
         "VNIR": {
@@ -370,6 +446,26 @@
                     "description": "near infrared",
                     "center_wavelength": 0.82,
                     "full_width_half_max": 0.08
+                }
+            ],
+            "raster:bands": [
+                {
+                    "name": "VNIR_Band1",
+                    "nodata": 0,
+                    "data_type": "uint8",
+                    "spatial_resolution": 15
+                },
+                {
+                    "name": "VNIR_Band2",
+                    "nodata": 0,
+                    "data_type": "uint8",
+                    "spatial_resolution": 15
+                },
+                {
+                    "name": "VNIR_Band3N",
+                    "nodata": 0,
+                    "data_type": "uint8",
+                    "spatial_resolution": 15
                 }
             ]
         },
@@ -408,6 +504,7 @@
     "msft:container": "aster",
     "msft:storage_account": "astersa",
     "msft:short_description": "The ASTER instrument, launched on-board NASA's Terra satellite in 1999, provides multispectral images of the Earth at 15m-90m resolution.  This dataset contains ASTER data from 2000-2006.",
+    "msft:region": "westeurope",
     "extent": {
         "spatial": {
             "bbox": [
