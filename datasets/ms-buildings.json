@@ -48,14 +48,6 @@
             "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/msbuildings-thumbnail.png",
             "type": "image/png",
             "title": "Thumbnail"
-        },
-        "global-footprints": {
-            "href": "https://planetarycomputer.microsoft.com/api/data/v1/vector/collections/ms-buildings/tilesets/global-footprints/tilejson.json",
-            "type": "application/json",
-            "title": "Global Bing ML building footprints",
-            "roles": [
-                "tiles"
-            ]
         }
     },
     "keywords": [
