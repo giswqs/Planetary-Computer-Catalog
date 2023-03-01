@@ -31,6 +31,11 @@
             "title": "Product Landing Page"
         },
         {
+            "rel": "license",
+            "href": "https://www.nass.usda.gov/Research_and_Science/Cropland/sarsfaqs2.php#Section3_5.0",
+            "title": "Redistribution information"
+        },
+        {
             "rel": "describedby",
             "href": "https://planetarycomputer.microsoft.com/dataset/usda-cdl",
             "type": "text/html",
