@@ -47,17 +47,50 @@
     "stac_extensions": [
         "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json"
     ],
-    "title": "ECMWF Open Data (real-time)",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/ecmwf-forecast-thumbnail-proj.png",
-            "type": "image/png",
-            "title": "thumbnail",
+    "item_assets": {
+        "data": {
+            "type": "application/wmo-GRIB2",
             "roles": [
-                "thumbnail"
+                "data"
+            ],
+            "title": "GRIB2 data file",
+            "description": "The forecast data, as a grib2 file. Subsets of the data can be loaded using information from the associated index file."
+        },
+        "index": {
+            "type": "application/x-ndjson",
+            "roles": [
+                "index"
+            ],
+            "title": "Index file",
+            "description": "The index file contains information on each message within the GRIB2 file."
+        }
+    },
+    "msft:container": "ecmwf",
+    "msft:storage_account": "ai4edatauewest",
+    "msft:short_description": "ECMWF Open Data (Real Time) forecasts",
+    "msft:region": "westeurope",
+    "title": "ECMWF Open Data (real-time)",
+    "extent": {
+        "spatial": {
+            "bbox": [
+                [
+                    -180.0,
+                    90.0,
+                    180.0,
+                    -90.0
+                ]
+            ]
+        },
+        "temporal": {
+            "interval": [
+                [
+                    null,
+                    null
+                ]
             ]
         }
     },
+    "license": "CC-BY-4.0",
     "keywords": [
         "ECMWF",
         "forecast",
@@ -106,47 +139,14 @@
             "18"
         ]
     },
-    "item_assets": {
-        "data": {
-            "type": "application/wmo-GRIB2",
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/ecmwf-forecast-thumbnail-proj.png",
+            "type": "image/png",
+            "title": "thumbnail",
             "roles": [
-                "data"
-            ],
-            "title": "GRIB2 data file",
-            "description": "The forecast data, as a grib2 file. Subsets of the data can be loaded using information from the associated index file."
-        },
-        "index": {
-            "type": "application/x-ndjson",
-            "roles": [
-                "index"
-            ],
-            "title": "Index file",
-            "description": "The index file contains information on each message within the GRIB2 file."
-        }
-    },
-    "msft:container": "ecmwf",
-    "msft:storage_account": "ai4edatauewest",
-    "msft:short_description": "ECMWF Open Data (Real Time) forecasts",
-    "msft:region": "westeurope",
-    "extent": {
-        "spatial": {
-            "bbox": [
-                [
-                    -180.0,
-                    90.0,
-                    180.0,
-                    -90.0
-                ]
-            ]
-        },
-        "temporal": {
-            "interval": [
-                [
-                    null,
-                    null
-                ]
+                "thumbnail"
             ]
         }
-    },
-    "license": "CC-BY-4.0"
+    }
 }

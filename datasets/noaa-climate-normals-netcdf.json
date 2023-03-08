@@ -59,32 +59,41 @@
     "stac_extensions": [
         "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json"
     ],
-    "title": "NOAA US Gridded Climate Normals (NetCDF)",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/noaa-climate-normals-netcdf-thumb.png",
-            "type": "image/png",
-            "title": "NOAA U.S. Gridded Climate Normals (NetCDF) Thumbnail",
+    "item_assets": {
+        "netcdf": {
+            "type": "application/netcdf",
             "roles": [
-                "thumbnail"
-            ]
-        },
-        "geoparquet-items": {
-            "href": "abfs://items/noaa-climate-normals-netcdf.parquet",
-            "type": "application/x-parquet",
-            "title": "GeoParquet STAC items",
-            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
-            "msft:partition_info": {
-                "is_partitioned": false
-            },
-            "table:storage_options": {
-                "account_name": "pcstacitems"
-            },
-            "roles": [
-                "stac-items"
+                "data"
             ]
         }
     },
+    "msft:region": "eastus",
+    "msft:group_id": "noaa-climate-normals",
+    "msft:container": "gridded-normals",
+    "msft:storage_account": "noaanormals",
+    "msft:short_description": "Gridded Climate Normals for the contiguous United States in the original NetCDF format provided by NOAA's National Centers for Environmental Information.",
+    "title": "NOAA US Gridded Climate Normals (NetCDF)",
+    "extent": {
+        "spatial": {
+            "bbox": [
+                [
+                    -124.708333,
+                    24.541666,
+                    -66.999995,
+                    49.375001
+                ]
+            ]
+        },
+        "temporal": {
+            "interval": [
+                [
+                    "1901-01-01T00:00:00Z",
+                    "2020-12-31T23:59:59Z"
+                ]
+            ]
+        }
+    },
+    "license": "proprietary",
     "keywords": [
         "NOAA",
         "Climate Normals",
@@ -122,38 +131,29 @@
             "monthly"
         ]
     },
-    "item_assets": {
-        "netcdf": {
-            "type": "application/netcdf",
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/noaa-climate-normals-netcdf-thumb.png",
+            "type": "image/png",
+            "title": "NOAA U.S. Gridded Climate Normals (NetCDF) Thumbnail",
             "roles": [
-                "data"
-            ]
-        }
-    },
-    "msft:region": "eastus",
-    "msft:group_id": "noaa-climate-normals",
-    "msft:container": "gridded-normals",
-    "msft:storage_account": "noaanormals",
-    "msft:short_description": "Gridded Climate Normals for the contiguous United States in the original NetCDF format provided by NOAA's National Centers for Environmental Information.",
-    "extent": {
-        "spatial": {
-            "bbox": [
-                [
-                    -124.708333,
-                    24.541666,
-                    -66.999995,
-                    49.375001
-                ]
+                "thumbnail"
             ]
         },
-        "temporal": {
-            "interval": [
-                [
-                    "1901-01-01T00:00:00Z",
-                    "2020-12-31T23:59:59Z"
-                ]
+        "geoparquet-items": {
+            "href": "abfs://items/noaa-climate-normals-netcdf.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "msft:partition_info": {
+                "is_partitioned": false
+            },
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
             ]
         }
-    },
-    "license": "proprietary"
+    }
 }

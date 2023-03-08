@@ -41,32 +41,41 @@
         "https://stac-extensions.github.io/projection/v1.0.0/schema.json",
         "https://stac-extensions.github.io/table/v1.2.0/schema.json"
     ],
-    "title": "NASADEM HGT v001",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/nasadem.png",
-            "type": "image/png",
-            "title": "NASADEM",
+    "item_assets": {
+        "elevation": {
+            "type": "image/tiff; application=geotiff; profile=cloud-optimized",
             "roles": [
-                "thumbnail"
+                "data"
+            ],
+            "title": "Elevation"
+        }
+    },
+    "msft:container": "nasadem-cog",
+    "msft:storage_account": "nasademeuwest",
+    "msft:short_description": "Global topographic data at 1 arc-second (~30m) horizontal resolution, derived primarily from data captured via the Shuttle Radar Topography Mission",
+    "msft:region": "westeurope",
+    "title": "NASADEM HGT v001",
+    "extent": {
+        "spatial": {
+            "bbox": [
+                [
+                    -179.000139,
+                    -56.000139,
+                    179.000139,
+                    61.000139
+                ]
             ]
         },
-        "geoparquet-items": {
-            "href": "abfs://items/nasadem.parquet",
-            "type": "application/x-parquet",
-            "title": "GeoParquet STAC items",
-            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
-            "msft:partition_info": {
-                "is_partitioned": false
-            },
-            "table:storage_options": {
-                "account_name": "pcstacitems"
-            },
-            "roles": [
-                "stac-items"
+        "temporal": {
+            "interval": [
+                [
+                    "2000-02-20T00:00:00Z",
+                    "2000-02-20T00:00:00Z"
+                ]
             ]
         }
     },
+    "license": "proprietary",
     "keywords": [
         "NASA",
         "JPL",
@@ -122,38 +131,29 @@
             30
         ]
     },
-    "item_assets": {
-        "elevation": {
-            "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/nasadem.png",
+            "type": "image/png",
+            "title": "NASADEM",
             "roles": [
-                "data"
-            ],
-            "title": "Elevation"
-        }
-    },
-    "msft:container": "nasadem-cog",
-    "msft:storage_account": "nasademeuwest",
-    "msft:short_description": "Global topographic data at 1 arc-second (~30m) horizontal resolution, derived primarily from data captured via the Shuttle Radar Topography Mission",
-    "msft:region": "westeurope",
-    "extent": {
-        "spatial": {
-            "bbox": [
-                [
-                    -179.000139,
-                    -56.000139,
-                    179.000139,
-                    61.000139
-                ]
+                "thumbnail"
             ]
         },
-        "temporal": {
-            "interval": [
-                [
-                    "2000-02-20T00:00:00Z",
-                    "2000-02-20T00:00:00Z"
-                ]
+        "geoparquet-items": {
+            "href": "abfs://items/nasadem.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "msft:partition_info": {
+                "is_partitioned": false
+            },
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
             ]
         }
-    },
-    "license": "proprietary"
+    }
 }

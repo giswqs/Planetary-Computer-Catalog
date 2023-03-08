@@ -42,84 +42,6 @@
         "https://stac-extensions.github.io/xarray-assets/v1.0.0/schema.json",
         "https://stac-extensions.github.io/datacube/v2.0.0/schema.json"
     ],
-    "title": "TerraClimate",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/terraclimate.png",
-            "type": "image/png",
-            "title": "TerraClimate thumbnail",
-            "role": [
-                "thumbnail"
-            ]
-        },
-        "zarr-abfs": {
-            "href": "az://cpdata/terraclimate.zarr",
-            "type": "application/vnd+zarr",
-            "title": "TerraClimate Azure Blob File System Zarr root",
-            "description": "Azure Blob File System URI of the TerraClimate Zarr Group on Azure Blob Storage for use with adlfs.",
-            "xarray:open_kwargs": {
-                "chunks": {},
-                "engine": "zarr",
-                "consolidated": true,
-                "storage_options": {
-                    "account_name": "cpdataeuwest"
-                }
-            },
-            "roles": [
-                "data",
-                "zarr",
-                "abfs"
-            ]
-        },
-        "zarr-https": {
-            "href": "https://cpdataeuwest.blob.core.windows.net/cpdata/terraclimate.zarr",
-            "type": "application/vnd+zarr",
-            "title": "TerraClimate HTTPS Zarr root",
-            "description": "HTTPS URI of the TerraClimate Zarr Group on Azure Blob Storage.",
-            "xarray:open_kwargs": {
-                "chunks": {},
-                "engine": "zarr",
-                "consolidated": true
-            },
-            "roles": [
-                "data",
-                "zarr",
-                "https"
-            ]
-        }
-    },
-    "keywords": [
-        "TerraClimate",
-        "Water",
-        "Precipitation",
-        "Temperature",
-        "Vapor Pressure",
-        "Climate"
-    ],
-    "providers": [
-        {
-            "name": "Microsoft",
-            "roles": [
-                "host",
-                "processor"
-            ],
-            "url": "https://planetarycomputer.microsoft.com"
-        },
-        {
-            "name": "Climatology Lab",
-            "roles": [
-                "producer"
-            ],
-            "url": "http://www.climatologylab.org/terraclimate.html"
-        },
-        {
-            "name": "Abatzoglou, J.T., S.Z. Dobrowski, S.A. Parks, K.C. Hegewisch",
-            "roles": [
-                "producer"
-            ],
-            "url": "https://www.nature.com/articles/sdata2017191"
-        }
-    ],
     "cube:variables": {
         "q": {
             "type": "data",
@@ -562,6 +484,7 @@
     "msft:storage_account": "cpdataeuwest",
     "msft:short_description": "High-resolution global dataset of monthly climate and climatic water balance",
     "msft:region": "westeurope",
+    "title": "TerraClimate",
     "extent": {
         "spatial": {
             "bbox": [
@@ -582,5 +505,82 @@
             ]
         }
     },
-    "license": "CC0-1.0"
+    "license": "CC0-1.0",
+    "keywords": [
+        "TerraClimate",
+        "Water",
+        "Precipitation",
+        "Temperature",
+        "Vapor Pressure",
+        "Climate"
+    ],
+    "providers": [
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host",
+                "processor"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        },
+        {
+            "name": "Climatology Lab",
+            "roles": [
+                "producer"
+            ],
+            "url": "http://www.climatologylab.org/terraclimate.html"
+        },
+        {
+            "name": "Abatzoglou, J.T., S.Z. Dobrowski, S.A. Parks, K.C. Hegewisch",
+            "roles": [
+                "producer"
+            ],
+            "url": "https://www.nature.com/articles/sdata2017191"
+        }
+    ],
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/terraclimate.png",
+            "type": "image/png",
+            "title": "TerraClimate thumbnail",
+            "role": [
+                "thumbnail"
+            ]
+        },
+        "zarr-abfs": {
+            "href": "az://cpdata/terraclimate.zarr",
+            "type": "application/vnd+zarr",
+            "title": "TerraClimate Azure Blob File System Zarr root",
+            "description": "Azure Blob File System URI of the TerraClimate Zarr Group on Azure Blob Storage for use with adlfs.",
+            "xarray:open_kwargs": {
+                "chunks": {},
+                "engine": "zarr",
+                "consolidated": true,
+                "storage_options": {
+                    "account_name": "cpdataeuwest"
+                }
+            },
+            "roles": [
+                "data",
+                "zarr",
+                "abfs"
+            ]
+        },
+        "zarr-https": {
+            "href": "https://cpdataeuwest.blob.core.windows.net/cpdata/terraclimate.zarr",
+            "type": "application/vnd+zarr",
+            "title": "TerraClimate HTTPS Zarr root",
+            "description": "HTTPS URI of the TerraClimate Zarr Group on Azure Blob Storage.",
+            "xarray:open_kwargs": {
+                "chunks": {},
+                "engine": "zarr",
+                "consolidated": true
+            },
+            "roles": [
+                "data",
+                "zarr",
+                "https"
+            ]
+        }
+    }
 }

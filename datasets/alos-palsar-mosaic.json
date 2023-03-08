@@ -55,104 +55,7 @@
         "https://stac-extensions.github.io/classification/v1.0.0/schema.json",
         "https://stac-extensions.github.io/table/v1.2.0/schema.json"
     ],
-    "title": "ALOS PALSAR Annual Mosaic",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/alos-palsar-thumbnail.png",
-            "type": "image/png",
-            "title": "ALOS PALSAR MOSAIC",
-            "roles": [
-                "thumbnail"
-            ]
-        },
-        "geoparquet-items": {
-            "href": "abfs://items/alos-palsar-mosaic.parquet",
-            "type": "application/x-parquet",
-            "title": "GeoParquet STAC items",
-            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
-            "msft:partition_info": {
-                "is_partitioned": true,
-                "partition_frequency": "AS"
-            },
-            "table:storage_options": {
-                "account_name": "pcstacitems"
-            },
-            "roles": [
-                "stac-items"
-            ]
-        }
-    },
     "version": "2.0.0",
-    "keywords": [
-        "ALOS",
-        "JAXA",
-        "Remote Sensing",
-        "Global"
-    ],
-    "providers": [
-        {
-            "name": "Japan Aerospace Exploration Agency",
-            "roles": [
-                "producer",
-                "processor",
-                "licensor"
-            ],
-            "url": "https://www.eorc.jaxa.jp/ALOS/en/dataset/fnf_e.htm"
-        },
-        {
-            "name": "Development Seed",
-            "roles": [
-                "processor"
-            ],
-            "url": "https://developmentseed.org"
-        },
-        {
-            "name": "Microsoft Planetary Computer",
-            "roles": [
-                "host",
-                "processor"
-            ],
-            "url": "https://planetarycomputer.microsoft.com/"
-        }
-    ],
-    "summaries": {
-        "platform": [
-            "ALOS",
-            "ALOS-2"
-        ],
-        "instruments": [
-            "PALSAR",
-            "PALSAR-2"
-        ],
-        "sat:orbit_state": [
-            "ascending",
-            "descending"
-        ],
-        "sar:polarizations": [
-            [
-                "HH",
-                "HV"
-            ],
-            [
-                "HH",
-                "HV",
-                "VH",
-                "VV"
-            ]
-        ],
-        "sar:instrument_mode": [
-            "F",
-            "U"
-        ],
-        "sar:observation_direction": [
-            "left",
-            "right"
-        ],
-        "palsar:number_of_polarizations": [
-            "D",
-            "Q"
-        ]
-    },
     "item_assets": {
         "HH": {
             "role": "data",
@@ -239,6 +142,7 @@
     "msft:storage_account": "https://pceo.blob.core.windows.net/",
     "msft:short_description": "Global 25m resolution SAR image mosaic.",
     "msft:region": "westeurope",
+    "title": "ALOS PALSAR Annual Mosaic",
     "extent": {
         "spatial": {
             "bbox": [
@@ -259,5 +163,101 @@
             ]
         }
     },
-    "license": "proprietary"
+    "license": "proprietary",
+    "keywords": [
+        "ALOS",
+        "JAXA",
+        "Remote Sensing",
+        "Global"
+    ],
+    "providers": [
+        {
+            "name": "Japan Aerospace Exploration Agency",
+            "roles": [
+                "producer",
+                "processor",
+                "licensor"
+            ],
+            "url": "https://www.eorc.jaxa.jp/ALOS/en/dataset/fnf_e.htm"
+        },
+        {
+            "name": "Development Seed",
+            "roles": [
+                "processor"
+            ],
+            "url": "https://developmentseed.org"
+        },
+        {
+            "name": "Microsoft Planetary Computer",
+            "roles": [
+                "host",
+                "processor"
+            ],
+            "url": "https://planetarycomputer.microsoft.com/"
+        }
+    ],
+    "summaries": {
+        "platform": [
+            "ALOS",
+            "ALOS-2"
+        ],
+        "instruments": [
+            "PALSAR",
+            "PALSAR-2"
+        ],
+        "sat:orbit_state": [
+            "ascending",
+            "descending"
+        ],
+        "sar:polarizations": [
+            [
+                "HH",
+                "HV"
+            ],
+            [
+                "HH",
+                "HV",
+                "VH",
+                "VV"
+            ]
+        ],
+        "sar:instrument_mode": [
+            "F",
+            "U"
+        ],
+        "sar:observation_direction": [
+            "left",
+            "right"
+        ],
+        "palsar:number_of_polarizations": [
+            "D",
+            "Q"
+        ]
+    },
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/alos-palsar-thumbnail.png",
+            "type": "image/png",
+            "title": "ALOS PALSAR MOSAIC",
+            "roles": [
+                "thumbnail"
+            ]
+        },
+        "geoparquet-items": {
+            "href": "abfs://items/alos-palsar-mosaic.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "msft:partition_info": {
+                "is_partitioned": true,
+                "partition_frequency": "AS"
+            },
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
+            ]
+        }
+    }
 }

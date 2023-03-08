@@ -41,61 +41,6 @@
         "https://stac-extensions.github.io/projection/v1.0.0/schema.json",
         "https://stac-extensions.github.io/table/v1.2.0/schema.json"
     ],
-    "title": "MoBI: Map of Biodiversity Importance",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/mobi.png",
-            "type": "image/png",
-            "title": "MoBI",
-            "roles": [
-                "thumbnail"
-            ]
-        },
-        "geoparquet-items": {
-            "href": "abfs://items/mobi.parquet",
-            "type": "application/x-parquet",
-            "title": "GeoParquet STAC items",
-            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
-            "msft:partition_info": {
-                "is_partitioned": false
-            },
-            "table:storage_options": {
-                "account_name": "pcstacitems"
-            },
-            "roles": [
-                "stac-items"
-            ]
-        }
-    },
-    "keywords": [
-        "MoBI",
-        "Natureserve",
-        "United States",
-        "Biodiversity"
-    ],
-    "providers": [
-        {
-            "name": "NatureServe",
-            "roles": [
-                "producer",
-                "licensor"
-            ],
-            "url": "http://natureserve.org/"
-        },
-        {
-            "name": "Microsoft",
-            "roles": [
-                "host",
-                "processor"
-            ],
-            "url": "https://planetarycomputer.microsoft.com"
-        }
-    ],
-    "summaries": {
-        "gsd": [
-            990
-        ]
-    },
     "item_assets": {
         "RSR_All": {
             "type": "image/tiff; application=geotiff; profile=cloud-optimized",
@@ -207,6 +152,7 @@
     "msft:storage_account": "ai4edataeuwest",
     "msft:short_description": "Habitat information for 2,216 imperiled species occurring in the continental United States",
     "msft:region": "westeurope",
+    "title": "MoBI: Map of Biodiversity Importance",
     "extent": {
         "spatial": {
             "bbox": [
@@ -227,5 +173,59 @@
             ]
         }
     },
-    "license": "proprietary"
+    "license": "proprietary",
+    "keywords": [
+        "MoBI",
+        "Natureserve",
+        "United States",
+        "Biodiversity"
+    ],
+    "providers": [
+        {
+            "name": "NatureServe",
+            "roles": [
+                "producer",
+                "licensor"
+            ],
+            "url": "http://natureserve.org/"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host",
+                "processor"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        }
+    ],
+    "summaries": {
+        "gsd": [
+            990
+        ]
+    },
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/mobi.png",
+            "type": "image/png",
+            "title": "MoBI",
+            "roles": [
+                "thumbnail"
+            ]
+        },
+        "geoparquet-items": {
+            "href": "abfs://items/mobi.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "msft:partition_info": {
+                "is_partitioned": false
+            },
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
+            ]
+        }
+    }
 }

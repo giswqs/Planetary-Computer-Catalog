@@ -53,72 +53,7 @@
         "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
         "https://stac-extensions.github.io/scientific/v1.0.0/schema.json"
     ],
-    "title": "CIL Global Downscaled Projections for Climate Impacts Research (CC-BY-SA-4.0)",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/gdpcir.png",
-            "type": "image/png",
-            "title": "Thumbnail"
-        }
-    },
     "sci:doi": "10.5194/egusphere-2022-1513",
-    "keywords": [
-        "CMIP6",
-        "Climate Impact Lab",
-        "Rhodium Group",
-        "Precipitation",
-        "Temperature"
-    ],
-    "providers": [
-        {
-            "name": "Climate Impact Lab",
-            "roles": [
-                "producer"
-            ],
-            "url": "https://impactlab.org/"
-        },
-        {
-            "name": "Microsoft",
-            "roles": [
-                "host"
-            ],
-            "url": "https://planetarycomputer.microsoft.com/"
-        }
-    ],
-    "summaries": {
-        "cmip6:variable": [
-            "pr",
-            "tasmax",
-            "tasmin"
-        ],
-        "cmip6:source_id": [
-            "CanESM5"
-        ],
-        "cmip6:experiment_id": [
-            "historical",
-            "ssp126",
-            "ssp245",
-            "ssp370",
-            "ssp585"
-        ],
-        "cmip6:institution_id": [
-            "BCC",
-            "CAS",
-            "CCCma",
-            "CMCC",
-            "CSIRO",
-            "CSIRO-ARCCSS",
-            "DKRZ",
-            "EC-Earth-Consortium",
-            "INM",
-            "MIROC",
-            "MOHC",
-            "MPI-M",
-            "NCC",
-            "NOAA-GFDL",
-            "NUIST"
-        ]
-    },
     "item_assets": {
         "pr": {
             "type": "application/vnd+zarr",
@@ -235,6 +170,7 @@
     "msft:storage_account": "rhgeuwest",
     "msft:short_description": "Climate Impact Lab Global Downscaled Projections for Climate Impacts Research (CC-BY-SA-4.0)",
     "msft:region": "westeurope",
+    "title": "CIL Global Downscaled Projections for Climate Impacts Research (CC-BY-SA-4.0)",
     "extent": {
         "spatial": {
             "bbox": [
@@ -255,5 +191,69 @@
             ]
         }
     },
-    "license": "CC-BY-SA-4.0"
+    "license": "CC-BY-SA-4.0",
+    "keywords": [
+        "CMIP6",
+        "Climate Impact Lab",
+        "Rhodium Group",
+        "Precipitation",
+        "Temperature"
+    ],
+    "providers": [
+        {
+            "name": "Climate Impact Lab",
+            "roles": [
+                "producer"
+            ],
+            "url": "https://impactlab.org/"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host"
+            ],
+            "url": "https://planetarycomputer.microsoft.com/"
+        }
+    ],
+    "summaries": {
+        "cmip6:variable": [
+            "pr",
+            "tasmax",
+            "tasmin"
+        ],
+        "cmip6:source_id": [
+            "CanESM5"
+        ],
+        "cmip6:experiment_id": [
+            "historical",
+            "ssp126",
+            "ssp245",
+            "ssp370",
+            "ssp585"
+        ],
+        "cmip6:institution_id": [
+            "BCC",
+            "CAS",
+            "CCCma",
+            "CMCC",
+            "CSIRO",
+            "CSIRO-ARCCSS",
+            "DKRZ",
+            "EC-Earth-Consortium",
+            "INM",
+            "MIROC",
+            "MOHC",
+            "MPI-M",
+            "NCC",
+            "NOAA-GFDL",
+            "NUIST"
+        ]
+    },
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/gdpcir.png",
+            "type": "image/png",
+            "title": "Thumbnail"
+        }
+    }
 }

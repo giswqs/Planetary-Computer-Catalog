@@ -76,33 +76,44 @@
         "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
         "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json"
     ],
-    "title": "ESA Climate Change Initiative Land Cover Maps (NetCDF)",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/esa-cci-lc-netcdf-thumb.png",
-            "type": "image/png",
-            "title": "ESA CCI Land Cover NetCDF Thumbnail",
+    "sci:doi": "10.24381/cds.006f2c9a",
+    "item_assets": {
+        "netcdf": {
+            "type": "application/netcdf",
             "roles": [
-                "thumbnail"
+                "data",
+                "quality"
+            ],
+            "title": "ESA CCI Land Cover NetCDF 4 File"
+        }
+    },
+    "msft:group_id": "esa-cci-lc",
+    "msft:container": "esa-cci-lc",
+    "msft:storage_account": "landcoverdata",
+    "msft:short_description": "ESA CCI global land cover maps in NetCDF format",
+    "msft:region": "westeurope",
+    "title": "ESA Climate Change Initiative Land Cover Maps (NetCDF)",
+    "extent": {
+        "spatial": {
+            "bbox": [
+                [
+                    -180.0,
+                    -90.0,
+                    180.0,
+                    90.0
+                ]
             ]
         },
-        "geoparquet-items": {
-            "href": "abfs://items/esa-cci-lc-netcdf.parquet",
-            "type": "application/x-parquet",
-            "title": "GeoParquet STAC items",
-            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
-            "msft:partition_info": {
-                "is_partitioned": false
-            },
-            "table:storage_options": {
-                "account_name": "pcstacitems"
-            },
-            "roles": [
-                "stac-items"
+        "temporal": {
+            "interval": [
+                [
+                    "1992-01-01T00:00:00Z",
+                    "2020-12-31T23:59:59Z"
+                ]
             ]
         }
     },
-    "sci:doi": "10.24381/cds.006f2c9a",
+    "license": "proprietary",
     "keywords": [
         "Land Cover",
         "ESA",
@@ -164,40 +175,29 @@
             "2.1.1"
         ]
     },
-    "item_assets": {
-        "netcdf": {
-            "type": "application/netcdf",
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/esa-cci-lc-netcdf-thumb.png",
+            "type": "image/png",
+            "title": "ESA CCI Land Cover NetCDF Thumbnail",
             "roles": [
-                "data",
-                "quality"
-            ],
-            "title": "ESA CCI Land Cover NetCDF 4 File"
-        }
-    },
-    "msft:group_id": "esa-cci-lc",
-    "msft:container": "esa-cci-lc",
-    "msft:storage_account": "landcoverdata",
-    "msft:short_description": "ESA CCI global land cover maps in NetCDF format",
-    "msft:region": "westeurope",
-    "extent": {
-        "spatial": {
-            "bbox": [
-                [
-                    -180.0,
-                    -90.0,
-                    180.0,
-                    90.0
-                ]
+                "thumbnail"
             ]
         },
-        "temporal": {
-            "interval": [
-                [
-                    "1992-01-01T00:00:00Z",
-                    "2020-12-31T23:59:59Z"
-                ]
+        "geoparquet-items": {
+            "href": "abfs://items/esa-cci-lc-netcdf.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "msft:partition_info": {
+                "is_partitioned": false
+            },
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
             ]
         }
-    },
-    "license": "proprietary"
+    }
 }

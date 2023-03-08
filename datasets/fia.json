@@ -42,69 +42,6 @@
         "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
         "https://stac-extensions.github.io/table/v1.2.0/schema.json"
     ],
-    "title": "Forest Inventory and Analysis",
-    "assets": {
-        "guide": {
-            "href": "https://www.fia.fs.fed.us/library/database-documentation/current/ver80/FIADB%20User%20Guide%20P2_8-0.pdf",
-            "type": "application/pdf",
-            "title": "Database Description and User Guide",
-            "roles": [
-                "metadata"
-            ]
-        },
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/fia.png",
-            "type": "image/gif",
-            "title": "Forest Inventory and Analysis"
-        },
-        "geoparquet-items": {
-            "href": "abfs://items/fia.parquet",
-            "type": "application/x-parquet",
-            "title": "GeoParquet STAC items",
-            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
-            "msft:partition_info": {
-                "is_partitioned": false
-            },
-            "table:storage_options": {
-                "account_name": "pcstacitems"
-            },
-            "roles": [
-                "stac-items"
-            ]
-        }
-    },
-    "keywords": [
-        "Forest",
-        "Species",
-        "Carbon",
-        "Biomass",
-        "USDA",
-        "Forest Service"
-    ],
-    "providers": [
-        {
-            "name": "Forest Inventory & Analysis",
-            "roles": [
-                "producer",
-                "licensor"
-            ],
-            "url": "https://www.fia.fs.fed.us/"
-        },
-        {
-            "name": "CarbonPlan",
-            "roles": [
-                "processor"
-            ],
-            "url": "https://carbonplan.org/"
-        },
-        {
-            "name": "Microsoft",
-            "roles": [
-                "host"
-            ],
-            "url": "https://planetarycomputer.microsoft.com"
-        }
-    ],
     "item_assets": {
         "data": {
             "type": "application/x-parquet",
@@ -323,6 +260,7 @@
     "msft:storage_account": "cpdataeuwest",
     "msft:short_description": "Status and trends on U.S. forest location, health, growth, mortality, and production, from the U.S. Forest Service's Forest Inventory and Analysis (FIA) program",
     "msft:region": "westeurope",
+    "title": "Forest Inventory and Analysis",
     "extent": {
         "spatial": {
             "bbox": [
@@ -415,5 +353,67 @@
             ]
         }
     },
-    "license": "CC0-1.0"
+    "license": "CC0-1.0",
+    "keywords": [
+        "Forest",
+        "Species",
+        "Carbon",
+        "Biomass",
+        "USDA",
+        "Forest Service"
+    ],
+    "providers": [
+        {
+            "name": "Forest Inventory & Analysis",
+            "roles": [
+                "producer",
+                "licensor"
+            ],
+            "url": "https://www.fia.fs.fed.us/"
+        },
+        {
+            "name": "CarbonPlan",
+            "roles": [
+                "processor"
+            ],
+            "url": "https://carbonplan.org/"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        }
+    ],
+    "assets": {
+        "guide": {
+            "href": "https://www.fia.fs.fed.us/library/database-documentation/current/ver80/FIADB%20User%20Guide%20P2_8-0.pdf",
+            "type": "application/pdf",
+            "title": "Database Description and User Guide",
+            "roles": [
+                "metadata"
+            ]
+        },
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/fia.png",
+            "type": "image/gif",
+            "title": "Forest Inventory and Analysis"
+        },
+        "geoparquet-items": {
+            "href": "abfs://items/fia.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "msft:partition_info": {
+                "is_partitioned": false
+            },
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
+            ]
+        }
+    }
 }

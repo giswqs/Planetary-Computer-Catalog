@@ -49,67 +49,6 @@
         "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
         "https://stac-extensions.github.io/table/v1.2.0/schema.json"
     ],
-    "title": "Urban Innovation Eclipse Sensor Data",
-    "assets": {
-        "data": {
-            "href": "abfs://eclipse/Chicago/",
-            "type": "application/x-parquet",
-            "title": "Full dataset",
-            "description": "Full parquet dataset",
-            "table:storage_options": {
-                "account_name": "ai4edataeuwest"
-            },
-            "roles": [
-                "data"
-            ]
-        },
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/eclipse-thumbnail.png",
-            "type": "image/png",
-            "title": "Urban Innovation Chicago Sensors",
-            "roles": [
-                "thumbnail"
-            ]
-        },
-        "geoparquet-items": {
-            "href": "abfs://items/eclipse.parquet",
-            "type": "application/x-parquet",
-            "title": "GeoParquet STAC items",
-            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
-            "msft:partition_info": {
-                "is_partitioned": false
-            },
-            "table:storage_options": {
-                "account_name": "pcstacitems"
-            },
-            "roles": [
-                "stac-items"
-            ]
-        }
-    },
-    "keywords": [
-        "Eclipse",
-        "PM25",
-        "air pollution"
-    ],
-    "providers": [
-        {
-            "name": "Urban Innovation",
-            "roles": [
-                "producer",
-                "licensor",
-                "processor"
-            ],
-            "url": "https://www.microsoft.com/en-us/research/urban-innovation-research/"
-        },
-        {
-            "name": "Microsoft",
-            "roles": [
-                "host"
-            ],
-            "url": "https://planetarycomputer.microsoft.com"
-        }
-    ],
     "item_assets": {
         "data": {
             "type": "application/x-parquet",
@@ -209,6 +148,7 @@
     "msft:storage_account": "ai4edataeuwest",
     "msft:short_description": "A network of low-cost air quality sensing network for cities and led by the Urban Innovation Group at Microsoft Research",
     "msft:region": "westeurope",
+    "title": "Urban Innovation Eclipse Sensor Data",
     "extent": {
         "spatial": {
             "bbox": [
@@ -229,5 +169,65 @@
             ]
         }
     },
-    "license": "proprietary"
+    "license": "proprietary",
+    "keywords": [
+        "Eclipse",
+        "PM25",
+        "air pollution"
+    ],
+    "providers": [
+        {
+            "name": "Urban Innovation",
+            "roles": [
+                "producer",
+                "licensor",
+                "processor"
+            ],
+            "url": "https://www.microsoft.com/en-us/research/urban-innovation-research/"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        }
+    ],
+    "assets": {
+        "data": {
+            "href": "abfs://eclipse/Chicago/",
+            "type": "application/x-parquet",
+            "title": "Full dataset",
+            "description": "Full parquet dataset",
+            "table:storage_options": {
+                "account_name": "ai4edataeuwest"
+            },
+            "roles": [
+                "data"
+            ]
+        },
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/eclipse-thumbnail.png",
+            "type": "image/png",
+            "title": "Urban Innovation Chicago Sensors",
+            "roles": [
+                "thumbnail"
+            ]
+        },
+        "geoparquet-items": {
+            "href": "abfs://items/eclipse.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "msft:partition_info": {
+                "is_partitioned": false
+            },
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
+            ]
+        }
+    }
 }

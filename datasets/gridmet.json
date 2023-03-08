@@ -42,85 +42,6 @@
         "https://stac-extensions.github.io/xarray-assets/v1.0.0/schema.json",
         "https://stac-extensions.github.io/datacube/v2.0.0/schema.json"
     ],
-    "title": "gridMET",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/gridmet.png",
-            "type": "image/png",
-            "title": "gridMET thumbnail",
-            "role": [
-                "thumbnail"
-            ]
-        },
-        "zarr-abfs": {
-            "href": "abfs://gridmet/gridmet.zarr",
-            "type": "application/vnd+zarr",
-            "description": "Azure Blob File System URI of the gridMET Zarr Group on Azure Blob Storage for use with adlfs.",
-            "xarray:open_kwargs": {
-                "consolidated": true
-            },
-            "xarray:storage_options": {
-                "account_name": "ai4edataeuwest"
-            },
-            "roles": [
-                "data",
-                "zarr"
-            ]
-        },
-        "zarr-https": {
-            "href": "https://ai4edataeuwest.blob.core.windows.net/gridmet/gridmet.zarr",
-            "type": "application/vnd+zarr",
-            "title": "gridMET HTTPS Zarr root",
-            "description": "HTTPS URI of the gridMET Zarr Group on Azure Blob Storage.",
-            "xarray:open_kwargs": {
-                "consolidated": true
-            },
-            "roles": [
-                "data",
-                "zarr",
-                "https"
-            ]
-        }
-    },
-    "keywords": [
-        "gridMET",
-        "Water",
-        "Precipitation",
-        "Temperature",
-        "Vapor Pressure",
-        "Climate"
-    ],
-    "providers": [
-        {
-            "name": "Development Seed",
-            "roles": [
-                "processor"
-            ],
-            "url": "https://developmentseed.org/"
-        },
-        {
-            "name": "Microsoft",
-            "roles": [
-                "host",
-                "processor"
-            ],
-            "url": "https://planetarycomputer.microsoft.com"
-        },
-        {
-            "name": "Climatology Lab",
-            "roles": [
-                "producer"
-            ],
-            "url": "http://www.climatologylab.org/gridmet.html"
-        },
-        {
-            "name": "Abatzoglou, J.T.",
-            "roles": [
-                "producer"
-            ],
-            "url": "http://onlinelibrary.wiley.com/doi/10.1002/joc.3413/full"
-        }
-    ],
     "cube:variables": {
         "wind_speed": {
             "type": "data",
@@ -506,6 +427,7 @@
     "msft:storage_account": "ai4edataeuwest",
     "msft:short_description": "Daily high-spatial resolution surface meteorological data covering the contiguous United States from 1979 to the present",
     "msft:region": "westeurope",
+    "title": "gridMET",
     "extent": {
         "spatial": {
             "bbox": [
@@ -526,5 +448,83 @@
             ]
         }
     },
-    "license": "CC0-1.0"
+    "license": "CC0-1.0",
+    "keywords": [
+        "gridMET",
+        "Water",
+        "Precipitation",
+        "Temperature",
+        "Vapor Pressure",
+        "Climate"
+    ],
+    "providers": [
+        {
+            "name": "Development Seed",
+            "roles": [
+                "processor"
+            ],
+            "url": "https://developmentseed.org/"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host",
+                "processor"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        },
+        {
+            "name": "Climatology Lab",
+            "roles": [
+                "producer"
+            ],
+            "url": "http://www.climatologylab.org/gridmet.html"
+        },
+        {
+            "name": "Abatzoglou, J.T.",
+            "roles": [
+                "producer"
+            ],
+            "url": "http://onlinelibrary.wiley.com/doi/10.1002/joc.3413/full"
+        }
+    ],
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/gridmet.png",
+            "type": "image/png",
+            "title": "gridMET thumbnail",
+            "role": [
+                "thumbnail"
+            ]
+        },
+        "zarr-abfs": {
+            "href": "abfs://gridmet/gridmet.zarr",
+            "type": "application/vnd+zarr",
+            "description": "Azure Blob File System URI of the gridMET Zarr Group on Azure Blob Storage for use with adlfs.",
+            "xarray:open_kwargs": {
+                "consolidated": true
+            },
+            "xarray:storage_options": {
+                "account_name": "ai4edataeuwest"
+            },
+            "roles": [
+                "data",
+                "zarr"
+            ]
+        },
+        "zarr-https": {
+            "href": "https://ai4edataeuwest.blob.core.windows.net/gridmet/gridmet.zarr",
+            "type": "application/vnd+zarr",
+            "title": "gridMET HTTPS Zarr root",
+            "description": "HTTPS URI of the gridMET Zarr Group on Azure Blob Storage.",
+            "xarray:open_kwargs": {
+                "consolidated": true
+            },
+            "roles": [
+                "data",
+                "zarr",
+                "https"
+            ]
+        }
+    }
 }

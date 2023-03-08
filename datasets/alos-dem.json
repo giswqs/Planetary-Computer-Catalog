@@ -41,32 +41,40 @@
         "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
         "https://stac-extensions.github.io/table/v1.2.0/schema.json"
     ],
-    "title": "ALOS World 3D-30m",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/alos-dem.png",
-            "type": "image/png",
-            "title": "ALOS DEM",
+    "item_assets": {
+        "data": {
+            "type": "image/tiff; application=geotiff; profile=cloud-optimized",
             "roles": [
-                "thumbnail"
-            ]
-        },
-        "geoparquet-items": {
-            "href": "abfs://items/alos-dem.parquet",
-            "type": "application/x-parquet",
-            "title": "GeoParquet STAC items",
-            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
-            "msft:partition_info": {
-                "is_partitioned": false
-            },
-            "table:storage_options": {
-                "account_name": "pcstacitems"
-            },
-            "roles": [
-                "stac-items"
+                "data"
             ]
         }
     },
+    "msft:container": "alos-dem",
+    "msft:storage_account": "ai4edataeuwest",
+    "msft:short_description": "ALOS World 3D is a global digital surface model (DSM) with a horizontal resolution of approximately 30 meters, constructed from the Panchromatic Remote-sensing Instrument for Stereo Mapping (PRISM) on board Advanced Land Observing Satellite (ALOS).",
+    "msft:region": "westeurope",
+    "title": "ALOS World 3D-30m",
+    "extent": {
+        "spatial": {
+            "bbox": [
+                [
+                    -180,
+                    -90,
+                    180,
+                    90
+                ]
+            ]
+        },
+        "temporal": {
+            "interval": [
+                [
+                    "2016-12-07T00:00:00Z",
+                    "2016-12-07T00:00:00Z"
+                ]
+            ]
+        }
+    },
+    "license": "proprietary",
     "keywords": [
         "ALOS",
         "PRISM",
@@ -111,37 +119,29 @@
             "prism"
         ]
     },
-    "item_assets": {
-        "data": {
-            "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/alos-dem.png",
+            "type": "image/png",
+            "title": "ALOS DEM",
             "roles": [
-                "data"
-            ]
-        }
-    },
-    "msft:container": "alos-dem",
-    "msft:storage_account": "ai4edataeuwest",
-    "msft:short_description": "ALOS World 3D is a global digital surface model (DSM) with a horizontal resolution of approximately 30 meters, constructed from the Panchromatic Remote-sensing Instrument for Stereo Mapping (PRISM) on board Advanced Land Observing Satellite (ALOS).",
-    "msft:region": "westeurope",
-    "extent": {
-        "spatial": {
-            "bbox": [
-                [
-                    -180,
-                    -90,
-                    180,
-                    90
-                ]
+                "thumbnail"
             ]
         },
-        "temporal": {
-            "interval": [
-                [
-                    "2016-12-07T00:00:00Z",
-                    "2016-12-07T00:00:00Z"
-                ]
+        "geoparquet-items": {
+            "href": "abfs://items/alos-dem.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "msft:partition_info": {
+                "is_partitioned": false
+            },
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
             ]
         }
-    },
-    "license": "proprietary"
+    }
 }

@@ -41,32 +41,58 @@
         "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
         "https://stac-extensions.github.io/table/v1.2.0/schema.json"
     ],
-    "title": "USGS 3DEP Seamless DEMs",
-    "assets": {
+    "item_assets": {
+        "data": {
+            "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+            "roles": [
+                "data"
+            ]
+        },
+        "gpkg": {
+            "type": "application/geopackage+sqlite3",
+            "roles": [
+                "metadata"
+            ]
+        },
+        "metadata": {
+            "type": "application/xml",
+            "roles": [
+                "metadata"
+            ]
+        },
         "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/threedep.png",
-            "type": "image/png",
-            "title": "USGS 3DEP",
+            "type": "image/jpeg",
             "roles": [
                 "thumbnail"
             ]
+        }
+    },
+    "msft:container": "3dep",
+    "msft:storage_account": "ai4edataeuwest",
+    "msft:short_description": "U.S.-wide digital elevation data at horizontal resolutions ranging from one to sixty meters",
+    "msft:region": "westeurope",
+    "title": "USGS 3DEP Seamless DEMs",
+    "extent": {
+        "spatial": {
+            "bbox": [
+                [
+                    -174.001666666983,
+                    -15.00166666667,
+                    164.0016666666,
+                    84.00166666666
+                ]
+            ]
         },
-        "geoparquet-items": {
-            "href": "abfs://items/3dep-seamless.parquet",
-            "type": "application/x-parquet",
-            "title": "GeoParquet STAC items",
-            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
-            "msft:partition_info": {
-                "is_partitioned": false
-            },
-            "table:storage_options": {
-                "account_name": "pcstacitems"
-            },
-            "roles": [
-                "stac-items"
+        "temporal": {
+            "interval": [
+                [
+                    "1925-01-01T00:00:00Z",
+                    "2020-05-06T00:00:00Z"
+                ]
             ]
         }
     },
+    "license": "PDDL-1.0",
     "keywords": [
         "USGS",
         "3DEP",
@@ -98,55 +124,29 @@
             30
         ]
     },
-    "item_assets": {
-        "data": {
-            "type": "image/tiff; application=geotiff; profile=cloud-optimized",
-            "roles": [
-                "data"
-            ]
-        },
-        "gpkg": {
-            "type": "application/geopackage+sqlite3",
-            "roles": [
-                "metadata"
-            ]
-        },
-        "metadata": {
-            "type": "application/xml",
-            "roles": [
-                "metadata"
-            ]
-        },
+    "assets": {
         "thumbnail": {
-            "type": "image/jpeg",
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/threedep.png",
+            "type": "image/png",
+            "title": "USGS 3DEP",
             "roles": [
                 "thumbnail"
             ]
-        }
-    },
-    "msft:container": "3dep",
-    "msft:storage_account": "ai4edataeuwest",
-    "msft:short_description": "U.S.-wide digital elevation data at horizontal resolutions ranging from one to sixty meters",
-    "msft:region": "westeurope",
-    "extent": {
-        "spatial": {
-            "bbox": [
-                [
-                    -174.001666666983,
-                    -15.00166666667,
-                    164.0016666666,
-                    84.00166666666
-                ]
-            ]
         },
-        "temporal": {
-            "interval": [
-                [
-                    "1925-01-01T00:00:00Z",
-                    "2020-05-06T00:00:00Z"
-                ]
+        "geoparquet-items": {
+            "href": "abfs://items/3dep-seamless.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "msft:partition_info": {
+                "is_partitioned": false
+            },
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
             ]
         }
-    },
-    "license": "PDDL-1.0"
+    }
 }

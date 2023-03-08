@@ -42,40 +42,6 @@
         "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
         "https://stac-extensions.github.io/table/v1.2.0/schema.json"
     ],
-    "title": "Microsoft Building Footprints",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/msbuildings-thumbnail.png",
-            "type": "image/png",
-            "title": "Thumbnail"
-        },
-        "global-footprints": {
-            "href": "https://planetarycomputer.microsoft.com/api/data/v1/vector/collections/ms-buildings/tilesets/global-footprints/tilejson.json",
-            "type": "application/json",
-            "title": "Global Bing ML building footprints",
-            "roles": [
-                "tiles"
-            ]
-        }
-    },
-    "keywords": [
-        "Bing Maps",
-        "Buildings",
-        "geoparquet",
-        "Microsoft",
-        "Footprint"
-    ],
-    "providers": [
-        {
-            "name": "Microsoft",
-            "roles": [
-                "producer",
-                "processor",
-                "host"
-            ],
-            "url": "https://planetarycomputer.microsoft.com"
-        }
-    ],
     "item_assets": {
         "data": {
             "type": "application/x-parquet",
@@ -100,6 +66,7 @@
     "msft:storage_account": "bingmlbuildings",
     "msft:short_description": "Machine learning detected buildings footprints.",
     "msft:region": "westeurope",
+    "title": "Microsoft Building Footprints",
     "extent": {
         "spatial": {
             "bbox": [
@@ -120,5 +87,38 @@
             ]
         }
     },
-    "license": "ODbL-1.0"
+    "license": "ODbL-1.0",
+    "keywords": [
+        "Bing Maps",
+        "Buildings",
+        "geoparquet",
+        "Microsoft",
+        "Footprint"
+    ],
+    "providers": [
+        {
+            "name": "Microsoft",
+            "roles": [
+                "producer",
+                "processor",
+                "host"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        }
+    ],
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/msbuildings-thumbnail.png",
+            "type": "image/png",
+            "title": "Thumbnail"
+        },
+        "global-footprints": {
+            "href": "https://planetarycomputer.microsoft.com/api/data/v1/vector/collections/ms-buildings/tilesets/global-footprints/tilejson.json",
+            "type": "application/json",
+            "title": "Global Bing ML building footprints",
+            "roles": [
+                "tiles"
+            ]
+        }
+    }
 }

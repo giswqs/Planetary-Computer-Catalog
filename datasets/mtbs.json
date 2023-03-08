@@ -42,70 +42,6 @@
         "https://stac-extensions.github.io/file/v2.1.0/schema.json",
         "https://stac-extensions.github.io/table/v1.2.0/schema.json"
     ],
-    "title": "MTBS: Monitoring Trends in Burn Severity",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/mtbs.png",
-            "type": "image/png",
-            "title": "MTBS",
-            "roles": [
-                "thumbnail"
-            ]
-        },
-        "geoparquet-items": {
-            "href": "abfs://items/mtbs.parquet",
-            "type": "application/x-parquet",
-            "title": "GeoParquet STAC items",
-            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
-            "msft:partition_info": {
-                "is_partitioned": false
-            },
-            "table:storage_options": {
-                "account_name": "pcstacitems"
-            },
-            "roles": [
-                "stac-items"
-            ]
-        }
-    },
-    "keywords": [
-        "MTBS",
-        "USGS",
-        "USFS",
-        "USDA",
-        "Forest",
-        "Fire"
-    ],
-    "providers": [
-        {
-            "name": "MTBS program",
-            "roles": [
-                "producer",
-                "licensor"
-            ],
-            "url": "https://www.mtbs.gov/"
-        },
-        {
-            "name": "CarbonPlan",
-            "roles": [
-                "processor"
-            ],
-            "url": "https://carbonplan.org"
-        },
-        {
-            "name": "Microsoft",
-            "roles": [
-                "host",
-                "processor"
-            ],
-            "url": "https://planetarycomputer.microsoft.com"
-        }
-    ],
-    "summaries": {
-        "gsd": [
-            30
-        ]
-    },
     "item_assets": {
         "metadata": {
             "type": "text/html",
@@ -164,6 +100,7 @@
     "msft:storage_account": "cpdataeuwest",
     "msft:short_description": "Annual burn severity mosaics for the continental United States and Alaska",
     "msft:region": "westeurope",
+    "title": "MTBS: Monitoring Trends in Burn Severity",
     "extent": {
         "spatial": {
             "bbox": [
@@ -190,5 +127,68 @@
             ]
         }
     },
-    "license": "proprietary"
+    "license": "proprietary",
+    "keywords": [
+        "MTBS",
+        "USGS",
+        "USFS",
+        "USDA",
+        "Forest",
+        "Fire"
+    ],
+    "providers": [
+        {
+            "name": "MTBS program",
+            "roles": [
+                "producer",
+                "licensor"
+            ],
+            "url": "https://www.mtbs.gov/"
+        },
+        {
+            "name": "CarbonPlan",
+            "roles": [
+                "processor"
+            ],
+            "url": "https://carbonplan.org"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host",
+                "processor"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        }
+    ],
+    "summaries": {
+        "gsd": [
+            30
+        ]
+    },
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/mtbs.png",
+            "type": "image/png",
+            "title": "MTBS",
+            "roles": [
+                "thumbnail"
+            ]
+        },
+        "geoparquet-items": {
+            "href": "abfs://items/mtbs.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "msft:partition_info": {
+                "is_partitioned": false
+            },
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
+            ]
+        }
+    }
 }

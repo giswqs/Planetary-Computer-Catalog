@@ -41,33 +41,74 @@
         "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
         "https://stac-extensions.github.io/table/v1.2.0/schema.json"
     ],
-    "title": "NAIP: National Agriculture Imagery Program",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/naip.png",
-            "type": "image/png",
-            "title": "NAIP thumbnail",
+    "item_assets": {
+        "image": {
+            "type": "image/tiff; application=geotiff; profile=cloud-optimized",
             "roles": [
-                "thumbnail"
+                "data"
+            ],
+            "title": "RGBIR COG tile",
+            "eo:bands": [
+                {
+                    "name": "Red",
+                    "common_name": "red"
+                },
+                {
+                    "name": "Green",
+                    "common_name": "green"
+                },
+                {
+                    "name": "Blue",
+                    "common_name": "blue"
+                },
+                {
+                    "name": "NIR",
+                    "common_name": "nir",
+                    "description": "near-infrared"
+                }
             ]
         },
-        "geoparquet-items": {
-            "href": "abfs://items/naip.parquet",
-            "type": "application/x-parquet",
-            "title": "GeoParquet STAC items",
-            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
-            "msft:partition_info": {
-                "is_partitioned": true,
-                "partition_frequency": "AS"
-            },
-            "table:storage_options": {
-                "account_name": "pcstacitems"
-            },
+        "metadata": {
+            "type": "text/plain",
             "roles": [
-                "stac-items"
+                "metadata"
+            ],
+            "title": "FGDC Metdata"
+        },
+        "thumbnail": {
+            "type": "image/jpeg",
+            "roles": [
+                "thumbnail"
+            ],
+            "title": "Thumbnail"
+        }
+    },
+    "msft:container": "naip",
+    "msft:storage_account": "naipeuwest",
+    "msft:short_description": "NAIP provides US-wide, high-resolution aerial imagery.  This dataset includes NAIP images from 2010 to the present.",
+    "msft:region": "westeurope",
+    "title": "NAIP: National Agriculture Imagery Program",
+    "extent": {
+        "spatial": {
+            "bbox": [
+                [
+                    -124.784,
+                    24.744,
+                    -66.951,
+                    49.346
+                ]
+            ]
+        },
+        "temporal": {
+            "interval": [
+                [
+                    "2010-01-01T00:00:00Z",
+                    "2020-12-31T00:00:00Z"
+                ]
             ]
         }
     },
+    "license": "proprietary",
     "keywords": [
         "NAIP",
         "Aerial",
@@ -130,71 +171,30 @@
             }
         ]
     },
-    "item_assets": {
-        "image": {
-            "type": "image/tiff; application=geotiff; profile=cloud-optimized",
-            "roles": [
-                "data"
-            ],
-            "title": "RGBIR COG tile",
-            "eo:bands": [
-                {
-                    "name": "Red",
-                    "common_name": "red"
-                },
-                {
-                    "name": "Green",
-                    "common_name": "green"
-                },
-                {
-                    "name": "Blue",
-                    "common_name": "blue"
-                },
-                {
-                    "name": "NIR",
-                    "common_name": "nir",
-                    "description": "near-infrared"
-                }
-            ]
-        },
-        "metadata": {
-            "type": "text/plain",
-            "roles": [
-                "metadata"
-            ],
-            "title": "FGDC Metdata"
-        },
+    "assets": {
         "thumbnail": {
-            "type": "image/jpeg",
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/naip.png",
+            "type": "image/png",
+            "title": "NAIP thumbnail",
             "roles": [
                 "thumbnail"
-            ],
-            "title": "Thumbnail"
-        }
-    },
-    "msft:container": "naip",
-    "msft:storage_account": "naipeuwest",
-    "msft:short_description": "NAIP provides US-wide, high-resolution aerial imagery.  This dataset includes NAIP images from 2010 to the present.",
-    "msft:region": "westeurope",
-    "extent": {
-        "spatial": {
-            "bbox": [
-                [
-                    -124.784,
-                    24.744,
-                    -66.951,
-                    49.346
-                ]
             ]
         },
-        "temporal": {
-            "interval": [
-                [
-                    "2010-01-01T00:00:00Z",
-                    "2020-12-31T00:00:00Z"
-                ]
+        "geoparquet-items": {
+            "href": "abfs://items/naip.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "msft:partition_info": {
+                "is_partitioned": true,
+                "partition_frequency": "AS"
+            },
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
             ]
         }
-    },
-    "license": "proprietary"
+    }
 }

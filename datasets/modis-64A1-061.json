@@ -58,70 +58,6 @@
         "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
         "https://stac-extensions.github.io/table/v1.2.0/schema.json"
     ],
-    "title": "MODIS Burned Area Monthly",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/modis-64A1-061.png",
-            "type": "image/png",
-            "title": "MODIS Burned Area Monthly thumbnail",
-            "roles": [
-                "thumbnail"
-            ]
-        },
-        "geoparquet-items": {
-            "href": "abfs://items/modis-64A1-061.parquet",
-            "type": "application/x-parquet",
-            "title": "GeoParquet STAC items",
-            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
-            "msft:partition_info": {
-                "is_partitioned": true,
-                "partition_frequency": "MS"
-            },
-            "table:storage_options": {
-                "account_name": "pcstacitems"
-            },
-            "roles": [
-                "stac-items"
-            ]
-        }
-    },
-    "keywords": [
-        "NASA",
-        "MODIS",
-        "Satellite",
-        "Imagery",
-        "Global",
-        "Fire",
-        "MCD64A1"
-    ],
-    "providers": [
-        {
-            "name": "NASA LP DAAC at the USGS EROS Center",
-            "roles": [
-                "producer",
-                "licensor",
-                "processor"
-            ],
-            "url": "https://lpdaac.usgs.gov/"
-        },
-        {
-            "name": "Microsoft",
-            "roles": [
-                "host",
-                "processor"
-            ],
-            "url": "https://planetarycomputer.microsoft.com"
-        }
-    ],
-    "summaries": {
-        "platform": [
-            "aqua",
-            "terra"
-        ],
-        "instruments": [
-            "modis"
-        ]
-    },
     "item_assets": {
         "QA": {
             "type": "image/tiff; application=geotiff; profile=cloud-optimized",
@@ -218,6 +154,7 @@
     "msft:storage_account": "modiseuwest",
     "msft:short_description": "MODIS Burned Area Monthly",
     "msft:region": "westeurope",
+    "title": "MODIS Burned Area Monthly",
     "extent": {
         "spatial": {
             "bbox": [
@@ -238,5 +175,68 @@
             ]
         }
     },
-    "license": "proprietary"
+    "license": "proprietary",
+    "keywords": [
+        "NASA",
+        "MODIS",
+        "Satellite",
+        "Imagery",
+        "Global",
+        "Fire",
+        "MCD64A1"
+    ],
+    "providers": [
+        {
+            "name": "NASA LP DAAC at the USGS EROS Center",
+            "roles": [
+                "producer",
+                "licensor",
+                "processor"
+            ],
+            "url": "https://lpdaac.usgs.gov/"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host",
+                "processor"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        }
+    ],
+    "summaries": {
+        "platform": [
+            "aqua",
+            "terra"
+        ],
+        "instruments": [
+            "modis"
+        ]
+    },
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/modis-64A1-061.png",
+            "type": "image/png",
+            "title": "MODIS Burned Area Monthly thumbnail",
+            "roles": [
+                "thumbnail"
+            ]
+        },
+        "geoparquet-items": {
+            "href": "abfs://items/modis-64A1-061.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "msft:partition_info": {
+                "is_partitioned": true,
+                "partition_frequency": "MS"
+            },
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
+            ]
+        }
+    }
 }

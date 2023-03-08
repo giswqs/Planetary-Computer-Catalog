@@ -42,52 +42,6 @@
         "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
         "https://stac-extensions.github.io/table/v1.2.0/schema.json"
     ],
-    "title": "Global Biodiversity Information Facility (GBIF)",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/gbif.png",
-            "type": "image/png",
-            "title": "Forest Inventory and Analysis"
-        },
-        "geoparquet-items": {
-            "href": "abfs://items/gbif.parquet",
-            "type": "application/x-parquet",
-            "title": "GeoParquet STAC items",
-            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
-            "msft:partition_info": {
-                "is_partitioned": false
-            },
-            "table:storage_options": {
-                "account_name": "pcstacitems"
-            },
-            "roles": [
-                "stac-items"
-            ]
-        }
-    },
-    "keywords": [
-        "GBIF",
-        "Biodiversity",
-        "Species"
-    ],
-    "providers": [
-        {
-            "name": "Global Biodiversity Information Facility",
-            "roles": [
-                "producer",
-                "licensor",
-                "processor"
-            ],
-            "url": "https://www.gbif.org/"
-        },
-        {
-            "name": "Microsoft",
-            "roles": [
-                "host"
-            ],
-            "url": "https://planetarycomputer.microsoft.com"
-        }
-    ],
     "item_assets": {
         "data": {
             "type": "application/x-parquet",
@@ -356,6 +310,7 @@
     "msft:storage_account": "ai4edataeuwest",
     "msft:short_description": "Global biodiversity observation records, documenting over 1.6 billion species occurrences",
     "msft:region": "westeurope",
+    "title": "Global Biodiversity Information Facility (GBIF)",
     "extent": {
         "spatial": {
             "bbox": [
@@ -376,5 +331,50 @@
             ]
         }
     },
-    "license": "proprietary"
+    "license": "proprietary",
+    "keywords": [
+        "GBIF",
+        "Biodiversity",
+        "Species"
+    ],
+    "providers": [
+        {
+            "name": "Global Biodiversity Information Facility",
+            "roles": [
+                "producer",
+                "licensor",
+                "processor"
+            ],
+            "url": "https://www.gbif.org/"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        }
+    ],
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/gbif.png",
+            "type": "image/png",
+            "title": "Forest Inventory and Analysis"
+        },
+        "geoparquet-items": {
+            "href": "abfs://items/gbif.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "msft:partition_info": {
+                "is_partitioned": false
+            },
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
+            ]
+        }
+    }
 }

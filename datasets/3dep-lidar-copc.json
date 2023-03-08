@@ -41,17 +41,57 @@
         "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
         "https://stac-extensions.github.io/pointcloud/v1.0.0/schema.json"
     ],
-    "title": "USGS 3DEP Lidar Point Cloud",
-    "assets": {
+    "item_assets": {
+        "data": {
+            "type": "application/vnd.laszip+copc",
+            "roles": [
+                "data"
+            ],
+            "title": "COPC data",
+            "pc:type": "lidar",
+            "pc:encoding": "application/vnd.laszip+copc"
+        },
         "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/3dep-lidar-copc-thumbnail.png",
             "type": "image/png",
-            "title": "Thumbnail",
             "roles": [
                 "thumbnail"
+            ],
+            "title": "3DEP Lidar COPC"
+        }
+    },
+    "msft:group_id": "3dep-lidar",
+    "msft:container": "usgs-3dep-copc",
+    "msft:storage_account": "usgslidareuwest",
+    "msft:short_description": "Nationwide Lidar point cloud data in COPC format.",
+    "msft:region": "westeurope",
+    "title": "USGS 3DEP Lidar Point Cloud",
+    "extent": {
+        "spatial": {
+            "bbox": [
+                [
+                    -166.8546920006028,
+                    17.655357747708283,
+                    -64.56116757979399,
+                    71.39330810146807
+                ],
+                [
+                    144.60180842809473,
+                    13.21774453924126,
+                    146.08202179248926,
+                    18.18369664008955
+                ]
+            ]
+        },
+        "temporal": {
+            "interval": [
+                [
+                    "2012-01-01T00:00:00Z",
+                    "2022-01-01T00:00:00Z"
+                ]
             ]
         }
     },
+    "license": "proprietary",
     "keywords": [
         "USGS",
         "3DEP",
@@ -89,54 +129,14 @@
             2.0
         ]
     },
-    "item_assets": {
-        "data": {
-            "type": "application/vnd.laszip+copc",
-            "roles": [
-                "data"
-            ],
-            "title": "COPC data",
-            "pc:type": "lidar",
-            "pc:encoding": "application/vnd.laszip+copc"
-        },
+    "assets": {
         "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/3dep-lidar-copc-thumbnail.png",
             "type": "image/png",
+            "title": "Thumbnail",
             "roles": [
                 "thumbnail"
-            ],
-            "title": "3DEP Lidar COPC"
-        }
-    },
-    "msft:group_id": "3dep-lidar",
-    "msft:container": "usgs-3dep-copc",
-    "msft:storage_account": "usgslidareuwest",
-    "msft:short_description": "Nationwide Lidar point cloud data in COPC format.",
-    "msft:region": "westeurope",
-    "extent": {
-        "spatial": {
-            "bbox": [
-                [
-                    -166.8546920006028,
-                    17.655357747708283,
-                    -64.56116757979399,
-                    71.39330810146807
-                ],
-                [
-                    144.60180842809473,
-                    13.21774453924126,
-                    146.08202179248926,
-                    18.18369664008955
-                ]
-            ]
-        },
-        "temporal": {
-            "interval": [
-                [
-                    "2012-01-01T00:00:00Z",
-                    "2022-01-01T00:00:00Z"
-                ]
             ]
         }
-    },
-    "license": "proprietary"
+    }
 }

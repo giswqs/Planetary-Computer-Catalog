@@ -41,188 +41,6 @@
         "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
         "https://stac-extensions.github.io/table/v1.2.0/schema.json"
     ],
-    "title": "Sentinel-2 Level-2A",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/sentinel-2.png",
-            "type": "image/png",
-            "title": "Sentinel 2 L2A",
-            "roles": [
-                "thumbnail"
-            ]
-        },
-        "geoparquet-items": {
-            "href": "abfs://items/sentinel-2-l2a.parquet",
-            "type": "application/x-parquet",
-            "title": "GeoParquet STAC items",
-            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
-            "msft:partition_info": {
-                "is_partitioned": true,
-                "partition_frequency": "W-MON"
-            },
-            "table:storage_options": {
-                "account_name": "pcstacitems"
-            },
-            "roles": [
-                "stac-items"
-            ]
-        }
-    },
-    "keywords": [
-        "Sentinel",
-        "Copernicus",
-        "ESA",
-        "Satellite",
-        "Global",
-        "Imagery",
-        "Reflectance"
-    ],
-    "providers": [
-        {
-            "name": "ESA",
-            "roles": [
-                "producer",
-                "licensor"
-            ],
-            "url": "https://sentinel.esa.int/web/sentinel/missions/sentinel-2"
-        },
-        {
-            "name": "Esri",
-            "roles": [
-                "processor"
-            ],
-            "url": "https://www.esri.com/"
-        },
-        {
-            "name": "Microsoft",
-            "roles": [
-                "host",
-                "processor"
-            ],
-            "url": "https://planetarycomputer.microsoft.com"
-        }
-    ],
-    "summaries": {
-        "gsd": [
-            10,
-            20,
-            60
-        ],
-        "eo:bands": [
-            {
-                "name": "AOT",
-                "description": "aerosol optical thickness"
-            },
-            {
-                "gsd": 60,
-                "name": "B01",
-                "common_name": "coastal",
-                "description": "coastal aerosol",
-                "center_wavelength": 0.443,
-                "full_width_half_max": 0.027
-            },
-            {
-                "gsd": 10,
-                "name": "B02",
-                "common_name": "blue",
-                "description": "visible blue",
-                "center_wavelength": 0.49,
-                "full_width_half_max": 0.098
-            },
-            {
-                "gsd": 10,
-                "name": "B03",
-                "common_name": "green",
-                "description": "visible green",
-                "center_wavelength": 0.56,
-                "full_width_half_max": 0.045
-            },
-            {
-                "gsd": 10,
-                "name": "B04",
-                "common_name": "red",
-                "description": "visible red",
-                "center_wavelength": 0.665,
-                "full_width_half_max": 0.038
-            },
-            {
-                "gsd": 20,
-                "name": "B05",
-                "common_name": "rededge",
-                "description": "vegetation classification red edge",
-                "center_wavelength": 0.704,
-                "full_width_half_max": 0.019
-            },
-            {
-                "gsd": 20,
-                "name": "B06",
-                "common_name": "rededge",
-                "description": "vegetation classification red edge",
-                "center_wavelength": 0.74,
-                "full_width_half_max": 0.018
-            },
-            {
-                "gsd": 20,
-                "name": "B07",
-                "common_name": "rededge",
-                "description": "vegetation classification red edge",
-                "center_wavelength": 0.783,
-                "full_width_half_max": 0.028
-            },
-            {
-                "gsd": 10,
-                "name": "B08",
-                "common_name": "nir",
-                "description": "near infrared",
-                "center_wavelength": 0.842,
-                "full_width_half_max": 0.145
-            },
-            {
-                "gsd": 20,
-                "name": "B8A",
-                "common_name": "rededge",
-                "description": "vegetation classification red edge",
-                "center_wavelength": 0.865,
-                "full_width_half_max": 0.033
-            },
-            {
-                "gsd": 60,
-                "name": "B09",
-                "description": "water vapor",
-                "center_wavelength": 0.945,
-                "full_width_half_max": 0.026
-            },
-            {
-                "gsd": 20,
-                "name": "B11",
-                "common_name": "swir16",
-                "description": "short-wave infrared, snow/ice/cloud classification",
-                "center_wavelength": 1.61,
-                "full_width_half_max": 0.143
-            },
-            {
-                "gsd": 20,
-                "name": "B12",
-                "common_name": "swir22",
-                "description": "short-wave infrared, snow/ice/cloud classification",
-                "center_wavelength": 2.19,
-                "full_width_half_max": 0.242
-            }
-        ],
-        "platform": [
-            "Sentinel-2A",
-            "Sentinel-2B"
-        ],
-        "instruments": [
-            "msi"
-        ],
-        "constellation": [
-            "sentinel-2"
-        ],
-        "view:off_nadir": [
-            0
-        ]
-    },
     "item_assets": {
         "AOT": {
             "gsd": 10.0,
@@ -529,6 +347,7 @@
     "msft:storage_account": "sentinel2l2a01",
     "msft:short_description": "The Sentinel-2 program provides global imagery in thirteen spectral bands at 10m-60m resolution and a revisit time of approximately five days.  This dataset contains the global Sentinel-2 archive, from 2016 to the present, processed to L2A (bottom-of-atmosphere).",
     "msft:region": "westeurope",
+    "title": "Sentinel-2 Level-2A",
     "extent": {
         "spatial": {
             "bbox": [
@@ -549,5 +368,186 @@
             ]
         }
     },
-    "license": "proprietary"
+    "license": "proprietary",
+    "keywords": [
+        "Sentinel",
+        "Copernicus",
+        "ESA",
+        "Satellite",
+        "Global",
+        "Imagery",
+        "Reflectance"
+    ],
+    "providers": [
+        {
+            "name": "ESA",
+            "roles": [
+                "producer",
+                "licensor"
+            ],
+            "url": "https://sentinel.esa.int/web/sentinel/missions/sentinel-2"
+        },
+        {
+            "name": "Esri",
+            "roles": [
+                "processor"
+            ],
+            "url": "https://www.esri.com/"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host",
+                "processor"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        }
+    ],
+    "summaries": {
+        "gsd": [
+            10,
+            20,
+            60
+        ],
+        "eo:bands": [
+            {
+                "name": "AOT",
+                "description": "aerosol optical thickness"
+            },
+            {
+                "gsd": 60,
+                "name": "B01",
+                "common_name": "coastal",
+                "description": "coastal aerosol",
+                "center_wavelength": 0.443,
+                "full_width_half_max": 0.027
+            },
+            {
+                "gsd": 10,
+                "name": "B02",
+                "common_name": "blue",
+                "description": "visible blue",
+                "center_wavelength": 0.49,
+                "full_width_half_max": 0.098
+            },
+            {
+                "gsd": 10,
+                "name": "B03",
+                "common_name": "green",
+                "description": "visible green",
+                "center_wavelength": 0.56,
+                "full_width_half_max": 0.045
+            },
+            {
+                "gsd": 10,
+                "name": "B04",
+                "common_name": "red",
+                "description": "visible red",
+                "center_wavelength": 0.665,
+                "full_width_half_max": 0.038
+            },
+            {
+                "gsd": 20,
+                "name": "B05",
+                "common_name": "rededge",
+                "description": "vegetation classification red edge",
+                "center_wavelength": 0.704,
+                "full_width_half_max": 0.019
+            },
+            {
+                "gsd": 20,
+                "name": "B06",
+                "common_name": "rededge",
+                "description": "vegetation classification red edge",
+                "center_wavelength": 0.74,
+                "full_width_half_max": 0.018
+            },
+            {
+                "gsd": 20,
+                "name": "B07",
+                "common_name": "rededge",
+                "description": "vegetation classification red edge",
+                "center_wavelength": 0.783,
+                "full_width_half_max": 0.028
+            },
+            {
+                "gsd": 10,
+                "name": "B08",
+                "common_name": "nir",
+                "description": "near infrared",
+                "center_wavelength": 0.842,
+                "full_width_half_max": 0.145
+            },
+            {
+                "gsd": 20,
+                "name": "B8A",
+                "common_name": "rededge",
+                "description": "vegetation classification red edge",
+                "center_wavelength": 0.865,
+                "full_width_half_max": 0.033
+            },
+            {
+                "gsd": 60,
+                "name": "B09",
+                "description": "water vapor",
+                "center_wavelength": 0.945,
+                "full_width_half_max": 0.026
+            },
+            {
+                "gsd": 20,
+                "name": "B11",
+                "common_name": "swir16",
+                "description": "short-wave infrared, snow/ice/cloud classification",
+                "center_wavelength": 1.61,
+                "full_width_half_max": 0.143
+            },
+            {
+                "gsd": 20,
+                "name": "B12",
+                "common_name": "swir22",
+                "description": "short-wave infrared, snow/ice/cloud classification",
+                "center_wavelength": 2.19,
+                "full_width_half_max": 0.242
+            }
+        ],
+        "platform": [
+            "Sentinel-2A",
+            "Sentinel-2B"
+        ],
+        "instruments": [
+            "msi"
+        ],
+        "constellation": [
+            "sentinel-2"
+        ],
+        "view:off_nadir": [
+            0
+        ]
+    },
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/sentinel-2.png",
+            "type": "image/png",
+            "title": "Sentinel 2 L2A",
+            "roles": [
+                "thumbnail"
+            ]
+        },
+        "geoparquet-items": {
+            "href": "abfs://items/sentinel-2-l2a.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "msft:partition_info": {
+                "is_partitioned": true,
+                "partition_frequency": "W-MON"
+            },
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
+            ]
+        }
+    }
 }

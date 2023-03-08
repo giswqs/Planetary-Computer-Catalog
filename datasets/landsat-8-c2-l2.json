@@ -40,167 +40,6 @@
     "stac_extensions": [
         "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json"
     ],
-    "title": "Landsat 8 Collection 2 Level-2",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/landsat.png",
-            "type": "image/png",
-            "title": "Landsat 8 C2",
-            "roles": [
-                "thumbnail"
-            ]
-        }
-    },
-    "keywords": [
-        "Landsat",
-        "USGS",
-        "NASA",
-        "Satellite",
-        "Global",
-        "Imagery",
-        "Reflectance"
-    ],
-    "providers": [
-        {
-            "name": "NASA",
-            "roles": [
-                "producer",
-                "licensor"
-            ],
-            "url": "https://landsat.gsfc.nasa.gov/"
-        },
-        {
-            "name": "USGS",
-            "roles": [
-                "producer",
-                "processor",
-                "licensor"
-            ],
-            "url": "https://www.usgs.gov/core-science-systems/nli/landsat/landsat-collection-2-level-2-science-products"
-        },
-        {
-            "name": "Microsoft",
-            "roles": [
-                "host"
-            ],
-            "url": "https://planetarycomputer.microsoft.com"
-        }
-    ],
-    "summaries": {
-        "gsd": [
-            15,
-            30,
-            100
-        ],
-        "eo:bands": [
-            {
-                "gsd": 30,
-                "name": "SR_B1",
-                "common_name": "coastal",
-                "description": "coastal",
-                "center_wavelength": 0.44,
-                "full_width_half_max": 0.02
-            },
-            {
-                "gsd": 30,
-                "name": "SR_B2",
-                "common_name": "blue",
-                "description": "visible blue",
-                "center_wavelength": 0.48,
-                "full_width_half_max": 0.06
-            },
-            {
-                "gsd": 30,
-                "name": "SR_B3",
-                "common_name": "green",
-                "description": "visible green",
-                "center_wavelength": 0.56,
-                "full_width_half_max": 0.06
-            },
-            {
-                "gsd": 30,
-                "name": "SR_B4",
-                "common_name": "red",
-                "description": "visible red",
-                "center_wavelength": 0.65,
-                "full_width_half_max": 0.04
-            },
-            {
-                "gsd": 30,
-                "name": "SR_B5",
-                "common_name": "nir",
-                "description": "near-infrared",
-                "center_wavelength": 0.86,
-                "full_width_half_max": 0.03
-            },
-            {
-                "gsd": 30,
-                "name": "SR_B6",
-                "common_name": "swir16",
-                "description": "short-wave infrared",
-                "center_wavelength": 1.6,
-                "full_width_half_max": 0.08
-            },
-            {
-                "gsd": 30,
-                "name": "SR_B7",
-                "common_name": "swir22",
-                "description": "short-wave infrared",
-                "center_wavelength": 2.2,
-                "full_width_half_max": 0.2
-            },
-            {
-                "gsd": 100,
-                "name": "ST_B10",
-                "common_name": "lwir11",
-                "description": "long-wave infrared",
-                "center_wavelength": 10.9,
-                "full_width_half_max": 0.8
-            },
-            {
-                "gsd": 30,
-                "name": "ST_TRAD",
-                "description": "thermal radiance"
-            },
-            {
-                "gsd": 30,
-                "name": "ST_URAD",
-                "description": "upwelled radiance"
-            },
-            {
-                "gsd": 30,
-                "name": "ST_ATRAN",
-                "description": "atmospheric transmission"
-            },
-            {
-                "gsd": 30,
-                "name": "ST_CDIST",
-                "description": "distance to nearest cloud"
-            },
-            {
-                "gsd": 30,
-                "name": "ST_DRAD",
-                "description": "downwelled radiance"
-            },
-            {
-                "gsd": 30,
-                "name": "ST_EMIS",
-                "description": "emissivity"
-            },
-            {
-                "gsd": 30,
-                "name": "ST_EMSD",
-                "description": "emissivity standard deviation"
-            }
-        ],
-        "platform": [
-            "landsat-8"
-        ],
-        "instruments": [
-            "oli",
-            "tirs"
-        ]
-    },
     "item_assets": {
         "ANG": {
             "type": "text/plain",
@@ -471,6 +310,7 @@
     "msft:storage_account": "landsateuwest",
     "msft:short_description": "Landsat 8 has captured 30m-resolution imagery of the Earth since 2013.  This dataset contains global, atmospherically-corrected imagery from Landsat Collection 2.",
     "msft:region": "westeurope",
+    "title": "Landsat 8 Collection 2 Level-2",
     "extent": {
         "spatial": {
             "bbox": [
@@ -491,5 +331,165 @@
             ]
         }
     },
-    "license": "proprietary"
+    "license": "proprietary",
+    "keywords": [
+        "Landsat",
+        "USGS",
+        "NASA",
+        "Satellite",
+        "Global",
+        "Imagery",
+        "Reflectance"
+    ],
+    "providers": [
+        {
+            "name": "NASA",
+            "roles": [
+                "producer",
+                "licensor"
+            ],
+            "url": "https://landsat.gsfc.nasa.gov/"
+        },
+        {
+            "name": "USGS",
+            "roles": [
+                "producer",
+                "processor",
+                "licensor"
+            ],
+            "url": "https://www.usgs.gov/core-science-systems/nli/landsat/landsat-collection-2-level-2-science-products"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        }
+    ],
+    "summaries": {
+        "gsd": [
+            15,
+            30,
+            100
+        ],
+        "eo:bands": [
+            {
+                "gsd": 30,
+                "name": "SR_B1",
+                "common_name": "coastal",
+                "description": "coastal",
+                "center_wavelength": 0.44,
+                "full_width_half_max": 0.02
+            },
+            {
+                "gsd": 30,
+                "name": "SR_B2",
+                "common_name": "blue",
+                "description": "visible blue",
+                "center_wavelength": 0.48,
+                "full_width_half_max": 0.06
+            },
+            {
+                "gsd": 30,
+                "name": "SR_B3",
+                "common_name": "green",
+                "description": "visible green",
+                "center_wavelength": 0.56,
+                "full_width_half_max": 0.06
+            },
+            {
+                "gsd": 30,
+                "name": "SR_B4",
+                "common_name": "red",
+                "description": "visible red",
+                "center_wavelength": 0.65,
+                "full_width_half_max": 0.04
+            },
+            {
+                "gsd": 30,
+                "name": "SR_B5",
+                "common_name": "nir",
+                "description": "near-infrared",
+                "center_wavelength": 0.86,
+                "full_width_half_max": 0.03
+            },
+            {
+                "gsd": 30,
+                "name": "SR_B6",
+                "common_name": "swir16",
+                "description": "short-wave infrared",
+                "center_wavelength": 1.6,
+                "full_width_half_max": 0.08
+            },
+            {
+                "gsd": 30,
+                "name": "SR_B7",
+                "common_name": "swir22",
+                "description": "short-wave infrared",
+                "center_wavelength": 2.2,
+                "full_width_half_max": 0.2
+            },
+            {
+                "gsd": 100,
+                "name": "ST_B10",
+                "common_name": "lwir11",
+                "description": "long-wave infrared",
+                "center_wavelength": 10.9,
+                "full_width_half_max": 0.8
+            },
+            {
+                "gsd": 30,
+                "name": "ST_TRAD",
+                "description": "thermal radiance"
+            },
+            {
+                "gsd": 30,
+                "name": "ST_URAD",
+                "description": "upwelled radiance"
+            },
+            {
+                "gsd": 30,
+                "name": "ST_ATRAN",
+                "description": "atmospheric transmission"
+            },
+            {
+                "gsd": 30,
+                "name": "ST_CDIST",
+                "description": "distance to nearest cloud"
+            },
+            {
+                "gsd": 30,
+                "name": "ST_DRAD",
+                "description": "downwelled radiance"
+            },
+            {
+                "gsd": 30,
+                "name": "ST_EMIS",
+                "description": "emissivity"
+            },
+            {
+                "gsd": 30,
+                "name": "ST_EMSD",
+                "description": "emissivity standard deviation"
+            }
+        ],
+        "platform": [
+            "landsat-8"
+        ],
+        "instruments": [
+            "oli",
+            "tirs"
+        ]
+    },
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/landsat.png",
+            "type": "image/png",
+            "title": "Landsat 8 C2",
+            "roles": [
+                "thumbnail"
+            ]
+        }
+    }
 }

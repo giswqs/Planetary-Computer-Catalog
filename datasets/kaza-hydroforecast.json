@@ -41,40 +41,7 @@
     "stac_extensions": [
         "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json"
     ],
-    "title": "HydroForecast - Kwando & Upper Zambezi Rivers",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/kaza-hydroforecast-thumbnail.png",
-            "type": "image/png",
-            "title": "Thumbnail"
-        }
-    },
     "version": "1.0.0",
-    "keywords": [
-        "Water",
-        "HydroForecast",
-        "Streamflow",
-        "Hydrology",
-        "Upstream Tech"
-    ],
-    "providers": [
-        {
-            "name": "Upstream Tech",
-            "roles": [
-                "producer",
-                "processor",
-                "licensor"
-            ],
-            "url": "https://www.upstream.tech"
-        },
-        {
-            "name": "Microsoft",
-            "roles": [
-                "host"
-            ],
-            "url": "https://planetarycomputer.microsoft.com"
-        }
-    ],
     "item_assets": {
         "data": {
             "type": "application/x-parquet",
@@ -171,6 +138,7 @@
     "msft:storage_account": "ai4edataeuwest",
     "msft:short_description": "Seasonal river flow forecasts for the Kwando and Upper Zambezi rivers in the KAZA region of Africa, produced by Upstream Tech's HydroForecast model.",
     "msft:region": "westeurope",
+    "title": "HydroForecast - Kwando & Upper Zambezi Rivers",
     "extent": {
         "spatial": {
             "bbox": [
@@ -239,5 +207,37 @@
             ]
         }
     },
-    "license": "CDLA-Sharing-1.0"
+    "license": "CDLA-Sharing-1.0",
+    "keywords": [
+        "Water",
+        "HydroForecast",
+        "Streamflow",
+        "Hydrology",
+        "Upstream Tech"
+    ],
+    "providers": [
+        {
+            "name": "Upstream Tech",
+            "roles": [
+                "producer",
+                "processor",
+                "licensor"
+            ],
+            "url": "https://www.upstream.tech"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        }
+    ],
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/kaza-hydroforecast-thumbnail.png",
+            "type": "image/png",
+            "title": "Thumbnail"
+        }
+    }
 }

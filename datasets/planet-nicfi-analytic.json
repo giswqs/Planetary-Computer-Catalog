@@ -60,33 +60,50 @@
         "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
         "https://stac-extensions.github.io/table/v1.2.0/schema.json"
     ],
-    "title": "Planet-NICFI Basemaps (Analytic)",
-    "assets": {
+    "item_assets": {
+        "data": {
+            "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+            "roles": [
+                "data"
+            ],
+            "title": "Data",
+            "description": "a 'ground truth' representation of spatially accurate data with minimized effects of atmosphere and sensor characteristics"
+        },
         "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/planet-nicfi-analytic-thumbnail.png",
             "type": "image/png",
-            "title": "thumbnail",
             "roles": [
                 "thumbnail"
+            ],
+            "title": "Thumbnail"
+        }
+    },
+    "msft:group_id": "planet-nicfi",
+    "msft:container": "nicfi",
+    "msft:storage_account": "planet",
+    "msft:short_description": "Planet's high-resolution, analysis-ready mosaics of the world's tropics",
+    "msft:region": "westeurope",
+    "title": "Planet-NICFI Basemaps (Analytic)",
+    "extent": {
+        "spatial": {
+            "bbox": [
+                [
+                    -180.0,
+                    -34.161818157002,
+                    180.0,
+                    30.145127179625
+                ]
             ]
         },
-        "geoparquet-items": {
-            "href": "abfs://items/planet-nicfi-analytic.parquet",
-            "type": "application/x-parquet",
-            "title": "GeoParquet STAC items",
-            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
-            "msft:partition_info": {
-                "is_partitioned": true,
-                "partition_frequency": "AS"
-            },
-            "table:storage_options": {
-                "account_name": "pcstacitems"
-            },
-            "roles": [
-                "stac-items"
+        "temporal": {
+            "interval": [
+                [
+                    "2015-12-01T00:00:00Z",
+                    null
+                ]
             ]
         }
     },
+    "license": "proprietary",
     "keywords": [
         "Planet",
         "NICFI",
@@ -148,47 +165,30 @@
             "maximum": 100
         }
     },
-    "item_assets": {
-        "data": {
-            "type": "image/tiff; application=geotiff; profile=cloud-optimized",
-            "roles": [
-                "data"
-            ],
-            "title": "Data",
-            "description": "a 'ground truth' representation of spatially accurate data with minimized effects of atmosphere and sensor characteristics"
-        },
+    "assets": {
         "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/planet-nicfi-analytic-thumbnail.png",
             "type": "image/png",
+            "title": "thumbnail",
             "roles": [
                 "thumbnail"
-            ],
-            "title": "Thumbnail"
-        }
-    },
-    "msft:group_id": "planet-nicfi",
-    "msft:container": "nicfi",
-    "msft:storage_account": "planet",
-    "msft:short_description": "Planet's high-resolution, analysis-ready mosaics of the world's tropics",
-    "msft:region": "westeurope",
-    "extent": {
-        "spatial": {
-            "bbox": [
-                [
-                    -180.0,
-                    -34.161818157002,
-                    180.0,
-                    30.145127179625
-                ]
             ]
         },
-        "temporal": {
-            "interval": [
-                [
-                    "2015-12-01T00:00:00Z",
-                    null
-                ]
+        "geoparquet-items": {
+            "href": "abfs://items/planet-nicfi-analytic.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "msft:partition_info": {
+                "is_partitioned": true,
+                "partition_frequency": "AS"
+            },
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
             ]
         }
-    },
-    "license": "proprietary"
+    }
 }

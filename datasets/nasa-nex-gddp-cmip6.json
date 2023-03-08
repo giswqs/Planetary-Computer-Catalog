@@ -49,364 +49,6 @@
         "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
         "https://stac-extensions.github.io/table/v1.2.0/schema.json"
     ],
-    "title": "Earth Exchange Global Daily Downscaled Projections (NEX-GDDP-CMIP6)",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/nasa-nex-gddp-thumbnail.png",
-            "type": "image/png",
-            "title": "thumbnail",
-            "roles": [
-                "thumbnail"
-            ]
-        },
-        "CESM2.historical": {
-            "href": "https://nasagddp.blob.core.windows.net/nex-gddp-cmip6-references/CESM2_historical.json",
-            "type": "application/json",
-            "title": "CESM2-historical references",
-            "cmip6:model": "CESM2",
-            "cmip6:scenario": "historical",
-            "xarray:open_dataset_kwargs": {
-                "engine": "zarr",
-                "backend_kwargs": {
-                    "chunks": {},
-                    "consolidated": false
-                }
-            },
-            "roles": [
-                "references"
-            ]
-        },
-        "geoparquet-items": {
-            "href": "abfs://items/nasa-nex-gddp-cmip6.parquet",
-            "type": "application/x-parquet",
-            "title": "GeoParquet STAC items",
-            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
-            "msft:partition_info": {
-                "is_partitioned": false
-            },
-            "table:storage_options": {
-                "account_name": "pcstacitems"
-            },
-            "roles": [
-                "stac-items"
-            ]
-        },
-        "MIROC6.historical": {
-            "href": "https://nasagddp.blob.core.windows.net/nex-gddp-cmip6-references/MIROC6_historical.json",
-            "type": "application/json",
-            "title": "MIROC6-historical references",
-            "cmip6:model": "MIROC6",
-            "cmip6:scenario": "historical",
-            "xarray:open_dataset_kwargs": {
-                "engine": "zarr",
-                "backend_kwargs": {
-                    "chunks": {},
-                    "consolidated": false
-                }
-            },
-            "roles": [
-                "references"
-            ]
-        },
-        "TaiESM1.historical": {
-            "href": "https://nasagddp.blob.core.windows.net/nex-gddp-cmip6-references/TaiESM1_historical.json",
-            "type": "application/json",
-            "title": "TaiESM1-historical references",
-            "cmip6:model": "TaiESM1",
-            "cmip6:scenario": "historical",
-            "xarray:open_dataset_kwargs": {
-                "engine": "zarr",
-                "backend_kwargs": {
-                    "chunks": {},
-                    "consolidated": false
-                }
-            },
-            "roles": [
-                "references"
-            ]
-        },
-        "CMCC-ESM2.historical": {
-            "href": "https://nasagddp.blob.core.windows.net/nex-gddp-cmip6-references/CMCC-ESM2_historical.json",
-            "type": "application/json",
-            "title": "CMCC-ESM2-historical references",
-            "cmip6:model": "CMCC-ESM2",
-            "cmip6:scenario": "historical",
-            "xarray:open_dataset_kwargs": {
-                "engine": "zarr",
-                "backend_kwargs": {
-                    "chunks": {},
-                    "consolidated": false
-                }
-            },
-            "roles": [
-                "references"
-            ]
-        },
-        "KIOST-ESM.historical": {
-            "href": "https://nasagddp.blob.core.windows.net/nex-gddp-cmip6-references/KIOST-ESM_historical.json",
-            "type": "application/json",
-            "title": "KIOST-ESM-historical references",
-            "cmip6:model": "KIOST-ESM",
-            "cmip6:scenario": "historical",
-            "xarray:open_dataset_kwargs": {
-                "engine": "zarr",
-                "backend_kwargs": {
-                    "chunks": {},
-                    "consolidated": false
-                }
-            },
-            "roles": [
-                "references"
-            ]
-        },
-        "ACCESS-CM2.historical": {
-            "href": "https://nasagddp.blob.core.windows.net/nex-gddp-cmip6-references/ACCESS-CM2_historical.json",
-            "type": "application/json",
-            "title": "ACCESS-CM2-historical references",
-            "cmip6:model": "ACCESS-CM2",
-            "cmip6:scenario": "historical",
-            "xarray:open_dataset_kwargs": {
-                "engine": "zarr",
-                "backend_kwargs": {
-                    "chunks": {},
-                    "consolidated": false
-                }
-            },
-            "roles": [
-                "references"
-            ]
-        },
-        "KACE-1-0-G.historical": {
-            "href": "https://nasagddp.blob.core.windows.net/nex-gddp-cmip6-references/KACE-1-0-G_historical.json",
-            "type": "application/json",
-            "title": "KACE-1-0-G-historical references",
-            "cmip6:model": "KACE-1-0-G",
-            "cmip6:scenario": "historical",
-            "xarray:open_dataset_kwargs": {
-                "engine": "zarr",
-                "backend_kwargs": {
-                    "chunks": {},
-                    "consolidated": false
-                }
-            },
-            "roles": [
-                "references"
-            ]
-        },
-        "MIROC-ES2L.historical": {
-            "href": "https://nasagddp.blob.core.windows.net/nex-gddp-cmip6-references/MIROC-ES2L_historical.json",
-            "type": "application/json",
-            "title": "MIROC-ES2L-historical references",
-            "cmip6:model": "MIROC-ES2L",
-            "cmip6:scenario": "historical",
-            "xarray:open_dataset_kwargs": {
-                "engine": "zarr",
-                "backend_kwargs": {
-                    "chunks": {},
-                    "consolidated": false
-                }
-            },
-            "roles": [
-                "references"
-            ]
-        },
-        "MRI-ESM2-0.historical": {
-            "href": "https://nasagddp.blob.core.windows.net/nex-gddp-cmip6-references/MRI-ESM2-0_historical.json",
-            "type": "application/json",
-            "title": "MRI-ESM2-0-historical references",
-            "cmip6:model": "MRI-ESM2-0",
-            "cmip6:scenario": "historical",
-            "xarray:open_dataset_kwargs": {
-                "engine": "zarr",
-                "backend_kwargs": {
-                    "chunks": {},
-                    "consolidated": false
-                }
-            },
-            "roles": [
-                "references"
-            ]
-        },
-        "NorESM2-LM.historical": {
-            "href": "https://nasagddp.blob.core.windows.net/nex-gddp-cmip6-references/NorESM2-LM_historical.json",
-            "type": "application/json",
-            "title": "NorESM2-LM-historical references",
-            "cmip6:model": "NorESM2-LM",
-            "cmip6:scenario": "historical",
-            "xarray:open_dataset_kwargs": {
-                "engine": "zarr",
-                "backend_kwargs": {
-                    "chunks": {},
-                    "consolidated": false
-                }
-            },
-            "roles": [
-                "references"
-            ]
-        },
-        "NorESM2-MM.historical": {
-            "href": "https://nasagddp.blob.core.windows.net/nex-gddp-cmip6-references/NorESM2-MM_historical.json",
-            "type": "application/json",
-            "title": "NorESM2-MM-historical references",
-            "cmip6:model": "NorESM2-MM",
-            "cmip6:scenario": "historical",
-            "xarray:open_dataset_kwargs": {
-                "engine": "zarr",
-                "backend_kwargs": {
-                    "chunks": {},
-                    "consolidated": false
-                }
-            },
-            "roles": [
-                "references"
-            ]
-        },
-        "CESM2-WACCM.historical": {
-            "href": "https://nasagddp.blob.core.windows.net/nex-gddp-cmip6-references/CESM2-WACCM_historical.json",
-            "type": "application/json",
-            "title": "CESM2-WACCM-historical references",
-            "cmip6:model": "CESM2-WACCM",
-            "cmip6:scenario": "historical",
-            "xarray:open_dataset_kwargs": {
-                "engine": "zarr",
-                "backend_kwargs": {
-                    "chunks": {},
-                    "consolidated": false
-                }
-            },
-            "roles": [
-                "references"
-            ]
-        },
-        "UKESM1-0-LL.historical": {
-            "href": "https://nasagddp.blob.core.windows.net/nex-gddp-cmip6-references/UKESM1-0-LL_historical.json",
-            "type": "application/json",
-            "title": "UKESM1-0-LL-historical references",
-            "cmip6:model": "UKESM1-0-LL",
-            "cmip6:scenario": "historical",
-            "xarray:open_dataset_kwargs": {
-                "engine": "zarr",
-                "backend_kwargs": {
-                    "chunks": {},
-                    "consolidated": false
-                }
-            },
-            "roles": [
-                "references"
-            ]
-        },
-        "CMCC-CM2-SR5.historical": {
-            "href": "https://nasagddp.blob.core.windows.net/nex-gddp-cmip6-references/CMCC-CM2-SR5_historical.json",
-            "type": "application/json",
-            "title": "CMCC-CM2-SR5-historical references",
-            "cmip6:model": "CMCC-CM2-SR5",
-            "cmip6:scenario": "historical",
-            "xarray:open_dataset_kwargs": {
-                "engine": "zarr",
-                "backend_kwargs": {
-                    "chunks": {},
-                    "consolidated": false
-                }
-            },
-            "roles": [
-                "references"
-            ]
-        },
-        "IPSL-CM6A-LR.historical": {
-            "href": "https://nasagddp.blob.core.windows.net/nex-gddp-cmip6-references/IPSL-CM6A-LR_historical.json",
-            "type": "application/json",
-            "title": "IPSL-CM6A-LR-historical references",
-            "cmip6:model": "IPSL-CM6A-LR",
-            "cmip6:scenario": "historical",
-            "xarray:open_dataset_kwargs": {
-                "engine": "zarr",
-                "backend_kwargs": {
-                    "chunks": {},
-                    "consolidated": false
-                }
-            },
-            "roles": [
-                "references"
-            ]
-        },
-        "MPI-ESM1-2-HR.historical": {
-            "href": "https://nasagddp.blob.core.windows.net/nex-gddp-cmip6-references/MPI-ESM1-2-HR_historical.json",
-            "type": "application/json",
-            "title": "MPI-ESM1-2-HR-historical references",
-            "cmip6:model": "MPI-ESM1-2-HR",
-            "cmip6:scenario": "historical",
-            "xarray:open_dataset_kwargs": {
-                "engine": "zarr",
-                "backend_kwargs": {
-                    "chunks": {},
-                    "consolidated": false
-                }
-            },
-            "roles": [
-                "references"
-            ]
-        },
-        "MPI-ESM1-2-LR.historical": {
-            "href": "https://nasagddp.blob.core.windows.net/nex-gddp-cmip6-references/MPI-ESM1-2-LR_historical.json",
-            "type": "application/json",
-            "title": "MPI-ESM1-2-LR-historical references",
-            "cmip6:model": "MPI-ESM1-2-LR",
-            "cmip6:scenario": "historical",
-            "xarray:open_dataset_kwargs": {
-                "engine": "zarr",
-                "backend_kwargs": {
-                    "chunks": {},
-                    "consolidated": false
-                }
-            },
-            "roles": [
-                "references"
-            ]
-        }
-    },
-    "keywords": [
-        "CMIP6",
-        "NASA",
-        "Climate",
-        "Humidity",
-        "Precipitation",
-        "Temperature"
-    ],
-    "providers": [
-        {
-            "name": "NASA NEX",
-            "roles": [
-                "producer"
-            ],
-            "url": "https://www.nasa.gov/nex"
-        },
-        {
-            "name": "Microsoft",
-            "roles": [
-                "host",
-                "processor"
-            ],
-            "url": "https://planetarycomputer.microsoft.com/"
-        }
-    ],
-    "summaries": {
-        "cmip6:scenario": [
-            "historical",
-            "ssp245",
-            "ssp585"
-        ],
-        "cmip6:variable": [
-            "hurs",
-            "huss",
-            "pr",
-            "rlds",
-            "rsds",
-            "sfcWind",
-            "tas",
-            "tasmax",
-            "tasmin"
-        ]
-    },
     "item_assets": {
         "pr": {
             "type": "application/netcdf",
@@ -730,6 +372,7 @@
         "Global downscaled climate scenarios derived from the General Circulation Model conducted under CMIP6."
     ],
     "msft:region": "westeurope",
+    "title": "Earth Exchange Global Daily Downscaled Projections (NEX-GDDP-CMIP6)",
     "extent": {
         "spatial": {
             "bbox": [
@@ -750,5 +393,362 @@
             ]
         }
     },
-    "license": "proprietary"
+    "license": "proprietary",
+    "keywords": [
+        "CMIP6",
+        "NASA",
+        "Climate",
+        "Humidity",
+        "Precipitation",
+        "Temperature"
+    ],
+    "providers": [
+        {
+            "name": "NASA NEX",
+            "roles": [
+                "producer"
+            ],
+            "url": "https://www.nasa.gov/nex"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host",
+                "processor"
+            ],
+            "url": "https://planetarycomputer.microsoft.com/"
+        }
+    ],
+    "summaries": {
+        "cmip6:scenario": [
+            "historical",
+            "ssp245",
+            "ssp585"
+        ],
+        "cmip6:variable": [
+            "hurs",
+            "huss",
+            "pr",
+            "rlds",
+            "rsds",
+            "sfcWind",
+            "tas",
+            "tasmax",
+            "tasmin"
+        ]
+    },
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/nasa-nex-gddp-thumbnail.png",
+            "type": "image/png",
+            "title": "thumbnail",
+            "roles": [
+                "thumbnail"
+            ]
+        },
+        "CESM2.historical": {
+            "href": "https://nasagddp.blob.core.windows.net/nex-gddp-cmip6-references/CESM2_historical.json",
+            "type": "application/json",
+            "title": "CESM2-historical references",
+            "cmip6:model": "CESM2",
+            "cmip6:scenario": "historical",
+            "xarray:open_dataset_kwargs": {
+                "engine": "zarr",
+                "backend_kwargs": {
+                    "chunks": {},
+                    "consolidated": false
+                }
+            },
+            "roles": [
+                "references"
+            ]
+        },
+        "geoparquet-items": {
+            "href": "abfs://items/nasa-nex-gddp-cmip6.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "msft:partition_info": {
+                "is_partitioned": false
+            },
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
+            ]
+        },
+        "MIROC6.historical": {
+            "href": "https://nasagddp.blob.core.windows.net/nex-gddp-cmip6-references/MIROC6_historical.json",
+            "type": "application/json",
+            "title": "MIROC6-historical references",
+            "cmip6:model": "MIROC6",
+            "cmip6:scenario": "historical",
+            "xarray:open_dataset_kwargs": {
+                "engine": "zarr",
+                "backend_kwargs": {
+                    "chunks": {},
+                    "consolidated": false
+                }
+            },
+            "roles": [
+                "references"
+            ]
+        },
+        "TaiESM1.historical": {
+            "href": "https://nasagddp.blob.core.windows.net/nex-gddp-cmip6-references/TaiESM1_historical.json",
+            "type": "application/json",
+            "title": "TaiESM1-historical references",
+            "cmip6:model": "TaiESM1",
+            "cmip6:scenario": "historical",
+            "xarray:open_dataset_kwargs": {
+                "engine": "zarr",
+                "backend_kwargs": {
+                    "chunks": {},
+                    "consolidated": false
+                }
+            },
+            "roles": [
+                "references"
+            ]
+        },
+        "CMCC-ESM2.historical": {
+            "href": "https://nasagddp.blob.core.windows.net/nex-gddp-cmip6-references/CMCC-ESM2_historical.json",
+            "type": "application/json",
+            "title": "CMCC-ESM2-historical references",
+            "cmip6:model": "CMCC-ESM2",
+            "cmip6:scenario": "historical",
+            "xarray:open_dataset_kwargs": {
+                "engine": "zarr",
+                "backend_kwargs": {
+                    "chunks": {},
+                    "consolidated": false
+                }
+            },
+            "roles": [
+                "references"
+            ]
+        },
+        "KIOST-ESM.historical": {
+            "href": "https://nasagddp.blob.core.windows.net/nex-gddp-cmip6-references/KIOST-ESM_historical.json",
+            "type": "application/json",
+            "title": "KIOST-ESM-historical references",
+            "cmip6:model": "KIOST-ESM",
+            "cmip6:scenario": "historical",
+            "xarray:open_dataset_kwargs": {
+                "engine": "zarr",
+                "backend_kwargs": {
+                    "chunks": {},
+                    "consolidated": false
+                }
+            },
+            "roles": [
+                "references"
+            ]
+        },
+        "ACCESS-CM2.historical": {
+            "href": "https://nasagddp.blob.core.windows.net/nex-gddp-cmip6-references/ACCESS-CM2_historical.json",
+            "type": "application/json",
+            "title": "ACCESS-CM2-historical references",
+            "cmip6:model": "ACCESS-CM2",
+            "cmip6:scenario": "historical",
+            "xarray:open_dataset_kwargs": {
+                "engine": "zarr",
+                "backend_kwargs": {
+                    "chunks": {},
+                    "consolidated": false
+                }
+            },
+            "roles": [
+                "references"
+            ]
+        },
+        "KACE-1-0-G.historical": {
+            "href": "https://nasagddp.blob.core.windows.net/nex-gddp-cmip6-references/KACE-1-0-G_historical.json",
+            "type": "application/json",
+            "title": "KACE-1-0-G-historical references",
+            "cmip6:model": "KACE-1-0-G",
+            "cmip6:scenario": "historical",
+            "xarray:open_dataset_kwargs": {
+                "engine": "zarr",
+                "backend_kwargs": {
+                    "chunks": {},
+                    "consolidated": false
+                }
+            },
+            "roles": [
+                "references"
+            ]
+        },
+        "MIROC-ES2L.historical": {
+            "href": "https://nasagddp.blob.core.windows.net/nex-gddp-cmip6-references/MIROC-ES2L_historical.json",
+            "type": "application/json",
+            "title": "MIROC-ES2L-historical references",
+            "cmip6:model": "MIROC-ES2L",
+            "cmip6:scenario": "historical",
+            "xarray:open_dataset_kwargs": {
+                "engine": "zarr",
+                "backend_kwargs": {
+                    "chunks": {},
+                    "consolidated": false
+                }
+            },
+            "roles": [
+                "references"
+            ]
+        },
+        "MRI-ESM2-0.historical": {
+            "href": "https://nasagddp.blob.core.windows.net/nex-gddp-cmip6-references/MRI-ESM2-0_historical.json",
+            "type": "application/json",
+            "title": "MRI-ESM2-0-historical references",
+            "cmip6:model": "MRI-ESM2-0",
+            "cmip6:scenario": "historical",
+            "xarray:open_dataset_kwargs": {
+                "engine": "zarr",
+                "backend_kwargs": {
+                    "chunks": {},
+                    "consolidated": false
+                }
+            },
+            "roles": [
+                "references"
+            ]
+        },
+        "NorESM2-LM.historical": {
+            "href": "https://nasagddp.blob.core.windows.net/nex-gddp-cmip6-references/NorESM2-LM_historical.json",
+            "type": "application/json",
+            "title": "NorESM2-LM-historical references",
+            "cmip6:model": "NorESM2-LM",
+            "cmip6:scenario": "historical",
+            "xarray:open_dataset_kwargs": {
+                "engine": "zarr",
+                "backend_kwargs": {
+                    "chunks": {},
+                    "consolidated": false
+                }
+            },
+            "roles": [
+                "references"
+            ]
+        },
+        "NorESM2-MM.historical": {
+            "href": "https://nasagddp.blob.core.windows.net/nex-gddp-cmip6-references/NorESM2-MM_historical.json",
+            "type": "application/json",
+            "title": "NorESM2-MM-historical references",
+            "cmip6:model": "NorESM2-MM",
+            "cmip6:scenario": "historical",
+            "xarray:open_dataset_kwargs": {
+                "engine": "zarr",
+                "backend_kwargs": {
+                    "chunks": {},
+                    "consolidated": false
+                }
+            },
+            "roles": [
+                "references"
+            ]
+        },
+        "CESM2-WACCM.historical": {
+            "href": "https://nasagddp.blob.core.windows.net/nex-gddp-cmip6-references/CESM2-WACCM_historical.json",
+            "type": "application/json",
+            "title": "CESM2-WACCM-historical references",
+            "cmip6:model": "CESM2-WACCM",
+            "cmip6:scenario": "historical",
+            "xarray:open_dataset_kwargs": {
+                "engine": "zarr",
+                "backend_kwargs": {
+                    "chunks": {},
+                    "consolidated": false
+                }
+            },
+            "roles": [
+                "references"
+            ]
+        },
+        "UKESM1-0-LL.historical": {
+            "href": "https://nasagddp.blob.core.windows.net/nex-gddp-cmip6-references/UKESM1-0-LL_historical.json",
+            "type": "application/json",
+            "title": "UKESM1-0-LL-historical references",
+            "cmip6:model": "UKESM1-0-LL",
+            "cmip6:scenario": "historical",
+            "xarray:open_dataset_kwargs": {
+                "engine": "zarr",
+                "backend_kwargs": {
+                    "chunks": {},
+                    "consolidated": false
+                }
+            },
+            "roles": [
+                "references"
+            ]
+        },
+        "CMCC-CM2-SR5.historical": {
+            "href": "https://nasagddp.blob.core.windows.net/nex-gddp-cmip6-references/CMCC-CM2-SR5_historical.json",
+            "type": "application/json",
+            "title": "CMCC-CM2-SR5-historical references",
+            "cmip6:model": "CMCC-CM2-SR5",
+            "cmip6:scenario": "historical",
+            "xarray:open_dataset_kwargs": {
+                "engine": "zarr",
+                "backend_kwargs": {
+                    "chunks": {},
+                    "consolidated": false
+                }
+            },
+            "roles": [
+                "references"
+            ]
+        },
+        "IPSL-CM6A-LR.historical": {
+            "href": "https://nasagddp.blob.core.windows.net/nex-gddp-cmip6-references/IPSL-CM6A-LR_historical.json",
+            "type": "application/json",
+            "title": "IPSL-CM6A-LR-historical references",
+            "cmip6:model": "IPSL-CM6A-LR",
+            "cmip6:scenario": "historical",
+            "xarray:open_dataset_kwargs": {
+                "engine": "zarr",
+                "backend_kwargs": {
+                    "chunks": {},
+                    "consolidated": false
+                }
+            },
+            "roles": [
+                "references"
+            ]
+        },
+        "MPI-ESM1-2-HR.historical": {
+            "href": "https://nasagddp.blob.core.windows.net/nex-gddp-cmip6-references/MPI-ESM1-2-HR_historical.json",
+            "type": "application/json",
+            "title": "MPI-ESM1-2-HR-historical references",
+            "cmip6:model": "MPI-ESM1-2-HR",
+            "cmip6:scenario": "historical",
+            "xarray:open_dataset_kwargs": {
+                "engine": "zarr",
+                "backend_kwargs": {
+                    "chunks": {},
+                    "consolidated": false
+                }
+            },
+            "roles": [
+                "references"
+            ]
+        },
+        "MPI-ESM1-2-LR.historical": {
+            "href": "https://nasagddp.blob.core.windows.net/nex-gddp-cmip6-references/MPI-ESM1-2-LR_historical.json",
+            "type": "application/json",
+            "title": "MPI-ESM1-2-LR-historical references",
+            "cmip6:model": "MPI-ESM1-2-LR",
+            "cmip6:scenario": "historical",
+            "xarray:open_dataset_kwargs": {
+                "engine": "zarr",
+                "backend_kwargs": {
+                    "chunks": {},
+                    "consolidated": false
+                }
+            },
+            "roles": [
+                "references"
+            ]
+        }
+    }
 }

@@ -41,61 +41,6 @@
         "https://stac-extensions.github.io/projection/v1.0.0/schema.json",
         "https://stac-extensions.github.io/table/v1.2.0/schema.json"
     ],
-    "title": "HREA: High Resolution Electricity Access",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/hrea.png",
-            "type": "image/png",
-            "title": "HREA",
-            "roles": [
-                "thumbnail"
-            ]
-        },
-        "geoparquet-items": {
-            "href": "abfs://items/hrea.parquet",
-            "type": "application/x-parquet",
-            "title": "GeoParquet STAC items",
-            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
-            "msft:partition_info": {
-                "is_partitioned": false
-            },
-            "table:storage_options": {
-                "account_name": "pcstacitems"
-            },
-            "roles": [
-                "stac-items"
-            ]
-        }
-    },
-    "keywords": [
-        "HREA",
-        "Electricity",
-        "VIIRS"
-    ],
-    "providers": [
-        {
-            "name": "University of Michigan",
-            "roles": [
-                "producer",
-                "licensor"
-            ],
-            "url": "http://www-personal.umich.edu/~brianmin/HREA/index.html/"
-        },
-        {
-            "name": "Microsoft",
-            "roles": [
-                "host",
-                "processor"
-            ],
-            "url": "https://planetarycomputer.microsoft.com"
-        }
-    ],
-    "summaries": {
-        "gsd": [
-            30,
-            460
-        ]
-    },
     "item_assets": {
         "lightscore": {
             "type": "image/tiff; application=geotiff; profile=cloud-optimized",
@@ -130,6 +75,7 @@
     "msft:storage_account": "hreadatasa",
     "msft:short_description": "Settlement-level measures of electricity access, reliability, and usage derived from VIIRS satellite imagery",
     "msft:region": "westeurope",
+    "title": "HREA: High Resolution Electricity Access",
     "extent": {
         "spatial": {
             "bbox": [
@@ -168,5 +114,59 @@
             ]
         }
     },
-    "license": "CC-BY-4.0"
+    "license": "CC-BY-4.0",
+    "keywords": [
+        "HREA",
+        "Electricity",
+        "VIIRS"
+    ],
+    "providers": [
+        {
+            "name": "University of Michigan",
+            "roles": [
+                "producer",
+                "licensor"
+            ],
+            "url": "http://www-personal.umich.edu/~brianmin/HREA/index.html/"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host",
+                "processor"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        }
+    ],
+    "summaries": {
+        "gsd": [
+            30,
+            460
+        ]
+    },
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/hrea.png",
+            "type": "image/png",
+            "title": "HREA",
+            "roles": [
+                "thumbnail"
+            ]
+        },
+        "geoparquet-items": {
+            "href": "abfs://items/hrea.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "msft:partition_info": {
+                "is_partitioned": false
+            },
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
+            ]
+        }
+    }
 }

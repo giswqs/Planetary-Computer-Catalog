@@ -42,60 +42,6 @@
         "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
         "https://stac-extensions.github.io/table/v1.2.0/schema.json"
     ],
-    "title": "US Census",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/us-census.png",
-            "type": "image/png",
-            "title": "US Census"
-        },
-        "geoparquet-items": {
-            "href": "abfs://items/us-census.parquet",
-            "type": "application/x-parquet",
-            "title": "GeoParquet STAC items",
-            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
-            "msft:partition_info": {
-                "is_partitioned": false
-            },
-            "table:storage_options": {
-                "account_name": "pcstacitems"
-            },
-            "roles": [
-                "stac-items"
-            ]
-        }
-    },
-    "keywords": [
-        "US Census Bureau",
-        "Administrative boundaries",
-        "Population",
-        "Demographics"
-    ],
-    "providers": [
-        {
-            "name": "United States Census Bureau",
-            "roles": [
-                "producer",
-                "licensor",
-                "processor"
-            ],
-            "url": "https://www.census.gov/en.html"
-        },
-        {
-            "name": "makepath",
-            "roles": [
-                "processor"
-            ],
-            "url": "https://makepath.com/"
-        },
-        {
-            "name": "Microsoft",
-            "roles": [
-                "host"
-            ],
-            "url": "https://planetarycomputer.microsoft.com"
-        }
-    ],
     "item_assets": {
         "data": {
             "type": "application/x-parquet",
@@ -264,6 +210,7 @@
     "msft:storage_account": "ai4edataeuwest",
     "msft:short_description": "United States population counts at various levels of cartographic aggregation",
     "msft:region": "westeurope",
+    "title": "US Census",
     "extent": {
         "spatial": {
             "bbox": [
@@ -338,5 +285,58 @@
             ]
         }
     },
-    "license": "proprietary"
+    "license": "proprietary",
+    "keywords": [
+        "US Census Bureau",
+        "Administrative boundaries",
+        "Population",
+        "Demographics"
+    ],
+    "providers": [
+        {
+            "name": "United States Census Bureau",
+            "roles": [
+                "producer",
+                "licensor",
+                "processor"
+            ],
+            "url": "https://www.census.gov/en.html"
+        },
+        {
+            "name": "makepath",
+            "roles": [
+                "processor"
+            ],
+            "url": "https://makepath.com/"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        }
+    ],
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/us-census.png",
+            "type": "image/png",
+            "title": "US Census"
+        },
+        "geoparquet-items": {
+            "href": "abfs://items/us-census.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "msft:partition_info": {
+                "is_partitioned": false
+            },
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
+            ]
+        }
+    }
 }

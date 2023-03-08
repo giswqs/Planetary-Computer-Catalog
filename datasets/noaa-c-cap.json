@@ -63,61 +63,6 @@
         "https://stac-extensions.github.io/classification/v1.0.0/schema.json",
         "https://stac-extensions.github.io/table/v1.2.0/schema.json"
     ],
-    "title": "C-CAP Regional Land Cover and Change",
-    "assets": {
-        "boundary": {
-            "href": "https://coast.noaa.gov/data/digitalcoast/zip/ccap-mapping-bndry-wgs84.zip",
-            "type": "application/zip",
-            "title": "C-CAP Mapping Boundary (shp file)"
-        },
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/noaa-c-cap.png",
-            "type": "image/png",
-            "title": "NOAA C-CAP",
-            "roles": [
-                "data"
-            ]
-        },
-        "geoparquet-items": {
-            "href": "abfs://items/noaa-c-cap.parquet",
-            "type": "application/x-parquet",
-            "title": "GeoParquet STAC items",
-            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
-            "msft:partition_info": {
-                "is_partitioned": false
-            },
-            "table:storage_options": {
-                "account_name": "pcstacitems"
-            },
-            "roles": [
-                "stac-items"
-            ]
-        }
-    },
-    "keywords": [
-        "Land Cover",
-        "Land Use",
-        "NOAA",
-        "Coastal"
-    ],
-    "providers": [
-        {
-            "name": "National Oceanic and Atmospheric Administration, Office for Coastal Management",
-            "roles": [
-                "licensor",
-                "producer",
-                "processor"
-            ],
-            "url": "https://coast.noaa.gov/digitalcoast/data/ccapregional.html"
-        },
-        {
-            "name": "Microsoft",
-            "roles": [
-                "host"
-            ],
-            "url": "https//planetarycomputer.microsoft.com"
-        }
-    ],
     "item_assets": {
         "data": {
             "type": "image/tiff; application=geotiff; profile=cloud-optimized",
@@ -273,6 +218,7 @@
     "msft:storage_account": "ai4edataeuwest",
     "msft:short_description": "Periodic coastal landcover classifications back to 1975",
     "msft:region": "westeurope",
+    "title": "C-CAP Regional Land Cover and Change",
     "extent": {
         "spatial": {
             "bbox": [
@@ -323,5 +269,59 @@
             ]
         }
     },
-    "license": "proprietary"
+    "license": "proprietary",
+    "keywords": [
+        "Land Cover",
+        "Land Use",
+        "NOAA",
+        "Coastal"
+    ],
+    "providers": [
+        {
+            "name": "National Oceanic and Atmospheric Administration, Office for Coastal Management",
+            "roles": [
+                "licensor",
+                "producer",
+                "processor"
+            ],
+            "url": "https://coast.noaa.gov/digitalcoast/data/ccapregional.html"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host"
+            ],
+            "url": "https//planetarycomputer.microsoft.com"
+        }
+    ],
+    "assets": {
+        "boundary": {
+            "href": "https://coast.noaa.gov/data/digitalcoast/zip/ccap-mapping-bndry-wgs84.zip",
+            "type": "application/zip",
+            "title": "C-CAP Mapping Boundary (shp file)"
+        },
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/noaa-c-cap.png",
+            "type": "image/png",
+            "title": "NOAA C-CAP",
+            "roles": [
+                "data"
+            ]
+        },
+        "geoparquet-items": {
+            "href": "abfs://items/noaa-c-cap.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "msft:partition_info": {
+                "is_partitioned": false
+            },
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
+            ]
+        }
+    }
 }

@@ -45,74 +45,7 @@
         "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
         "https://stac-extensions.github.io/datacube/v2.0.0/schema.json"
     ],
-    "title": "Daymet Monthly Puerto Rico",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/daymet-monthly-pr.png",
-            "type": "image/png",
-            "title": "Daymet monthly Puerto Rico map thumbnail",
-            "roles": [
-                "thumbnail"
-            ]
-        },
-        "zarr-abfs": {
-            "href": "abfs://daymet-zarr/monthly/pr.zarr",
-            "type": "application/vnd+zarr",
-            "title": "Monthly Puerto Rico Daymet Azure Blob File System Zarr root",
-            "description": "Azure Blob File System of the monthly Puerto Rico Daymet Zarr Group on Azure Blob Storage for use with adlfs.",
-            "xarray:open_kwargs": {
-                "consolidated": true
-            },
-            "xarray:storage_options": {
-                "account_name": "daymeteuwest"
-            },
-            "roles": [
-                "data",
-                "zarr",
-                "abfs"
-            ]
-        },
-        "zarr-https": {
-            "href": "https://daymeteuwest.blob.core.windows.net/daymet-zarr/monthly/pr.zarr",
-            "type": "application/vnd+zarr",
-            "title": "Monthly Puerto Rico Daymet HTTPS Zarr root",
-            "description": "HTTPS URI of the monthly Puerto Rico Daymet Zarr Group on Azure Blob Storage.",
-            "xarray:open_kwargs": {
-                "consolidated": true
-            },
-            "roles": [
-                "data",
-                "zarr",
-                "https"
-            ]
-        }
-    },
     "sci:doi": "10.3334/ORNLDAAC/1855",
-    "keywords": [
-        "Daymet",
-        "Puerto Rico",
-        "Temperature",
-        "Precipitation",
-        "Vapor Pressure",
-        "Climate"
-    ],
-    "providers": [
-        {
-            "name": "Microsoft",
-            "roles": [
-                "host",
-                "processor"
-            ],
-            "url": "https://planetarycomputer.microsoft.com"
-        },
-        {
-            "name": "ORNL DAAC",
-            "roles": [
-                "producer"
-            ],
-            "url": "https://doi.org/10.3334/ORNLDAAC/1855"
-        }
-    ],
     "sci:citation": "Thornton, M.M., R. Shrestha, Y. Wei, P.E. Thornton, S. Kao, and B.E. Wilson. 2020. Daymet: Monthly Climate Summaries on a 1-km Grid for North America, Version 4. ORNL DAAC, Oak Ridge, Tennessee, USA. https://doi.org/10.3334/ORNLDAAC/1855",
     "msft:group_id": "daymet",
     "cube:variables": {
@@ -605,6 +538,7 @@
     "msft:storage_account": "daymeteuwest",
     "msft:short_description": "Monthly climate summaries on a 1-km grid for Puerto Rico",
     "msft:region": "westeurope",
+    "title": "Daymet Monthly Puerto Rico",
     "extent": {
         "spatial": {
             "bbox": [
@@ -625,5 +559,71 @@
             ]
         }
     },
-    "license": "proprietary"
+    "license": "proprietary",
+    "keywords": [
+        "Daymet",
+        "Puerto Rico",
+        "Temperature",
+        "Precipitation",
+        "Vapor Pressure",
+        "Climate"
+    ],
+    "providers": [
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host",
+                "processor"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        },
+        {
+            "name": "ORNL DAAC",
+            "roles": [
+                "producer"
+            ],
+            "url": "https://doi.org/10.3334/ORNLDAAC/1855"
+        }
+    ],
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/daymet-monthly-pr.png",
+            "type": "image/png",
+            "title": "Daymet monthly Puerto Rico map thumbnail",
+            "roles": [
+                "thumbnail"
+            ]
+        },
+        "zarr-abfs": {
+            "href": "abfs://daymet-zarr/monthly/pr.zarr",
+            "type": "application/vnd+zarr",
+            "title": "Monthly Puerto Rico Daymet Azure Blob File System Zarr root",
+            "description": "Azure Blob File System of the monthly Puerto Rico Daymet Zarr Group on Azure Blob Storage for use with adlfs.",
+            "xarray:open_kwargs": {
+                "consolidated": true
+            },
+            "xarray:storage_options": {
+                "account_name": "daymeteuwest"
+            },
+            "roles": [
+                "data",
+                "zarr",
+                "abfs"
+            ]
+        },
+        "zarr-https": {
+            "href": "https://daymeteuwest.blob.core.windows.net/daymet-zarr/monthly/pr.zarr",
+            "type": "application/vnd+zarr",
+            "title": "Monthly Puerto Rico Daymet HTTPS Zarr root",
+            "description": "HTTPS URI of the monthly Puerto Rico Daymet Zarr Group on Azure Blob Storage.",
+            "xarray:open_kwargs": {
+                "consolidated": true
+            },
+            "roles": [
+                "data",
+                "zarr",
+                "https"
+            ]
+        }
+    }
 }

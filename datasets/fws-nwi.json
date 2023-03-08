@@ -59,48 +59,6 @@
     "stac_extensions": [
         "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json"
     ],
-    "title": "FWS National Wetlands Inventory",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/fws-nwi-thumb.png",
-            "type": "image/png",
-            "title": "FWS National Wetlands Inventory thumbnail",
-            "roles": [
-                "thumbnail"
-            ]
-        }
-    },
-    "keywords": [
-        "USFWS",
-        "Wetlands",
-        "United States"
-    ],
-    "providers": [
-        {
-            "name": "U.S. Fish and Wildlife Service",
-            "description": "The U.S. Fish and Wildlife Service is the principal federal agency tasked with providing information to the public on the extent and status of the nation's wetland and deepwater habitats, as well as changes to these habitats over time.",
-            "roles": [
-                "producer",
-                "licensor"
-            ],
-            "url": "https://www.fws.gov",
-            "email": "wetlands_team@fws.gov"
-        },
-        {
-            "name": "Microsoft",
-            "roles": [
-                "host"
-            ],
-            "url": "https://planetarycomputer.microsoft.com"
-        }
-    ],
-    "summaries": {
-        "fws_nwi:content": [
-            "riparian",
-            "historic_wetlands",
-            "wetlands"
-        ]
-    },
     "item_assets": {
         "zip": {
             "type": "application/zip",
@@ -115,6 +73,7 @@
     "msft:storage_account": "ai4edataeuwest",
     "msft:short_description": "Vector dataset containing wetlands boundaries and identification across the United States.",
     "msft:region": "westeurope",
+    "title": "FWS National Wetlands Inventory",
     "extent": {
         "spatial": {
             "bbox": [
@@ -147,5 +106,46 @@
             ]
         }
     },
-    "license": "proprietary"
+    "license": "proprietary",
+    "keywords": [
+        "USFWS",
+        "Wetlands",
+        "United States"
+    ],
+    "providers": [
+        {
+            "name": "U.S. Fish and Wildlife Service",
+            "description": "The U.S. Fish and Wildlife Service is the principal federal agency tasked with providing information to the public on the extent and status of the nation's wetland and deepwater habitats, as well as changes to these habitats over time.",
+            "roles": [
+                "producer",
+                "licensor"
+            ],
+            "url": "https://www.fws.gov",
+            "email": "wetlands_team@fws.gov"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        }
+    ],
+    "summaries": {
+        "fws_nwi:content": [
+            "riparian",
+            "historic_wetlands",
+            "wetlands"
+        ]
+    },
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/fws-nwi-thumb.png",
+            "type": "image/png",
+            "title": "FWS National Wetlands Inventory thumbnail",
+            "roles": [
+                "thumbnail"
+            ]
+        }
+    }
 }

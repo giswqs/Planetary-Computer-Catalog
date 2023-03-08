@@ -47,192 +47,6 @@
         "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
         "https://stac-extensions.github.io/table/v1.2.0/schema.json"
     ],
-    "title": "ASTER L1T",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/aster.png",
-            "type": "image/png",
-            "title": "ASTER L1T",
-            "roles": [
-                "thumbnail"
-            ]
-        },
-        "geoparquet-items": {
-            "href": "abfs://items/aster-l1t.parquet",
-            "type": "application/x-parquet",
-            "title": "GeoParquet STAC items",
-            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
-            "msft:partition_info": {
-                "is_partitioned": true,
-                "partition_frequency": "AS"
-            },
-            "table:storage_options": {
-                "account_name": "pcstacitems"
-            },
-            "roles": [
-                "stac-items"
-            ]
-        }
-    },
-    "keywords": [
-        "ASTER",
-        "USGS",
-        "NASA",
-        "Satellite",
-        "Global"
-    ],
-    "providers": [
-        {
-            "name": "NASA",
-            "roles": [
-                "producer",
-                "licensor"
-            ],
-            "url": "https://terra.nasa.gov/about/terra-instruments/aster"
-        },
-        {
-            "name": "USGS",
-            "roles": [
-                "processor",
-                "producer",
-                "licensor"
-            ],
-            "url": "https://lpdaac.usgs.gov/data/get-started-data/collection-overview/missions/aster-overview/"
-        },
-        {
-            "name": "Microsoft",
-            "roles": [
-                "host",
-                "processor"
-            ],
-            "url": "https://planetarycomputer.microsoft.com"
-        }
-    ],
-    "summaries": {
-        "gsd": [
-            15,
-            30,
-            90
-        ],
-        "eo:bands": [
-            {
-                "gsd": 15,
-                "name": "VNIR_Band1",
-                "common_name": "green",
-                "description": "visible yellow/green",
-                "center_wavelength": 0.56,
-                "full_width_half_max": 0.08
-            },
-            {
-                "gsd": 15,
-                "name": "VNIR_Band2",
-                "common_name": "red",
-                "description": "visible red",
-                "center_wavelength": 0.66,
-                "full_width_half_max": 0.06
-            },
-            {
-                "gsd": 15,
-                "name": "VNIR_Band3N",
-                "common_name": "nir08",
-                "description": "near infrared",
-                "center_wavelength": 0.82,
-                "full_width_half_max": 0.08
-            },
-            {
-                "gsd": 30,
-                "name": "SWIR_Band4",
-                "common_name": "swir16",
-                "description": "short-wave infrared",
-                "center_wavelength": 1.65,
-                "full_width_half_max": 0.1
-            },
-            {
-                "gsd": 30,
-                "name": "SWIR_Band5",
-                "common_name": "swir22",
-                "description": "short-wave infrared",
-                "center_wavelength": 2.165,
-                "full_width_half_max": 0.04
-            },
-            {
-                "gsd": 30,
-                "name": "SWIR_Band6",
-                "common_name": "swir22",
-                "description": "short-wave infrared",
-                "center_wavelength": 2.205,
-                "full_width_half_max": 0.04
-            },
-            {
-                "gsd": 30,
-                "name": "SWIR_Band7",
-                "common_name": "swir22",
-                "description": "short-wave infrared",
-                "center_wavelength": 2.26,
-                "full_width_half_max": 0.05
-            },
-            {
-                "gsd": 30,
-                "name": "SWIR_Band8",
-                "description": "short-wave infrared",
-                "center_wavelength": 2.339,
-                "full_width_half_max": 0.07
-            },
-            {
-                "gsd": 30,
-                "name": "SWIR_Band9",
-                "description": "short-wave infrared",
-                "center_wavelength": 2.395,
-                "full_width_half_max": 0.07
-            },
-            {
-                "gsd": 90,
-                "name": "TIR_Band10",
-                "common_name": "lwir",
-                "description": "thermal infrared",
-                "center_wavelength": 8.3,
-                "full_width_half_max": 0.35
-            },
-            {
-                "gsd": 90,
-                "name": "TIR_Band11",
-                "common_name": "lwir",
-                "description": "thermal infrared",
-                "center_wavelength": 8.65,
-                "full_width_half_max": 0.35
-            },
-            {
-                "gsd": 90,
-                "name": "TIR_Band12",
-                "common_name": "lwir",
-                "description": "thermal infrared",
-                "center_wavelength": 9.11,
-                "full_width_half_max": 0.35
-            },
-            {
-                "gsd": 90,
-                "name": "TIR_Band13",
-                "common_name": "lwir",
-                "description": "thermal infrared",
-                "center_wavelength": 10.6,
-                "full_width_half_max": 0.7
-            },
-            {
-                "gsd": 90,
-                "name": "TIR_Band14",
-                "common_name": "lwir",
-                "description": "thermal infrared",
-                "center_wavelength": 11.3,
-                "full_width_half_max": 0.7
-            }
-        ],
-        "platform": [
-            "terra"
-        ],
-        "instruments": [
-            "aster"
-        ]
-    },
     "item_assets": {
         "TIR": {
             "roles": [
@@ -505,6 +319,7 @@
     "msft:storage_account": "astersa",
     "msft:short_description": "The ASTER instrument, launched on-board NASA's Terra satellite in 1999, provides multispectral images of the Earth at 15m-90m resolution.  This dataset contains ASTER data from 2000-2006.",
     "msft:region": "westeurope",
+    "title": "ASTER L1T",
     "extent": {
         "spatial": {
             "bbox": [
@@ -525,5 +340,190 @@
             ]
         }
     },
-    "license": "proprietary"
+    "license": "proprietary",
+    "keywords": [
+        "ASTER",
+        "USGS",
+        "NASA",
+        "Satellite",
+        "Global"
+    ],
+    "providers": [
+        {
+            "name": "NASA",
+            "roles": [
+                "producer",
+                "licensor"
+            ],
+            "url": "https://terra.nasa.gov/about/terra-instruments/aster"
+        },
+        {
+            "name": "USGS",
+            "roles": [
+                "processor",
+                "producer",
+                "licensor"
+            ],
+            "url": "https://lpdaac.usgs.gov/data/get-started-data/collection-overview/missions/aster-overview/"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host",
+                "processor"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        }
+    ],
+    "summaries": {
+        "gsd": [
+            15,
+            30,
+            90
+        ],
+        "eo:bands": [
+            {
+                "gsd": 15,
+                "name": "VNIR_Band1",
+                "common_name": "green",
+                "description": "visible yellow/green",
+                "center_wavelength": 0.56,
+                "full_width_half_max": 0.08
+            },
+            {
+                "gsd": 15,
+                "name": "VNIR_Band2",
+                "common_name": "red",
+                "description": "visible red",
+                "center_wavelength": 0.66,
+                "full_width_half_max": 0.06
+            },
+            {
+                "gsd": 15,
+                "name": "VNIR_Band3N",
+                "common_name": "nir08",
+                "description": "near infrared",
+                "center_wavelength": 0.82,
+                "full_width_half_max": 0.08
+            },
+            {
+                "gsd": 30,
+                "name": "SWIR_Band4",
+                "common_name": "swir16",
+                "description": "short-wave infrared",
+                "center_wavelength": 1.65,
+                "full_width_half_max": 0.1
+            },
+            {
+                "gsd": 30,
+                "name": "SWIR_Band5",
+                "common_name": "swir22",
+                "description": "short-wave infrared",
+                "center_wavelength": 2.165,
+                "full_width_half_max": 0.04
+            },
+            {
+                "gsd": 30,
+                "name": "SWIR_Band6",
+                "common_name": "swir22",
+                "description": "short-wave infrared",
+                "center_wavelength": 2.205,
+                "full_width_half_max": 0.04
+            },
+            {
+                "gsd": 30,
+                "name": "SWIR_Band7",
+                "common_name": "swir22",
+                "description": "short-wave infrared",
+                "center_wavelength": 2.26,
+                "full_width_half_max": 0.05
+            },
+            {
+                "gsd": 30,
+                "name": "SWIR_Band8",
+                "description": "short-wave infrared",
+                "center_wavelength": 2.339,
+                "full_width_half_max": 0.07
+            },
+            {
+                "gsd": 30,
+                "name": "SWIR_Band9",
+                "description": "short-wave infrared",
+                "center_wavelength": 2.395,
+                "full_width_half_max": 0.07
+            },
+            {
+                "gsd": 90,
+                "name": "TIR_Band10",
+                "common_name": "lwir",
+                "description": "thermal infrared",
+                "center_wavelength": 8.3,
+                "full_width_half_max": 0.35
+            },
+            {
+                "gsd": 90,
+                "name": "TIR_Band11",
+                "common_name": "lwir",
+                "description": "thermal infrared",
+                "center_wavelength": 8.65,
+                "full_width_half_max": 0.35
+            },
+            {
+                "gsd": 90,
+                "name": "TIR_Band12",
+                "common_name": "lwir",
+                "description": "thermal infrared",
+                "center_wavelength": 9.11,
+                "full_width_half_max": 0.35
+            },
+            {
+                "gsd": 90,
+                "name": "TIR_Band13",
+                "common_name": "lwir",
+                "description": "thermal infrared",
+                "center_wavelength": 10.6,
+                "full_width_half_max": 0.7
+            },
+            {
+                "gsd": 90,
+                "name": "TIR_Band14",
+                "common_name": "lwir",
+                "description": "thermal infrared",
+                "center_wavelength": 11.3,
+                "full_width_half_max": 0.7
+            }
+        ],
+        "platform": [
+            "terra"
+        ],
+        "instruments": [
+            "aster"
+        ]
+    },
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/aster.png",
+            "type": "image/png",
+            "title": "ASTER L1T",
+            "roles": [
+                "thumbnail"
+            ]
+        },
+        "geoparquet-items": {
+            "href": "abfs://items/aster-l1t.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "msft:partition_info": {
+                "is_partitioned": true,
+                "partition_frequency": "AS"
+            },
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
+            ]
+        }
+    }
 }

@@ -48,49 +48,6 @@
         "https://stac-extensions.github.io/datacube/v2.0.0/schema.json",
         "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json"
     ],
-    "title": "Deltares Global Water Availability",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.azureedge.net/assets/pc_thumbnails/additional_datasets/deltares-reservoir.jpg",
-            "type": "image/png",
-            "title": "Thumbnail",
-            "roles": [
-                "thumbnail"
-            ]
-        }
-    },
-    "keywords": [
-        "Deltares",
-        "Water availability",
-        "Reservoir",
-        "Water",
-        "Precipitation"
-    ],
-    "providers": [
-        {
-            "name": "Deltares",
-            "roles": [
-                "producer"
-            ],
-            "url": "https://www.deltares.nl/en/"
-        },
-        {
-            "name": "Microsoft",
-            "roles": [
-                "host"
-            ],
-            "url": "https://planetarycomputer.microsoft.com/"
-        }
-    ],
-    "summaries": {
-        "deltares:reservoir": [
-            "ERA5",
-            "CHIRPS",
-            "EOBS",
-            "NLDAS",
-            "BOM"
-        ]
-    },
     "item_assets": {
         "data": {
             "type": "application/x-netcdf",
@@ -336,6 +293,7 @@
     "msft:storage_account": "deltaresreservoirssa",
     "msft:short_description": "Historical daily reservoir variations.",
     "msft:region": "westeurope",
+    "title": "Deltares Global Water Availability",
     "extent": {
         "spatial": {
             "bbox": [
@@ -356,5 +314,47 @@
             ]
         }
     },
-    "license": "CDLA-Permissive-1.0"
+    "license": "CDLA-Permissive-1.0",
+    "keywords": [
+        "Deltares",
+        "Water availability",
+        "Reservoir",
+        "Water",
+        "Precipitation"
+    ],
+    "providers": [
+        {
+            "name": "Deltares",
+            "roles": [
+                "producer"
+            ],
+            "url": "https://www.deltares.nl/en/"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host"
+            ],
+            "url": "https://planetarycomputer.microsoft.com/"
+        }
+    ],
+    "summaries": {
+        "deltares:reservoir": [
+            "ERA5",
+            "CHIRPS",
+            "EOBS",
+            "NLDAS",
+            "BOM"
+        ]
+    },
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.azureedge.net/assets/pc_thumbnails/additional_datasets/deltares-reservoir.jpg",
+            "type": "image/png",
+            "title": "Thumbnail",
+            "roles": [
+                "thumbnail"
+            ]
+        }
+    }
 }

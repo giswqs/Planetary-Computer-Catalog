@@ -55,76 +55,6 @@
         "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
         "https://stac-extensions.github.io/noaa-mrms-qpe/v1.0.0/schema.json"
     ],
-    "title": "NOAA MRMS QPE 24-Hour Pass 2",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/noaa-mrms-qpe-24h-pass2-thumb.png",
-            "type": "image/png",
-            "title": "NOAA MRMS QPE 24-Hour Pass 2 Thumbnail",
-            "roles": [
-                "thumbnail"
-            ]
-        },
-        "geoparquet-items": {
-            "href": "abfs://items/noaa-mrms-qpe-24h-pass2.parquet",
-            "type": "application/x-parquet",
-            "title": "GeoParquet STAC items",
-            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
-            "msft:partition_info": {
-                "is_partitioned": true,
-                "partition_frequency": "QS"
-            },
-            "table:storage_options": {
-                "account_name": "pcstacitems"
-            },
-            "roles": [
-                "stac-items"
-            ]
-        }
-    },
-    "keywords": [
-        "NOAA",
-        "MRMS",
-        "QPE",
-        "Precipitation",
-        "Weather",
-        "United States",
-        "Guam",
-        "Caribbean"
-    ],
-    "providers": [
-        {
-            "name": "NOAA National Severe Storms Laboratory",
-            "roles": [
-                "producer",
-                "licensor"
-            ],
-            "url": "https://www.nssl.noaa.gov/projects/mrms"
-        },
-        {
-            "name": "Microsoft",
-            "roles": [
-                "processor",
-                "host"
-            ],
-            "url": "https://planetarycomputer.microsoft.com"
-        }
-    ],
-    "summaries": {
-        "noaa_mrms_qpe:pass": [
-            2
-        ],
-        "noaa_mrms_qpe:period": [
-            24
-        ],
-        "noaa_mrms_qpe:region": [
-            "CONUS",
-            "HAWAII",
-            "GUAM",
-            "ALASKA",
-            "CARIB"
-        ]
-    },
     "item_assets": {
         "cog": {
             "type": "image/tiff; application=geotiff; profile=cloud-optimized",
@@ -160,6 +90,7 @@
     "msft:storage_account": "mrms",
     "msft:short_description": "Integrated multi-sensor cumulative precipitation estimate for the past 24 hours with a 2-hour latency.",
     "msft:region": "westeurope",
+    "title": "NOAA MRMS QPE 24-Hour Pass 2",
     "extent": {
         "spatial": {
             "bbox": [
@@ -210,5 +141,74 @@
             ]
         }
     },
-    "license": "proprietary"
+    "license": "proprietary",
+    "keywords": [
+        "NOAA",
+        "MRMS",
+        "QPE",
+        "Precipitation",
+        "Weather",
+        "United States",
+        "Guam",
+        "Caribbean"
+    ],
+    "providers": [
+        {
+            "name": "NOAA National Severe Storms Laboratory",
+            "roles": [
+                "producer",
+                "licensor"
+            ],
+            "url": "https://www.nssl.noaa.gov/projects/mrms"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "processor",
+                "host"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        }
+    ],
+    "summaries": {
+        "noaa_mrms_qpe:pass": [
+            2
+        ],
+        "noaa_mrms_qpe:period": [
+            24
+        ],
+        "noaa_mrms_qpe:region": [
+            "CONUS",
+            "HAWAII",
+            "GUAM",
+            "ALASKA",
+            "CARIB"
+        ]
+    },
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/noaa-mrms-qpe-24h-pass2-thumb.png",
+            "type": "image/png",
+            "title": "NOAA MRMS QPE 24-Hour Pass 2 Thumbnail",
+            "roles": [
+                "thumbnail"
+            ]
+        },
+        "geoparquet-items": {
+            "href": "abfs://items/noaa-mrms-qpe-24h-pass2.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "msft:partition_info": {
+                "is_partitioned": true,
+                "partition_frequency": "QS"
+            },
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
+            ]
+        }
+    }
 }

@@ -44,106 +44,6 @@
         "https://stac-extensions.github.io/file/v2.1.0/schema.json",
         "https://stac-extensions.github.io/table/v1.2.0/schema.json"
     ],
-    "title": "Land Cover of Canada",
-    "assets": {
-        "metadata": {
-            "href": "https://open.canada.ca/data/en/dataset/4e615eae-b90c-420b-adee-2ca35896caf6.jsonld",
-            "type": "application/json",
-            "title": "Land cover of Canada metadata",
-            "roles": [
-                "metadata"
-            ]
-        },
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/nrcan-landcover.png",
-            "type": "image/png",
-            "title": "Land cover of Canada thumbnail",
-            "roles": [
-                "thumbnail"
-            ]
-        },
-        "geoparquet-items": {
-            "href": "abfs://items/nrcan-landcover.parquet",
-            "type": "application/x-parquet",
-            "title": "GeoParquet STAC items",
-            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
-            "msft:partition_info": {
-                "is_partitioned": false
-            },
-            "table:storage_options": {
-                "account_name": "pcstacitems"
-            },
-            "roles": [
-                "stac-items"
-            ]
-        }
-    },
-    "keywords": [
-        "Land Cover",
-        "Remote Sensing",
-        "Landsat",
-        "North America",
-        "Canada"
-    ],
-    "providers": [
-        {
-            "name": "Natural Resources Canada | Ressources naturelles Canada",
-            "roles": [
-                "licensor",
-                "processor",
-                "producer"
-            ],
-            "url": "https://www.nrcan.gc.ca/maps-tools-publications/satellite-imagery-air-photos/application-development/land-cover/21755"
-        },
-        {
-            "name": "Sparkgeo",
-            "roles": [
-                "processor"
-            ],
-            "url": "https://sparkgeo.com"
-        },
-        {
-            "name": "Microsoft",
-            "roles": [
-                "host",
-                "processor"
-            ],
-            "url": "https://planetarycomputer.microsoft.com"
-        }
-    ],
-    "summaries": {
-        "proj:epsg": [
-            3978
-        ],
-        "label:type": [
-            "raster"
-        ],
-        "label:tasks": [
-            "classification"
-        ],
-        "label:classes": [
-            {
-                "name": "",
-                "classes": [
-                    "Temperate or sub-polar needleleaf forest",
-                    "Sub-polar taiga needleleaf forest",
-                    "Temperate or sub-polar broadleaf deciduous forest",
-                    "Mixed forest",
-                    "Temperate or sub-polar shrubland",
-                    "Temperate or sub-polar grassland",
-                    "Sub-polar or polar shrubland-lichen-moss",
-                    "Sub-polar or polar grassland-lichen-moss",
-                    "Sub-polar or polar barren-lichen-moss",
-                    "Wetland",
-                    "Cropland",
-                    "Barren lands",
-                    "Urban",
-                    "Water",
-                    "Snow and Ice"
-                ]
-            }
-        ]
-    },
     "item_assets": {
         "metadata": {
             "type": "application/json",
@@ -267,6 +167,7 @@
     "msft:storage_account": "nrcanlandcovereuwest",
     "msft:short_description": "Collection of Land Cover products for Canada as produced by Natural Resources Canada using Landsat satellite imagery. This collection of cartographic products offers classified Land Cover of Canada at a 30 metre scale, updated on a 5 year basis.",
     "msft:region": "westeurope",
+    "title": "Land Cover of Canada",
     "extent": {
         "spatial": {
             "bbox": [
@@ -287,5 +188,104 @@
             ]
         }
     },
-    "license": "OGL-Canada-2.0"
+    "license": "OGL-Canada-2.0",
+    "keywords": [
+        "Land Cover",
+        "Remote Sensing",
+        "Landsat",
+        "North America",
+        "Canada"
+    ],
+    "providers": [
+        {
+            "name": "Natural Resources Canada | Ressources naturelles Canada",
+            "roles": [
+                "licensor",
+                "processor",
+                "producer"
+            ],
+            "url": "https://www.nrcan.gc.ca/maps-tools-publications/satellite-imagery-air-photos/application-development/land-cover/21755"
+        },
+        {
+            "name": "Sparkgeo",
+            "roles": [
+                "processor"
+            ],
+            "url": "https://sparkgeo.com"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host",
+                "processor"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        }
+    ],
+    "summaries": {
+        "proj:epsg": [
+            3978
+        ],
+        "label:type": [
+            "raster"
+        ],
+        "label:tasks": [
+            "classification"
+        ],
+        "label:classes": [
+            {
+                "name": "",
+                "classes": [
+                    "Temperate or sub-polar needleleaf forest",
+                    "Sub-polar taiga needleleaf forest",
+                    "Temperate or sub-polar broadleaf deciduous forest",
+                    "Mixed forest",
+                    "Temperate or sub-polar shrubland",
+                    "Temperate or sub-polar grassland",
+                    "Sub-polar or polar shrubland-lichen-moss",
+                    "Sub-polar or polar grassland-lichen-moss",
+                    "Sub-polar or polar barren-lichen-moss",
+                    "Wetland",
+                    "Cropland",
+                    "Barren lands",
+                    "Urban",
+                    "Water",
+                    "Snow and Ice"
+                ]
+            }
+        ]
+    },
+    "assets": {
+        "metadata": {
+            "href": "https://open.canada.ca/data/en/dataset/4e615eae-b90c-420b-adee-2ca35896caf6.jsonld",
+            "type": "application/json",
+            "title": "Land cover of Canada metadata",
+            "roles": [
+                "metadata"
+            ]
+        },
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/nrcan-landcover.png",
+            "type": "image/png",
+            "title": "Land cover of Canada thumbnail",
+            "roles": [
+                "thumbnail"
+            ]
+        },
+        "geoparquet-items": {
+            "href": "abfs://items/nrcan-landcover.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "msft:partition_info": {
+                "is_partitioned": false
+            },
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
+            ]
+        }
+    }
 }

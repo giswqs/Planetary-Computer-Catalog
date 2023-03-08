@@ -55,40 +55,6 @@
         "https://stac-extensions.github.io/raster/v1.0.0/schema.json",
         "https://stac-extensions.github.io/classification/v1.0.0/schema.json"
     ],
-    "title": "Chesapeake Land Cover (13-class)",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/chesapeake-lc-13-thumb.png",
-            "type": "image/png",
-            "title": "Chesapeake Land Cover (13-class) Thumbnail",
-            "roles": [
-                "thumbnail"
-            ]
-        }
-    },
-    "keywords": [
-        "Land Cover",
-        "Chesapeake Bay Watershed",
-        "Chesapeake Conservancy"
-    ],
-    "providers": [
-        {
-            "name": "Chesapeake Conservancy Conservation Innovation Center",
-            "roles": [
-                "producer",
-                "processor",
-                "licensor"
-            ],
-            "url": "https://www.chesapeakeconservancy.org/conservation-innovation-center/high-resolution-data/land-cover-data-project/"
-        },
-        {
-            "name": "Microsoft",
-            "roles": [
-                "host"
-            ],
-            "url": "https://planetarycomputer.microsoft.com"
-        }
-    ],
     "item_assets": {
         "data": {
             "type": "image/tiff; application=geotiff; profile=cloud-optimized",
@@ -178,6 +144,7 @@
     "msft:storage_account": "landcoverdata",
     "msft:short_description": "Chesapeake Bay Watershed land cover product with 13 classes at 1m resolution.",
     "msft:region": "westeurope",
+    "title": "Chesapeake Land Cover (13-class)",
     "extent": {
         "spatial": {
             "bbox": [
@@ -198,5 +165,38 @@
             ]
         }
     },
-    "license": "proprietary"
+    "license": "proprietary",
+    "keywords": [
+        "Land Cover",
+        "Chesapeake Bay Watershed",
+        "Chesapeake Conservancy"
+    ],
+    "providers": [
+        {
+            "name": "Chesapeake Conservancy Conservation Innovation Center",
+            "roles": [
+                "producer",
+                "processor",
+                "licensor"
+            ],
+            "url": "https://www.chesapeakeconservancy.org/conservation-innovation-center/high-resolution-data/land-cover-data-project/"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        }
+    ],
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/chesapeake-lc-13-thumb.png",
+            "type": "image/png",
+            "title": "Chesapeake Land Cover (13-class) Thumbnail",
+            "roles": [
+                "thumbnail"
+            ]
+        }
+    }
 }

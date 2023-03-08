@@ -66,95 +66,7 @@
         "https://stac-extensions.github.io/table/v1.2.0/schema.json",
         "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json"
     ],
-    "title": "GOES-R Lightning Detection",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/goes-glm-thumb.png",
-            "type": "image/png",
-            "title": "GOES GLM Thumbnail",
-            "roles": [
-                "thumbnail"
-            ]
-        },
-        "geoparquet-items": {
-            "href": "abfs://items/goes-glm.parquet",
-            "type": "application/x-parquet",
-            "title": "GeoParquet STAC items",
-            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
-            "msft:partition_info": {
-                "is_partitioned": true,
-                "partition_frequency": "QS"
-            },
-            "table:storage_options": {
-                "account_name": "pcstacitems"
-            },
-            "roles": [
-                "stac-items"
-            ]
-        }
-    },
     "sci:doi": "10.7289/V5KH0KK6",
-    "keywords": [
-        "GOES",
-        "NOAA",
-        "NASA",
-        "Satellite",
-        "Lightning",
-        "Weather"
-    ],
-    "providers": [
-        {
-            "name": "NASA",
-            "roles": [
-                "producer"
-            ],
-            "url": "https://www.nasa.gov/content/goes"
-        },
-        {
-            "name": "NOAA",
-            "roles": [
-                "processor",
-                "producer",
-                "licensor"
-            ],
-            "url": "https://www.goes-r.gov/"
-        },
-        {
-            "name": "Microsoft",
-            "roles": [
-                "host",
-                "processor"
-            ],
-            "url": "https://planetarycomputer.microsoft.com"
-        }
-    ],
-    "summaries": {
-        "gsd": [
-            8000
-        ],
-        "mission": [
-            "GOES"
-        ],
-        "platform": [
-            "GOES-16",
-            "GOES-17"
-        ],
-        "instruments": [
-            "FM1",
-            "FM2"
-        ],
-        "constellation": [
-            "GOES"
-        ],
-        "processing:level": [
-            "L2"
-        ],
-        "goes:orbital-slot": [
-            "West",
-            "East",
-            "Test"
-        ]
-    },
     "item_assets": {
         "netcdf": {
             "type": "application/netcdf",
@@ -343,6 +255,7 @@
     "msft:storage_account": "goeseuwest",
     "msft:short_description": "Continuous lightning detection over the Western Hemisphere from the Geostationary Lightning Mapper (GLM) instrument.",
     "msft:region": "westeurope",
+    "title": "GOES-R Lightning Detection",
     "extent": {
         "spatial": {
             "bbox": [
@@ -369,5 +282,92 @@
             ]
         }
     },
-    "license": "proprietary"
+    "license": "proprietary",
+    "keywords": [
+        "GOES",
+        "NOAA",
+        "NASA",
+        "Satellite",
+        "Lightning",
+        "Weather"
+    ],
+    "providers": [
+        {
+            "name": "NASA",
+            "roles": [
+                "producer"
+            ],
+            "url": "https://www.nasa.gov/content/goes"
+        },
+        {
+            "name": "NOAA",
+            "roles": [
+                "processor",
+                "producer",
+                "licensor"
+            ],
+            "url": "https://www.goes-r.gov/"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host",
+                "processor"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        }
+    ],
+    "summaries": {
+        "gsd": [
+            8000
+        ],
+        "mission": [
+            "GOES"
+        ],
+        "platform": [
+            "GOES-16",
+            "GOES-17"
+        ],
+        "instruments": [
+            "FM1",
+            "FM2"
+        ],
+        "constellation": [
+            "GOES"
+        ],
+        "processing:level": [
+            "L2"
+        ],
+        "goes:orbital-slot": [
+            "West",
+            "East",
+            "Test"
+        ]
+    },
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/goes-glm-thumb.png",
+            "type": "image/png",
+            "title": "GOES GLM Thumbnail",
+            "roles": [
+                "thumbnail"
+            ]
+        },
+        "geoparquet-items": {
+            "href": "abfs://items/goes-glm.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "msft:partition_info": {
+                "is_partitioned": true,
+                "partition_frequency": "QS"
+            },
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
+            ]
+        }
+    }
 }

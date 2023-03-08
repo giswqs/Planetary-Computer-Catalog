@@ -47,95 +47,6 @@
         "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
         "https://stac-extensions.github.io/table/v1.2.0/schema.json"
     ],
-    "title": "GOES-R Cloud & Moisture Imagery",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/goes-cmi-thumb.png",
-            "title": "GOES CMIP",
-            "media_type": "image/png"
-        },
-        "geoparquet-items": {
-            "href": "abfs://items/goes-cmi.parquet",
-            "type": "application/x-parquet",
-            "title": "GeoParquet STAC items",
-            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
-            "msft:partition_info": {
-                "is_partitioned": true,
-                "partition_frequency": "W-MON"
-            },
-            "table:storage_options": {
-                "account_name": "pcstacitems"
-            },
-            "roles": [
-                "stac-items"
-            ]
-        },
-        "tilejson": {
-            "href": "https://planetarycomputer.microsoft.com/api/data/v1/collection/tilejson.json?collection=goes-cmi&expression=C02_2km_wm%2C0.45%2AC02_2km_wm%2B0.1%2AC03_2km_wm%2B0.45%2AC01_2km_wm%2CC01_2km_wm&nodata=-1&rescale=1%2C1000&color_formula=Gamma+RGB+2.5+Saturation+1.4+Sigmoidal+RGB+2+0.7&resampling=bilinear&format=png",
-            "type": "application/json",
-            "title": "Mosaic TileJSON with default rendering",
-            "roles": [
-                "tiles"
-            ]
-        }
-    },
-    "keywords": [
-        "GOES",
-        "NOAA",
-        "NASA",
-        "Satellite",
-        "Cloud",
-        "Moisture"
-    ],
-    "providers": [
-        {
-            "name": "NASA",
-            "roles": [
-                "producer"
-            ],
-            "url": "https://www.nasa.gov/content/goes"
-        },
-        {
-            "name": "NOAA",
-            "roles": [
-                "processor",
-                "producer",
-                "licensor"
-            ],
-            "url": "https://www.goes-r.gov/"
-        },
-        {
-            "name": "Microsoft",
-            "roles": [
-                "host",
-                "processor"
-            ],
-            "url": "https://planetarycomputer.microsoft.com"
-        }
-    ],
-    "summaries": {
-        "platform": [
-            "GOES-16",
-            "GOES-17",
-            "GOES-18"
-        ],
-        "goes:mode": [
-            "3",
-            "4",
-            "6"
-        ],
-        "instruments": [
-            "ABI"
-        ],
-        "goes:image-type": [
-            "FULL DISK",
-            "CONUS",
-            "MESOSCALE"
-        ],
-        "goes:processing-level": [
-            "L2"
-        ]
-    },
     "item_assets": {
         "C01_1km": {
             "type": "image/tiff; application=geotiff; profile=cloud-optimized",
@@ -839,6 +750,7 @@
     "msft:storage_account": "goeseuwest",
     "msft:short_description": "High temporal cadence cloud and moisture imagery over the Western Hemisphere from the Advanced Baseline Imager (ABI) instrument.",
     "msft:region": "westeurope",
+    "title": "GOES-R Cloud & Moisture Imagery",
     "extent": {
         "spatial": {
             "bbox": [
@@ -865,5 +777,93 @@
             ]
         }
     },
-    "license": "proprietary"
+    "license": "proprietary",
+    "keywords": [
+        "GOES",
+        "NOAA",
+        "NASA",
+        "Satellite",
+        "Cloud",
+        "Moisture"
+    ],
+    "providers": [
+        {
+            "name": "NASA",
+            "roles": [
+                "producer"
+            ],
+            "url": "https://www.nasa.gov/content/goes"
+        },
+        {
+            "name": "NOAA",
+            "roles": [
+                "processor",
+                "producer",
+                "licensor"
+            ],
+            "url": "https://www.goes-r.gov/"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host",
+                "processor"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        }
+    ],
+    "summaries": {
+        "platform": [
+            "GOES-16",
+            "GOES-17",
+            "GOES-18"
+        ],
+        "goes:mode": [
+            "3",
+            "4",
+            "6"
+        ],
+        "instruments": [
+            "ABI"
+        ],
+        "goes:image-type": [
+            "FULL DISK",
+            "CONUS",
+            "MESOSCALE"
+        ],
+        "goes:processing-level": [
+            "L2"
+        ]
+    },
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/goes-cmi-thumb.png",
+            "title": "GOES CMIP",
+            "media_type": "image/png"
+        },
+        "geoparquet-items": {
+            "href": "abfs://items/goes-cmi.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "msft:partition_info": {
+                "is_partitioned": true,
+                "partition_frequency": "W-MON"
+            },
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
+            ]
+        },
+        "tilejson": {
+            "href": "https://planetarycomputer.microsoft.com/api/data/v1/collection/tilejson.json?collection=goes-cmi&expression=C02_2km_wm%2C0.45%2AC02_2km_wm%2B0.1%2AC03_2km_wm%2B0.45%2AC01_2km_wm%2CC01_2km_wm&nodata=-1&rescale=1%2C1000&color_formula=Gamma+RGB+2.5+Saturation+1.4+Sigmoidal+RGB+2+0.7&resampling=bilinear&format=png",
+            "type": "application/json",
+            "title": "Mosaic TileJSON with default rendering",
+            "roles": [
+                "tiles"
+            ]
+        }
+    }
 }

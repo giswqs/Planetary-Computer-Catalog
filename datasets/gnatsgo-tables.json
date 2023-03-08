@@ -54,61 +54,6 @@
     "stac_extensions": [
         "https://stac-extensions.github.io/table/v1.2.0/schema.json"
     ],
-    "title": "gNATSGO Soil Database - Tables",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/gnatsgo-tables.png",
-            "type": "image/png",
-            "title": "gNATSGO",
-            "roles": [
-                "thumbnail"
-            ]
-        },
-        "geoparquet-items": {
-            "href": "abfs://items/gnatsgo-tables.parquet",
-            "type": "application/x-parquet",
-            "title": "GeoParquet STAC items",
-            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
-            "msft:partition_info": {
-                "is_partitioned": false
-            },
-            "table:storage_options": {
-                "account_name": "pcstacitems"
-            },
-            "roles": [
-                "stac-items"
-            ]
-        }
-    },
-    "keywords": [
-        "Soils",
-        "NATSGO",
-        "SSURGO",
-        "STATSGO2",
-        "RSS",
-        "USDA",
-        "United States"
-    ],
-    "providers": [
-        {
-            "name": "United States Department of Agriculture, Natural Resources Conservation Service",
-            "roles": [
-                "licensor",
-                "producer",
-                "processor",
-                "host"
-            ],
-            "url": "https://www.nrcs.usda.gov/"
-        },
-        {
-            "name": "Microsoft",
-            "roles": [
-                "processor",
-                "host"
-            ],
-            "url": "https://planetarycomputer.microsoft.com"
-        }
-    ],
     "item_assets": {
         "data": {
             "type": "application/x-parquet",
@@ -351,6 +296,7 @@
     "msft:storage_account": "soils",
     "msft:short_description": "The gridded National Soil Survey Geographic Database (gNATSGO) is a USDA-NRCS Soil & Plant Science Division (SPSD) composite database that provides complete coverage of the best available soils information for all areas of the United States and Island Territories.",
     "msft:region": "westeurope",
+    "title": "gNATSGO Soil Database - Tables",
     "extent": {
         "spatial": {
             "bbox": [
@@ -425,5 +371,59 @@
             ]
         }
     },
-    "license": "CC0-1.0"
+    "license": "CC0-1.0",
+    "keywords": [
+        "Soils",
+        "NATSGO",
+        "SSURGO",
+        "STATSGO2",
+        "RSS",
+        "USDA",
+        "United States"
+    ],
+    "providers": [
+        {
+            "name": "United States Department of Agriculture, Natural Resources Conservation Service",
+            "roles": [
+                "licensor",
+                "producer",
+                "processor",
+                "host"
+            ],
+            "url": "https://www.nrcs.usda.gov/"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "processor",
+                "host"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        }
+    ],
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/gnatsgo-tables.png",
+            "type": "image/png",
+            "title": "gNATSGO",
+            "roles": [
+                "thumbnail"
+            ]
+        },
+        "geoparquet-items": {
+            "href": "abfs://items/gnatsgo-tables.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "msft:partition_info": {
+                "is_partitioned": false
+            },
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
+            ]
+        }
+    }
 }

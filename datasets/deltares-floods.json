@@ -48,66 +48,6 @@
         "https://stac-extensions.github.io/datacube/v2.0.0/schema.json",
         "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json"
     ],
-    "title": "Deltares Global Flood Maps",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.azureedge.net/assets/pc_thumbnails/additional_datasets/deltares-flood.png",
-            "type": "image/png",
-            "title": "Thumbnail",
-            "roles": [
-                "thumbnail"
-            ]
-        }
-    },
-    "keywords": [
-        "Deltares",
-        "Flood",
-        "Sea level rise",
-        "Water",
-        "Global"
-    ],
-    "providers": [
-        {
-            "name": "Deltares",
-            "roles": [
-                "producer"
-            ],
-            "url": "https://www.deltares.nl/en/"
-        },
-        {
-            "name": "Microsoft",
-            "roles": [
-                "host"
-            ],
-            "url": "https://planetarycomputer.microsoft.com/"
-        }
-    ],
-    "summaries": {
-        "deltares:dem_name": [
-            "NASADEM",
-            "MERITDEM",
-            "LIDAR"
-        ],
-        "deltares:resolution": [
-            "90m",
-            "1km",
-            "5km"
-        ],
-        "deltares:return_period": [
-            0,
-            2,
-            5,
-            10,
-            25,
-            50,
-            100,
-            250
-        ],
-        "deltares:sea_level_year": [
-            2018,
-            2050
-        ]
-    },
     "item_assets": {
         "data": {
             "type": "application/x-netcdf",
@@ -257,6 +197,7 @@
     "msft:storage_account": "deltaresfloodssa",
     "msft:short_description": "Global estimates of coastal inundation under various sea level rise conditions and return periods.",
     "msft:region": "westeurope",
+    "title": "Deltares Global Flood Maps",
     "extent": {
         "spatial": {
             "bbox": [
@@ -281,5 +222,64 @@
             ]
         }
     },
-    "license": "CDLA-Permissive-1.0"
+    "license": "CDLA-Permissive-1.0",
+    "keywords": [
+        "Deltares",
+        "Flood",
+        "Sea level rise",
+        "Water",
+        "Global"
+    ],
+    "providers": [
+        {
+            "name": "Deltares",
+            "roles": [
+                "producer"
+            ],
+            "url": "https://www.deltares.nl/en/"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host"
+            ],
+            "url": "https://planetarycomputer.microsoft.com/"
+        }
+    ],
+    "summaries": {
+        "deltares:dem_name": [
+            "NASADEM",
+            "MERITDEM",
+            "LIDAR"
+        ],
+        "deltares:resolution": [
+            "90m",
+            "1km",
+            "5km"
+        ],
+        "deltares:return_period": [
+            0,
+            2,
+            5,
+            10,
+            25,
+            50,
+            100,
+            250
+        ],
+        "deltares:sea_level_year": [
+            2018,
+            2050
+        ]
+    },
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.azureedge.net/assets/pc_thumbnails/additional_datasets/deltares-flood.png",
+            "type": "image/png",
+            "title": "Thumbnail",
+            "roles": [
+                "thumbnail"
+            ]
+        }
+    }
 }

@@ -55,59 +55,7 @@
         "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
         "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
     ],
-    "title": "Monthly NOAA U.S. Climate Gridded Dataset (NClimGrid)",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/noaa-nclimgrid-monthly-thumb.png",
-            "type": "image/png",
-            "title": "Monthly NOAA NClimGrid Thumbnail",
-            "roles": [
-                "thumbnail"
-            ]
-        },
-        "geoparquet-items": {
-            "href": "abfs://items/noaa-nclimgrid-monthly.parquet",
-            "type": "application/x-parquet",
-            "title": "GeoParquet STAC items",
-            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
-            "msft:partition_info": {
-                "is_partitioned": false
-            },
-            "table:storage_options": {
-                "account_name": "pcstacitems"
-            },
-            "roles": [
-                "stac-items"
-            ]
-        }
-    },
     "sci:doi": "10.7289/V5SX6B56",
-    "keywords": [
-        "United States",
-        "NOAA",
-        "NClimGrid",
-        "Climate",
-        "Precipitation",
-        "Temperature"
-    ],
-    "providers": [
-        {
-            "name": "NOAA National Centers for Environmental Information",
-            "roles": [
-                "producer",
-                "licensor"
-            ],
-            "url": "https://www.ncei.noaa.gov/"
-        },
-        {
-            "name": "Microsoft",
-            "roles": [
-                "processor",
-                "host"
-            ],
-            "url": "https://planetarycomputer.microsoft.com"
-        }
-    ],
     "item_assets": {
         "prcp": {
             "type": "image/tiff; application=geotiff; profile=cloud-optimized",
@@ -182,6 +130,7 @@
     "msft:storage_account": "nclimgridwesteurope",
     "msft:short_description": "Gridded surface observations of monthly temperature and precipitation for the continental United States",
     "msft:region": "westeurope",
+    "title": "Monthly NOAA U.S. Climate Gridded Dataset (NClimGrid)",
     "extent": {
         "spatial": {
             "bbox": [
@@ -202,5 +151,56 @@
             ]
         }
     },
-    "license": "proprietary"
+    "license": "proprietary",
+    "keywords": [
+        "United States",
+        "NOAA",
+        "NClimGrid",
+        "Climate",
+        "Precipitation",
+        "Temperature"
+    ],
+    "providers": [
+        {
+            "name": "NOAA National Centers for Environmental Information",
+            "roles": [
+                "producer",
+                "licensor"
+            ],
+            "url": "https://www.ncei.noaa.gov/"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "processor",
+                "host"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        }
+    ],
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/noaa-nclimgrid-monthly-thumb.png",
+            "type": "image/png",
+            "title": "Monthly NOAA NClimGrid Thumbnail",
+            "roles": [
+                "thumbnail"
+            ]
+        },
+        "geoparquet-items": {
+            "href": "abfs://items/noaa-nclimgrid-monthly.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "msft:partition_info": {
+                "is_partitioned": false
+            },
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
+            ]
+        }
+    }
 }

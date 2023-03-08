@@ -79,95 +79,7 @@
         "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
         "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json"
     ],
-    "title": "ESA Climate Change Initiative Land Cover Maps (Cloud Optimized GeoTIFF)",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/esa-cci-lc-thumb.png",
-            "type": "image/png",
-            "title": "ESA CCI Land Cover COGs Thumbnail",
-            "roles": [
-                "thumbnail"
-            ]
-        },
-        "geoparquet-items": {
-            "href": "abfs://items/esa-cci-lc.parquet",
-            "type": "application/x-parquet",
-            "title": "GeoParquet STAC items",
-            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
-            "msft:partition_info": {
-                "is_partitioned": false
-            },
-            "table:storage_options": {
-                "account_name": "pcstacitems"
-            },
-            "roles": [
-                "stac-items"
-            ]
-        }
-    },
     "sci:doi": "10.24381/cds.006f2c9a",
-    "keywords": [
-        "Land Cover",
-        "ESA",
-        "CCI",
-        "Global"
-    ],
-    "providers": [
-        {
-            "name": "VITO",
-            "description": "Provides the PROBA-V source data (for v2.0).",
-            "roles": [
-                "licensor"
-            ],
-            "url": "https://vito.be"
-        },
-        {
-            "name": "UCLouvain",
-            "description": "UCLouvain produces the dataset (v2.1) for the ESA Climate Change Initiative.",
-            "roles": [
-                "producer"
-            ],
-            "url": "https://uclouvain.be"
-        },
-        {
-            "name": "Brockmann Consult",
-            "description": "Brockmann Consult is responsible for the required pre-processing and the distribution of the dataset (v2.1).",
-            "roles": [
-                "processor"
-            ],
-            "url": "https://brockmann-consult.de"
-        },
-        {
-            "name": "ESA Climate Change Initiative",
-            "description": "The ESA Climate Change Initiative (CCI) is leading the product creation.",
-            "roles": [
-                "licensor"
-            ],
-            "url": "http://esa-landcover-cci.org"
-        },
-        {
-            "name": "Copernicus",
-            "description": "Hosts the data on the Copernicus Climate Data Store (CDS).",
-            "roles": [
-                "licensor"
-            ],
-            "url": "https://copernicus.eu"
-        },
-        {
-            "name": "Microsoft",
-            "roles": [
-                "processor",
-                "host"
-            ],
-            "url": "https://planetarycomputer.microsoft.com"
-        }
-    ],
-    "summaries": {
-        "esa_cci_lc:version": [
-            "2.0.7cds",
-            "2.1.1"
-        ]
-    },
     "item_assets": {
         "lccs_class": {
             "type": "image/tiff; application=geotiff; profile=cloud-optimized",
@@ -543,6 +455,7 @@
     "msft:storage_account": "landcoverdata",
     "msft:short_description": "Tiled ESA CCI global land cover maps in COG format",
     "msft:region": "westeurope",
+    "title": "ESA Climate Change Initiative Land Cover Maps (Cloud Optimized GeoTIFF)",
     "extent": {
         "spatial": {
             "bbox": [
@@ -563,5 +476,92 @@
             ]
         }
     },
-    "license": "proprietary"
+    "license": "proprietary",
+    "keywords": [
+        "Land Cover",
+        "ESA",
+        "CCI",
+        "Global"
+    ],
+    "providers": [
+        {
+            "name": "VITO",
+            "description": "Provides the PROBA-V source data (for v2.0).",
+            "roles": [
+                "licensor"
+            ],
+            "url": "https://vito.be"
+        },
+        {
+            "name": "UCLouvain",
+            "description": "UCLouvain produces the dataset (v2.1) for the ESA Climate Change Initiative.",
+            "roles": [
+                "producer"
+            ],
+            "url": "https://uclouvain.be"
+        },
+        {
+            "name": "Brockmann Consult",
+            "description": "Brockmann Consult is responsible for the required pre-processing and the distribution of the dataset (v2.1).",
+            "roles": [
+                "processor"
+            ],
+            "url": "https://brockmann-consult.de"
+        },
+        {
+            "name": "ESA Climate Change Initiative",
+            "description": "The ESA Climate Change Initiative (CCI) is leading the product creation.",
+            "roles": [
+                "licensor"
+            ],
+            "url": "http://esa-landcover-cci.org"
+        },
+        {
+            "name": "Copernicus",
+            "description": "Hosts the data on the Copernicus Climate Data Store (CDS).",
+            "roles": [
+                "licensor"
+            ],
+            "url": "https://copernicus.eu"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "processor",
+                "host"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        }
+    ],
+    "summaries": {
+        "esa_cci_lc:version": [
+            "2.0.7cds",
+            "2.1.1"
+        ]
+    },
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/esa-cci-lc-thumb.png",
+            "type": "image/png",
+            "title": "ESA CCI Land Cover COGs Thumbnail",
+            "roles": [
+                "thumbnail"
+            ]
+        },
+        "geoparquet-items": {
+            "href": "abfs://items/esa-cci-lc.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "msft:partition_info": {
+                "is_partitioned": false
+            },
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
+            ]
+        }
+    }
 }

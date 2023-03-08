@@ -42,61 +42,6 @@
         "https://stac-extensions.github.io/raster/v1.1.0/schema.json",
         "https://stac-extensions.github.io/table/v1.2.0/schema.json"
     ],
-    "title": "Chloris Biomass",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/chloris-biomass.jpg",
-            "type": "image/jpg",
-            "title": "Chloris Biomass",
-            "roles": [
-                "thumbnail"
-            ]
-        },
-        "geoparquet-items": {
-            "href": "abfs://items/chloris-biomass.parquet",
-            "type": "application/x-parquet",
-            "title": "GeoParquet STAC items",
-            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
-            "msft:partition_info": {
-                "is_partitioned": false
-            },
-            "table:storage_options": {
-                "account_name": "pcstacitems"
-            },
-            "roles": [
-                "stac-items"
-            ]
-        }
-    },
-    "keywords": [
-        "Chloris",
-        "Biomass",
-        "MODIS",
-        "Carbon"
-    ],
-    "providers": [
-        {
-            "name": "Chloris",
-            "roles": [
-                "producer",
-                "licensor"
-            ],
-            "url": "http://chloris.earth/"
-        },
-        {
-            "name": "Microsoft",
-            "roles": [
-                "host",
-                "processor"
-            ],
-            "url": "https://planetarycomputer.microsoft.com"
-        }
-    ],
-    "summaries": {
-        "gsd": [
-            4633
-        ]
-    },
     "item_assets": {
         "biomass": {
             "type": "image/tiff; application=geotiff; profile=cloud-optimized",
@@ -159,6 +104,7 @@
     "msft:storage_account": "ai4edataeuwest",
     "msft:short_description": "The Chloris Global Biomass 2003 - 2019 dataset provides estimates of stock and change in aboveground biomass for Earth's terrestrial woody vegetation ecosystems during the period 2003 - 2019, at annual time steps. The global dataset has a circa 4.6 km spatial resolution.",
     "msft:region": "westeurope",
+    "title": "Chloris Biomass",
     "extent": {
         "spatial": {
             "bbox": [
@@ -179,5 +125,59 @@
             ]
         }
     },
-    "license": "CC-BY-NC-SA-4.0"
+    "license": "CC-BY-NC-SA-4.0",
+    "keywords": [
+        "Chloris",
+        "Biomass",
+        "MODIS",
+        "Carbon"
+    ],
+    "providers": [
+        {
+            "name": "Chloris",
+            "roles": [
+                "producer",
+                "licensor"
+            ],
+            "url": "http://chloris.earth/"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host",
+                "processor"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        }
+    ],
+    "summaries": {
+        "gsd": [
+            4633
+        ]
+    },
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/chloris-biomass.jpg",
+            "type": "image/jpg",
+            "title": "Chloris Biomass",
+            "roles": [
+                "thumbnail"
+            ]
+        },
+        "geoparquet-items": {
+            "href": "abfs://items/chloris-biomass.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "msft:partition_info": {
+                "is_partitioned": false
+            },
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
+            ]
+        }
+    }
 }

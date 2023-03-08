@@ -47,69 +47,7 @@
         "https://stac-extensions.github.io/file/v2.1.0/schema.json",
         "https://stac-extensions.github.io/table/v1.2.0/schema.json"
     ],
-    "title": "JRC Global Surface Water",
-    "assets": {
-        "guide": {
-            "href": "https://storage.cloud.google.com/global-surface-water/downloads_ancillary/DataUsersGuidev2020.pdf",
-            "type": "application/pdf",
-            "title": "Users Guide",
-            "description": "Data users guide and description of the JRC GSW datasets",
-            "roles": [
-                "metadata"
-            ]
-        },
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/jrc-gsw.png",
-            "title": "European Commission Joint Research Centre - Global Surface Water",
-            "media_type": "image/png"
-        },
-        "geoparquet-items": {
-            "href": "abfs://items/jrc-gsw.parquet",
-            "type": "application/x-parquet",
-            "title": "GeoParquet STAC items",
-            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
-            "msft:partition_info": {
-                "is_partitioned": false
-            },
-            "table:storage_options": {
-                "account_name": "pcstacitems"
-            },
-            "roles": [
-                "stac-items"
-            ]
-        }
-    },
     "sci:doi": "10.1038/nature20584",
-    "keywords": [
-        "Global",
-        "Water",
-        "Landsat"
-    ],
-    "providers": [
-        {
-            "name": "European Commission Joint Research Centre",
-            "roles": [
-                "producer",
-                "processor"
-            ],
-            "url": "https://global-surface-water.appspot.com/"
-        },
-        {
-            "name": "Google",
-            "roles": [
-                "producer"
-            ],
-            "url": "https://developers.google.com/earth-engine/datasets/tags/jrc"
-        },
-        {
-            "name": "Microsoft",
-            "roles": [
-                "processor",
-                "host"
-            ],
-            "url": "https://planetarycomputer.microsoft.com"
-        }
-    ],
     "item_assets": {
         "change": {
             "type": "image/tiff; application=geotiff; profile=cloud-optimized",
@@ -241,6 +179,7 @@
     "msft:storage_account": "ai4edataeuwest",
     "msft:short_description": "Global surface water distribution and dynamics from 1984 to 2020",
     "msft:region": "westeurope",
+    "title": "JRC Global Surface Water",
     "extent": {
         "spatial": {
             "bbox": [
@@ -261,5 +200,66 @@
             ]
         }
     },
-    "license": "proprietary"
+    "license": "proprietary",
+    "keywords": [
+        "Global",
+        "Water",
+        "Landsat"
+    ],
+    "providers": [
+        {
+            "name": "European Commission Joint Research Centre",
+            "roles": [
+                "producer",
+                "processor"
+            ],
+            "url": "https://global-surface-water.appspot.com/"
+        },
+        {
+            "name": "Google",
+            "roles": [
+                "producer"
+            ],
+            "url": "https://developers.google.com/earth-engine/datasets/tags/jrc"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "processor",
+                "host"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        }
+    ],
+    "assets": {
+        "guide": {
+            "href": "https://storage.cloud.google.com/global-surface-water/downloads_ancillary/DataUsersGuidev2020.pdf",
+            "type": "application/pdf",
+            "title": "Users Guide",
+            "description": "Data users guide and description of the JRC GSW datasets",
+            "roles": [
+                "metadata"
+            ]
+        },
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/jrc-gsw.png",
+            "title": "European Commission Joint Research Centre - Global Surface Water",
+            "media_type": "image/png"
+        },
+        "geoparquet-items": {
+            "href": "abfs://items/jrc-gsw.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "msft:partition_info": {
+                "is_partitioned": false
+            },
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
+            ]
+        }
+    }
 }

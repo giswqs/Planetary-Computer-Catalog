@@ -68,70 +68,6 @@
         "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
         "https://stac-extensions.github.io/table/v1.2.0/schema.json"
     ],
-    "title": "MODIS Land Surface Temperature/Emissivity 8-Day",
-    "assets": {
-        "thumbnail": {
-            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/modis-11A2-061.png",
-            "type": "image/png",
-            "title": "MODIS Land Surface Temperature/Emissivity 8-Day thumbnail",
-            "roles": [
-                "thumbnail"
-            ]
-        },
-        "geoparquet-items": {
-            "href": "abfs://items/modis-11A2-061.parquet",
-            "type": "application/x-parquet",
-            "title": "GeoParquet STAC items",
-            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
-            "msft:partition_info": {
-                "is_partitioned": true,
-                "partition_frequency": "MS"
-            },
-            "table:storage_options": {
-                "account_name": "pcstacitems"
-            },
-            "roles": [
-                "stac-items"
-            ]
-        }
-    },
-    "keywords": [
-        "NASA",
-        "MODIS",
-        "Satellite",
-        "Global",
-        "Temperature",
-        "MOD11A2",
-        "MYD11A2"
-    ],
-    "providers": [
-        {
-            "name": "NASA LP DAAC at the USGS EROS Center",
-            "roles": [
-                "producer",
-                "licensor",
-                "processor"
-            ],
-            "url": "https://lpdaac.usgs.gov/"
-        },
-        {
-            "name": "Microsoft",
-            "roles": [
-                "host",
-                "processor"
-            ],
-            "url": "https://planetarycomputer.microsoft.com"
-        }
-    ],
-    "summaries": {
-        "platform": [
-            "aqua",
-            "terra"
-        ],
-        "instruments": [
-            "modis"
-        ]
-    },
     "item_assets": {
         "hdf": {
             "type": "application/x-hdf",
@@ -333,6 +269,7 @@
     "msft:storage_account": "modiseuwest",
     "msft:short_description": "MODIS Land Surface Temperature/Emissivity 8-Day",
     "msft:region": "westeurope",
+    "title": "MODIS Land Surface Temperature/Emissivity 8-Day",
     "extent": {
         "spatial": {
             "bbox": [
@@ -353,5 +290,68 @@
             ]
         }
     },
-    "license": "proprietary"
+    "license": "proprietary",
+    "keywords": [
+        "NASA",
+        "MODIS",
+        "Satellite",
+        "Global",
+        "Temperature",
+        "MOD11A2",
+        "MYD11A2"
+    ],
+    "providers": [
+        {
+            "name": "NASA LP DAAC at the USGS EROS Center",
+            "roles": [
+                "producer",
+                "licensor",
+                "processor"
+            ],
+            "url": "https://lpdaac.usgs.gov/"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host",
+                "processor"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        }
+    ],
+    "summaries": {
+        "platform": [
+            "aqua",
+            "terra"
+        ],
+        "instruments": [
+            "modis"
+        ]
+    },
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/modis-11A2-061.png",
+            "type": "image/png",
+            "title": "MODIS Land Surface Temperature/Emissivity 8-Day thumbnail",
+            "roles": [
+                "thumbnail"
+            ]
+        },
+        "geoparquet-items": {
+            "href": "abfs://items/modis-11A2-061.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "msft:partition_info": {
+                "is_partitioned": true,
+                "partition_frequency": "MS"
+            },
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
+            ]
+        }
+    }
 }
