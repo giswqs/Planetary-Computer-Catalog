@@ -1,0 +1,1039 @@
+{
+    "type": "Collection",
+    "id": "sentinel-3-synergy-syn-l2-netcdf",
+    "stac_version": "1.0.0",
+    "description": "This Collection provides the Sentinel-3 [Synergy Level-2 Land Surface Reflectance and Aerosol](https://sentinels.copernicus.eu/web/sentinel/user-guides/sentinel-3-synergy/product-types/level-2-syn) product, which contains data on Surface Directional Reflectance, Aerosol Optical Thickness, and an Angstrom coefficient estimate over land.\n\n## Data Files\n\nIndividual NetCDF files for the following variables:\n\n- Surface Directional Reflectance (SDR) with their associated error estimates for the sun-reflective [SLSTR](https://sentinels.copernicus.eu/web/sentinel/user-guides/sentinel-3-slstr) channels (S1 to S6 for both nadir and oblique views, except S4) and for all [OLCI](https://sentinels.copernicus.eu/web/sentinel/user-guides/sentinel-3-olci) channels, except for the oxygen absorption bands Oa13, Oa14, Oa15, and the water vapor bands Oa19 and Oa20.\n- Aerosol optical thickness at 550nm with error estimates.\n- Angstrom coefficient at 550nm.\n\nMore information about the product and data processing can be found in the [User Guide](https://sentinels.copernicus.eu/web/sentinel/user-guides/sentinel-3-synergy/product-types/level-2-syn) and [Technical Guide](https://sentinel.esa.int/web/sentinel/technical-guides/sentinel-3-synergy/level-2/syn-level-2-product).\n\nThis Collection contains Level-2 data in NetCDF files from September 2018 to present.\n",
+    "links": [
+        {
+            "rel": "items",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/sentinel-3-synergy-syn-l2-netcdf/items",
+            "type": "application/geo+json"
+        },
+        {
+            "rel": "parent",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/",
+            "type": "application/json"
+        },
+        {
+            "rel": "root",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1",
+            "type": "application/json",
+            "title": "Microsoft Planetary Computer STAC API"
+        },
+        {
+            "rel": "self",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/sentinel-3-synergy-syn-l2-netcdf",
+            "type": "application/json"
+        },
+        {
+            "rel": "license",
+            "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice",
+            "type": "application/pdf",
+            "title": "Sentinel Data License"
+        },
+        {
+            "rel": "about",
+            "href": "https://sentinels.copernicus.eu/web/sentinel/user-guides/sentinel-3-synergy/product-types/level-2-syn",
+            "type": "text/html",
+            "title": "Sentinel-3 Land Surface Reflectance and Aerosol Product User Guide"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://planetarycomputer.microsoft.com/dataset/sentinel-3-synergy-syn-l2-netcdf",
+            "type": "text/html",
+            "title": "Human readable dataset overview and reference"
+        }
+    ],
+    "stac_extensions": [
+        "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
+        "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+        "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
+        "https://stac-extensions.github.io/eo/v1.1.0/schema.json"
+    ],
+    "item_assets": {
+        "time": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "description": "Time stamps annotation"
+        },
+        "syn-amin": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "description": "L2 Aerosol model index number data"
+        },
+        "syn-flags": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "description": "Classification and quality Flags associated with OLCI, SLSTR and SYNERGY products"
+        },
+        "syn-ato550": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "eo:bands": [
+                {
+                    "name": "S1",
+                    "description": "Band 1 - Cloud screening, vegetation monitoring, aerosol",
+                    "center_wavelength": 0.55427,
+                    "full_width_half_max": 0.01926
+                },
+                {
+                    "name": "S2",
+                    "description": "Band 2 - NDVI, vegetation monitoring, aerosol",
+                    "center_wavelength": 0.65947,
+                    "full_width_half_max": 0.01925
+                },
+                {
+                    "name": "S3",
+                    "description": "Band 3 - NDVI, cloud flagging, pixel co-registration",
+                    "center_wavelength": 0.868,
+                    "full_width_half_max": 0.0206
+                },
+                {
+                    "name": "S5",
+                    "description": "Band 5 - Cloud clearing, ice, snow, vegetation monitoring",
+                    "center_wavelength": 1.6134,
+                    "full_width_half_max": 0.06068
+                },
+                {
+                    "name": "S6",
+                    "description": "Band 6 - Vegetation state and cloud clearing",
+                    "center_wavelength": 2.2557,
+                    "full_width_half_max": 0.05015
+                },
+                {
+                    "name": "Oa01",
+                    "description": "Band 1 - Aerosol correction, improved water constituent retrieval",
+                    "center_wavelength": 0.4,
+                    "full_width_half_max": 0.015
+                },
+                {
+                    "name": "Oa02",
+                    "description": "Band 2 - Yellow substance and detrital pigments (turbidity)",
+                    "center_wavelength": 0.4125,
+                    "full_width_half_max": 0.01
+                },
+                {
+                    "name": "Oa03",
+                    "description": "Band 3 - Chlorophyll absorption maximum, biogeochemistry, vegetation",
+                    "center_wavelength": 0.4425,
+                    "full_width_half_max": 0.01
+                },
+                {
+                    "name": "Oa04",
+                    "description": "Band 4 - Chlorophyll",
+                    "center_wavelength": 0.49,
+                    "full_width_half_max": 0.01
+                },
+                {
+                    "name": "Oa05",
+                    "description": "Band 5 - Chlorophyll, sediment, turbidity, red tide",
+                    "center_wavelength": 0.51,
+                    "full_width_half_max": 0.01
+                },
+                {
+                    "name": "Oa06",
+                    "description": "Band 6 - Chlorophyll reference (minimum)",
+                    "center_wavelength": 0.56,
+                    "full_width_half_max": 0.01
+                },
+                {
+                    "name": "Oa07",
+                    "description": "Band 7 - Sediment loading",
+                    "center_wavelength": 0.62,
+                    "full_width_half_max": 0.01
+                },
+                {
+                    "name": "Oa08",
+                    "description": "Band 8 - 2nd Chlorophyll absorption maximum, sediment, yellow substance / vegetation",
+                    "center_wavelength": 0.665,
+                    "full_width_half_max": 0.01
+                },
+                {
+                    "name": "Oa09",
+                    "description": "Band 9 - Improved fluorescence retrieval",
+                    "center_wavelength": 0.67375,
+                    "full_width_half_max": 0.0075
+                },
+                {
+                    "name": "Oa10",
+                    "description": "Band 10 - Chlorophyll fluorescence peak, red edge",
+                    "center_wavelength": 0.68125,
+                    "full_width_half_max": 0.0075
+                },
+                {
+                    "name": "Oa11",
+                    "description": "Band 11 - Chlorophyll fluorescence baseline, red edge transition",
+                    "center_wavelength": 0.70875,
+                    "full_width_half_max": 0.01
+                },
+                {
+                    "name": "Oa12",
+                    "description": "Band 12 - O2 absorption / clouds, vegetation",
+                    "center_wavelength": 0.75375,
+                    "full_width_half_max": 0.0075
+                },
+                {
+                    "name": "Oa16",
+                    "description": "Band 16 - Atmospheric / aerosol correction",
+                    "center_wavelength": 0.77875,
+                    "full_width_half_max": 0.015
+                },
+                {
+                    "name": "Oa17",
+                    "description": "Band 17 - Atmospheric / aerosol correction, clouds, pixel co-registration",
+                    "center_wavelength": 0.865,
+                    "full_width_half_max": 0.02
+                },
+                {
+                    "name": "Oa18",
+                    "description": "Band 18 - Water vapour absorption reference. Common reference band with SLSTR. Vegetation monitoring",
+                    "center_wavelength": 0.885,
+                    "full_width_half_max": 0.01
+                },
+                {
+                    "name": "Oa21",
+                    "description": "Band 21 - Water vapour absorption, atmospheric / aerosol correction",
+                    "center_wavelength": 1.02,
+                    "full_width_half_max": 0.04
+                }
+            ],
+            "description": "Aerosol Optical Thickness Data Set"
+        },
+        "geolocation": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "description": "High resolution georeferencing data"
+        },
+        "safe-manifest": {
+            "type": "application/xml",
+            "roles": [
+                "metadata"
+            ],
+            "description": "SAFE product manifest"
+        },
+        "tiepoints-olci": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "description": "Low resolution georeferencing data and Sun and View angles associated with OLCI products"
+        },
+        "tiepoints-meteo": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "description": "ECMWF meteorology data"
+        },
+        "tiepoints-slstr-n": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "description": "Low resolution georeferencing data and Sun and View angles associated with SLSTR nadir view products"
+        },
+        "tiepoints-slstr-o": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "description": "Low resolution georeferencing data and Sun and View angles associated with SLSTR oblique view products"
+        },
+        "syn-angstrom-exp550": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "eo:bands": [
+                {
+                    "name": "S1",
+                    "description": "Band 1 - Cloud screening, vegetation monitoring, aerosol",
+                    "center_wavelength": 0.55427,
+                    "full_width_half_max": 0.01926
+                },
+                {
+                    "name": "S2",
+                    "description": "Band 2 - NDVI, vegetation monitoring, aerosol",
+                    "center_wavelength": 0.65947,
+                    "full_width_half_max": 0.01925
+                },
+                {
+                    "name": "S3",
+                    "description": "Band 3 - NDVI, cloud flagging, pixel co-registration",
+                    "center_wavelength": 0.868,
+                    "full_width_half_max": 0.0206
+                },
+                {
+                    "name": "S5",
+                    "description": "Band 5 - Cloud clearing, ice, snow, vegetation monitoring",
+                    "center_wavelength": 1.6134,
+                    "full_width_half_max": 0.06068
+                },
+                {
+                    "name": "S6",
+                    "description": "Band 6 - Vegetation state and cloud clearing",
+                    "center_wavelength": 2.2557,
+                    "full_width_half_max": 0.05015
+                },
+                {
+                    "name": "Oa01",
+                    "description": "Band 1 - Aerosol correction, improved water constituent retrieval",
+                    "center_wavelength": 0.4,
+                    "full_width_half_max": 0.015
+                },
+                {
+                    "name": "Oa02",
+                    "description": "Band 2 - Yellow substance and detrital pigments (turbidity)",
+                    "center_wavelength": 0.4125,
+                    "full_width_half_max": 0.01
+                },
+                {
+                    "name": "Oa03",
+                    "description": "Band 3 - Chlorophyll absorption maximum, biogeochemistry, vegetation",
+                    "center_wavelength": 0.4425,
+                    "full_width_half_max": 0.01
+                },
+                {
+                    "name": "Oa04",
+                    "description": "Band 4 - Chlorophyll",
+                    "center_wavelength": 0.49,
+                    "full_width_half_max": 0.01
+                },
+                {
+                    "name": "Oa05",
+                    "description": "Band 5 - Chlorophyll, sediment, turbidity, red tide",
+                    "center_wavelength": 0.51,
+                    "full_width_half_max": 0.01
+                },
+                {
+                    "name": "Oa06",
+                    "description": "Band 6 - Chlorophyll reference (minimum)",
+                    "center_wavelength": 0.56,
+                    "full_width_half_max": 0.01
+                },
+                {
+                    "name": "Oa07",
+                    "description": "Band 7 - Sediment loading",
+                    "center_wavelength": 0.62,
+                    "full_width_half_max": 0.01
+                },
+                {
+                    "name": "Oa08",
+                    "description": "Band 8 - 2nd Chlorophyll absorption maximum, sediment, yellow substance / vegetation",
+                    "center_wavelength": 0.665,
+                    "full_width_half_max": 0.01
+                },
+                {
+                    "name": "Oa09",
+                    "description": "Band 9 - Improved fluorescence retrieval",
+                    "center_wavelength": 0.67375,
+                    "full_width_half_max": 0.0075
+                },
+                {
+                    "name": "Oa10",
+                    "description": "Band 10 - Chlorophyll fluorescence peak, red edge",
+                    "center_wavelength": 0.68125,
+                    "full_width_half_max": 0.0075
+                },
+                {
+                    "name": "Oa11",
+                    "description": "Band 11 - Chlorophyll fluorescence baseline, red edge transition",
+                    "center_wavelength": 0.70875,
+                    "full_width_half_max": 0.01
+                },
+                {
+                    "name": "Oa12",
+                    "description": "Band 12 - O2 absorption / clouds, vegetation",
+                    "center_wavelength": 0.75375,
+                    "full_width_half_max": 0.0075
+                },
+                {
+                    "name": "Oa16",
+                    "description": "Band 16 - Atmospheric / aerosol correction",
+                    "center_wavelength": 0.77875,
+                    "full_width_half_max": 0.015
+                },
+                {
+                    "name": "Oa17",
+                    "description": "Band 17 - Atmospheric / aerosol correction, clouds, pixel co-registration",
+                    "center_wavelength": 0.865,
+                    "full_width_half_max": 0.02
+                },
+                {
+                    "name": "Oa18",
+                    "description": "Band 18 - Water vapour absorption reference. Common reference band with SLSTR. Vegetation monitoring",
+                    "center_wavelength": 0.885,
+                    "full_width_half_max": 0.01
+                },
+                {
+                    "name": "Oa21",
+                    "description": "Band 21 - Water vapour absorption, atmospheric / aerosol correction",
+                    "center_wavelength": 1.02,
+                    "full_width_half_max": 0.04
+                }
+            ],
+            "description": "Aerosol Angstrom Exponent Data Set"
+        },
+        "syn-s1n-reflectance": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "eo:bands": [
+                {
+                    "name": "SYN17",
+                    "description": "SLSTR nadir channel S1",
+                    "center_wavelength": 0.555,
+                    "full_width_half_max": 0.02
+                }
+            ],
+            "description": "Surface directional reflectance associated with SLSTR channel 01 acquired in nadir view"
+        },
+        "syn-s1o-reflectance": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "eo:bands": [
+                {
+                    "name": "SYN22",
+                    "description": "SLSTR oblique channel S1",
+                    "center_wavelength": 0.555,
+                    "full_width_half_max": 0.02
+                }
+            ],
+            "description": "Surface directional reflectance associated with SLSTR channel 01 acquired in oblique view"
+        },
+        "syn-s2n-reflectance": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "eo:bands": [
+                {
+                    "name": "SYN18",
+                    "description": "SLSTR nadir channel S2",
+                    "center_wavelength": 0.659,
+                    "full_width_half_max": 0.02
+                }
+            ],
+            "description": "Surface directional reflectance associated with SLSTR channel 02 acquired in nadir view"
+        },
+        "syn-s2o-reflectance": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "eo:bands": [
+                {
+                    "name": "SYN23",
+                    "description": "SLSTR oblique channel S2",
+                    "center_wavelength": 0.659,
+                    "full_width_half_max": 0.02
+                }
+            ],
+            "description": "Surface directional reflectance associated with SLSTR channel 02 acquired in oblique view"
+        },
+        "syn-s3n-reflectance": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "eo:bands": [
+                {
+                    "name": "SYN19",
+                    "description": "SLSTR nadir channel S3",
+                    "center_wavelength": 0.865,
+                    "full_width_half_max": 0.02
+                }
+            ],
+            "description": "Surface directional reflectance associated with SLSTR channel 03 acquired in nadir view"
+        },
+        "syn-s3o-reflectance": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "eo:bands": [
+                {
+                    "name": "SYN24",
+                    "description": "SLSTR oblique channel S3",
+                    "center_wavelength": 0.865,
+                    "full_width_half_max": 0.02
+                }
+            ],
+            "description": "Surface directional reflectance associated with SLSTR channel 03 acquired in oblique view"
+        },
+        "syn-s5n-reflectance": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "eo:bands": [
+                {
+                    "name": "SYN20",
+                    "description": "SLSTR nadir channel S5",
+                    "center_wavelength": 1.61,
+                    "full_width_half_max": 0.06
+                }
+            ],
+            "description": "Surface directional reflectance associated with SLSTR channel 05 acquired in nadir view"
+        },
+        "syn-s5o-reflectance": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "eo:bands": [
+                {
+                    "name": "SYN25",
+                    "description": "SLSTR oblique channel S5",
+                    "center_wavelength": 1.61,
+                    "full_width_half_max": 0.06
+                }
+            ],
+            "description": "Surface directional reflectance associated with SLSTR channel 05 acquired in oblique view"
+        },
+        "syn-s6n-reflectance": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "eo:bands": [
+                {
+                    "name": "SYN21",
+                    "description": "SLSTR nadir channel S6",
+                    "center_wavelength": 2.25,
+                    "full_width_half_max": 0.05
+                }
+            ],
+            "description": "Surface directional reflectance associated with SLSTR channel 06 acquired in nadir view"
+        },
+        "syn-s6o-reflectance": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "eo:bands": [
+                {
+                    "name": "SYN26",
+                    "description": "SLSTR oblique channel S6",
+                    "center_wavelength": 2.25,
+                    "full_width_half_max": 0.05
+                }
+            ],
+            "description": "Surface directional reflectance associated with SLSTR channel 06 acquired in oblique view"
+        },
+        "syn-oa01-reflectance": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "eo:bands": [
+                {
+                    "name": "SYN01",
+                    "description": "OLCI channel Oa01",
+                    "center_wavelength": 0.4,
+                    "full_width_half_max": 0.015
+                }
+            ],
+            "description": "Surface directional reflectance associated with OLCI channel 01"
+        },
+        "syn-oa02-reflectance": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "eo:bands": [
+                {
+                    "name": "SYN02",
+                    "description": "OLCI channel Oa02",
+                    "center_wavelength": 0.4125,
+                    "full_width_half_max": 0.01
+                }
+            ],
+            "description": "Surface directional reflectance associated with OLCI channel 02"
+        },
+        "syn-oa03-reflectance": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "eo:bands": [
+                {
+                    "name": "SYN03",
+                    "description": "OLCI channel Oa03",
+                    "center_wavelength": 0.4425,
+                    "full_width_half_max": 0.01
+                }
+            ],
+            "description": "Surface directional reflectance associated with OLCI channel 03"
+        },
+        "syn-oa04-reflectance": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "eo:bands": [
+                {
+                    "name": "SYN04",
+                    "description": "OLCI channel Oa04",
+                    "center_wavelength": 0.49,
+                    "full_width_half_max": 0.01
+                }
+            ],
+            "description": "Surface directional reflectance associated with OLCI channel 04"
+        },
+        "syn-oa05-reflectance": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "eo:bands": [
+                {
+                    "name": "SYN05",
+                    "description": "OLCI channel Oa05",
+                    "center_wavelength": 0.51,
+                    "full_width_half_max": 0.01
+                }
+            ],
+            "description": "Surface directional reflectance associated with OLCI channel 05"
+        },
+        "syn-oa06-reflectance": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "eo:bands": [
+                {
+                    "name": "SYN06",
+                    "description": "OLCI channel Oa06",
+                    "center_wavelength": 0.56,
+                    "full_width_half_max": 0.01
+                }
+            ],
+            "description": "Surface directional reflectance associated with OLCI channel 06"
+        },
+        "syn-oa07-reflectance": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "eo:bands": [
+                {
+                    "name": "SYN07",
+                    "description": "OLCI channel Oa07",
+                    "center_wavelength": 0.62,
+                    "full_width_half_max": 0.01
+                }
+            ],
+            "description": "Surface directional reflectance associated with OLCI channel 07"
+        },
+        "syn-oa08-reflectance": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "eo:bands": [
+                {
+                    "name": "SYN08",
+                    "description": "OLCI channel Oa08",
+                    "center_wavelength": 0.665,
+                    "full_width_half_max": 0.01
+                }
+            ],
+            "description": "Surface directional reflectance associated with OLCI channel 08"
+        },
+        "syn-oa09-reflectance": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "eo:bands": [
+                {
+                    "name": "SYN09",
+                    "description": "OLCI channel Oa09",
+                    "center_wavelength": 0.67375,
+                    "full_width_half_max": 0.0075
+                }
+            ],
+            "description": "Surface directional reflectance associated with OLCI channel 09"
+        },
+        "syn-oa10-reflectance": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "eo:bands": [
+                {
+                    "name": "SYN10",
+                    "description": "OLCI channel Oa10",
+                    "center_wavelength": 0.68125,
+                    "full_width_half_max": 0.0075
+                }
+            ],
+            "description": "Surface directional reflectance associated with OLCI channel 10"
+        },
+        "syn-oa11-reflectance": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "eo:bands": [
+                {
+                    "name": "SYN11",
+                    "description": "OLCI channel Oa11",
+                    "center_wavelength": 0.70875,
+                    "full_width_half_max": 0.01
+                }
+            ],
+            "description": "Surface directional reflectance associated with OLCI channel 11"
+        },
+        "syn-oa12-reflectance": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "eo:bands": [
+                {
+                    "name": "SYN12",
+                    "description": "OLCI channel Oa12",
+                    "center_wavelength": 0.75375,
+                    "full_width_half_max": 0.0075
+                }
+            ],
+            "description": "Surface directional reflectance associated with OLCI channel 12"
+        },
+        "syn-oa16-reflectance": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "eo:bands": [
+                {
+                    "name": "SYN13",
+                    "description": "OLCI channel Oa16",
+                    "center_wavelength": 0.7785,
+                    "full_width_half_max": 0.015
+                }
+            ],
+            "description": "Surface directional reflectance associated with OLCI channel 16"
+        },
+        "syn-oa17-reflectance": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "eo:bands": [
+                {
+                    "name": "SYN14",
+                    "description": "OLCI channel Oa17",
+                    "center_wavelength": 0.865,
+                    "full_width_half_max": 0.02
+                }
+            ],
+            "description": "Surface directional reflectance associated with OLCI channel 17"
+        },
+        "syn-oa18-reflectance": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "eo:bands": [
+                {
+                    "name": "SYN15",
+                    "description": "OLCI channel Oa18",
+                    "center_wavelength": 0.885,
+                    "full_width_half_max": 0.01
+                }
+            ],
+            "description": "Surface directional reflectance associated with OLCI channel 18"
+        },
+        "syn-oa21-reflectance": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "eo:bands": [
+                {
+                    "name": "SYN16",
+                    "description": "OLCI channel Oa21",
+                    "center_wavelength": 1.02,
+                    "full_width_half_max": 0.04
+                }
+            ],
+            "description": "Surface directional reflectance associated with OLCI channel 21"
+        },
+        "syn-sdr-removed-pixels": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "eo:bands": [
+                {
+                    "name": "S1",
+                    "description": "Band 1 - Cloud screening, vegetation monitoring, aerosol",
+                    "center_wavelength": 0.55427,
+                    "full_width_half_max": 0.01926
+                },
+                {
+                    "name": "S2",
+                    "description": "Band 2 - NDVI, vegetation monitoring, aerosol",
+                    "center_wavelength": 0.65947,
+                    "full_width_half_max": 0.01925
+                },
+                {
+                    "name": "S3",
+                    "description": "Band 3 - NDVI, cloud flagging, pixel co-registration",
+                    "center_wavelength": 0.868,
+                    "full_width_half_max": 0.0206
+                },
+                {
+                    "name": "S4",
+                    "description": "Band 4 - Cirrus detection over land",
+                    "center_wavelength": 1.3748,
+                    "full_width_half_max": 0.0208
+                },
+                {
+                    "name": "S6",
+                    "description": "Band 6 - Vegetation state and cloud clearing",
+                    "center_wavelength": 2.2557,
+                    "full_width_half_max": 0.05015
+                },
+                {
+                    "name": "Oa01",
+                    "description": "Band 1 - Aerosol correction, improved water constituent retrieval",
+                    "center_wavelength": 0.4,
+                    "full_width_half_max": 0.015
+                },
+                {
+                    "name": "Oa02",
+                    "description": "Band 2 - Yellow substance and detrital pigments (turbidity)",
+                    "center_wavelength": 0.4125,
+                    "full_width_half_max": 0.01
+                },
+                {
+                    "name": "Oa03",
+                    "description": "Band 3 - Chlorophyll absorption maximum, biogeochemistry, vegetation",
+                    "center_wavelength": 0.4425,
+                    "full_width_half_max": 0.01
+                },
+                {
+                    "name": "Oa04",
+                    "description": "Band 4 - Chlorophyll",
+                    "center_wavelength": 0.49,
+                    "full_width_half_max": 0.01
+                },
+                {
+                    "name": "Oa05",
+                    "description": "Band 5 - Chlorophyll, sediment, turbidity, red tide",
+                    "center_wavelength": 0.51,
+                    "full_width_half_max": 0.01
+                },
+                {
+                    "name": "Oa06",
+                    "description": "Band 6 - Chlorophyll reference (minimum)",
+                    "center_wavelength": 0.56,
+                    "full_width_half_max": 0.01
+                },
+                {
+                    "name": "Oa07",
+                    "description": "Band 7 - Sediment loading",
+                    "center_wavelength": 0.62,
+                    "full_width_half_max": 0.01
+                },
+                {
+                    "name": "Oa08",
+                    "description": "Band 8 - 2nd Chlorophyll absorption maximum, sediment, yellow substance / vegetation",
+                    "center_wavelength": 0.665,
+                    "full_width_half_max": 0.01
+                },
+                {
+                    "name": "Oa09",
+                    "description": "Band 9 - Improved fluorescence retrieval",
+                    "center_wavelength": 0.67375,
+                    "full_width_half_max": 0.0075
+                },
+                {
+                    "name": "Oa10",
+                    "description": "Band 10 - Chlorophyll fluorescence peak, red edge",
+                    "center_wavelength": 0.68125,
+                    "full_width_half_max": 0.0075
+                },
+                {
+                    "name": "Oa11",
+                    "description": "Band 11 - Chlorophyll fluorescence baseline, red edge transition",
+                    "center_wavelength": 0.70875,
+                    "full_width_half_max": 0.01
+                },
+                {
+                    "name": "Oa12",
+                    "description": "Band 12 - O2 absorption / clouds, vegetation",
+                    "center_wavelength": 0.75375,
+                    "full_width_half_max": 0.0075
+                },
+                {
+                    "name": "Oa13",
+                    "description": "Band 13 - O2 absorption / aerosol correction",
+                    "center_wavelength": 0.76125,
+                    "full_width_half_max": 0.0025
+                },
+                {
+                    "name": "Oa16",
+                    "description": "Band 16 - Atmospheric / aerosol correction",
+                    "center_wavelength": 0.77875,
+                    "full_width_half_max": 0.015
+                },
+                {
+                    "name": "Oa17",
+                    "description": "Band 17 - Atmospheric / aerosol correction, clouds, pixel co-registration",
+                    "center_wavelength": 0.865,
+                    "full_width_half_max": 0.02
+                },
+                {
+                    "name": "Oa18",
+                    "description": "Band 18 - Water vapour absorption reference. Common reference band with SLSTR. Vegetation monitoring",
+                    "center_wavelength": 0.885,
+                    "full_width_half_max": 0.01
+                },
+                {
+                    "name": "Oa19",
+                    "description": "Band 19 - Water vapour absorption, vegetation monitoring (maximum REFLECTANCE)",
+                    "center_wavelength": 0.9,
+                    "full_width_half_max": 0.01
+                },
+                {
+                    "name": "Oa21",
+                    "description": "Band 21 - Water vapour absorption, atmospheric / aerosol correction",
+                    "center_wavelength": 1.02,
+                    "full_width_half_max": 0.04
+                }
+            ],
+            "description": "Surface directional reflectance and aerosol parameters associated with removed pixel"
+        },
+        "annotations-removed-pixels": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "description": "Annotations parameters associated with removed pixel"
+        }
+    },
+    "msft:region": "westeurope",
+    "msft:group_id": "sentinel-3",
+    "msft:container": "sentinel-3",
+    "msft:storage_account": "sentinel3euwest",
+    "msft:short_description": "Sentinel-3 surface reflectance and aerosol over land (SYNERGY SYN).",
+    "title": "Sentinel-3 Land Surface Reflectance and Aerosol",
+    "extent": {
+        "spatial": {
+            "bbox": [
+                [
+                    -180,
+                    -90,
+                    180,
+                    90
+                ]
+            ]
+        },
+        "temporal": {
+            "interval": [
+                [
+                    "2018-09-22T16:51:00.001276Z",
+                    null
+                ]
+            ]
+        }
+    },
+    "license": "proprietary",
+    "keywords": [
+        "Sentinel",
+        "Copernicus",
+        "ESA",
+        "Satellite",
+        "Land",
+        "Reflectance",
+        "Aerosol"
+    ],
+    "providers": [
+        {
+            "name": "ESA",
+            "roles": [
+                "producer",
+                "processor",
+                "licensor"
+            ],
+            "url": "https://earth.esa.int/web/guest/home"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        }
+    ],
+    "summaries": {
+        "platform": [
+            "Sentinel-3A",
+            "Sentinel-3B"
+        ],
+        "instruments": [
+            "OLCI",
+            "SLSTR"
+        ],
+        "constellation": [
+            "Sentinel-3"
+        ],
+        "s3:product_name": [
+            "synergy-syn"
+        ],
+        "s3:product_type": [
+            "SY_2_SYN___"
+        ],
+        "sat:orbit_state": [
+            "ascending",
+            "descending"
+        ],
+        "s3:processing_timeliness": [
+            "NT"
+        ],
+        "sat:platform_international_designator": [
+            "2016-011A",
+            "2018-039A"
+        ]
+    },
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/sentinel-3-synergy-syn-l2-netcdf-thumb.png",
+            "title": "Sentinel-3 Land Surface Reflectance and Aerosol Thumbnail",
+            "media_type": "image/png"
+        },
+        "geoparquet-items": {
+            "href": "abfs://items/sentinel-3-synergy-syn-l2-netcdf.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC Items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "msft:partition_info": {
+                "is_partitioned": true,
+                "partition_frequency": "W"
+            },
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
+            ]
+        }
+    }
+}

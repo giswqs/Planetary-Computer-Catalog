@@ -2,7 +2,7 @@
     "type": "Collection",
     "id": "ms-buildings",
     "stac_version": "1.0.0",
-    "description": "Bing Maps is releasing open building footprints around the world. We have detected over 999 million buildings from Bing Maps imagery between 2014 and 2021 including Maxar and Airbus imagery. The data is freely available for download and use under ODbL. This dataset complements our other releases.\n\nFor more information, see the [GlobalMLBuildingFootprints](https://github.com/microsoft/GlobalMLBuildingFootprints/) repository on GitHub.\n\n## Building footprint creation\n\nThe building extraction is done in two stages:\n\n1. Semantic Segmentation \u2013 Recognizing building pixels on an aerial image using deep neural networks (DNNs)\n2. Polygonization \u2013 Converting building pixel detections into polygons\n\n**Stage 1: Semantic Segmentation**\n\n![Semantic segmentation](https://raw.githubusercontent.com/microsoft/GlobalMLBuildingFootprints/main/images/segmentation.jpg)\n\n**Stage 2: Polygonization**\n\n![Polygonization](https://github.com/microsoft/GlobalMLBuildingFootprints/raw/main/images/polygonization.jpg)\n\n## STAC metadata\n\nThis STAC collection has one STAC item per region. The `msbuildings:region` property can be used to filter items to a specific region.\n\n## Data assets\n\nThe building footprints are provided as a set of [geoparquet](https://github.com/opengeospatial/geoparquet) datasets. The data are partitioned at multiple levels. There is one [Parquet dataset](https://arrow.apache.org/docs/python/parquet.html#partitioned-datasets-multiple-files) per region. Regions are partitioned into many parquet files so that each file fits comfortably in memory.",
+    "description": "Bing Maps is releasing open building footprints around the world. We have detected over 999 million buildings from Bing Maps imagery between 2014 and 2021 including Maxar and Airbus imagery. The data is freely available for download and use under ODbL. This dataset complements our other releases.\n\nFor more information, see the [GlobalMLBuildingFootprints](https://github.com/microsoft/GlobalMLBuildingFootprints/) repository on GitHub.\n\n## Building footprint creation\n\nThe building extraction is done in two stages:\n\n1. Semantic Segmentation \u2013 Recognizing building pixels on an aerial image using deep neural networks (DNNs)\n2. Polygonization \u2013 Converting building pixel detections into polygons\n\n**Stage 1: Semantic Segmentation**\n\n![Semantic segmentation](https://raw.githubusercontent.com/microsoft/GlobalMLBuildingFootprints/main/images/segmentation.jpg)\n\n**Stage 2: Polygonization**\n\n![Polygonization](https://github.com/microsoft/GlobalMLBuildingFootprints/raw/main/images/polygonization.jpg)\n\n## Data assets\n\nThe building footprints are provided as a set of [geoparquet](https://github.com/opengeospatial/geoparquet) datasets in [Delta][delta] table format.\nThe data are partitioned by\n\n1. Region\n2. quadkey at [Bing Map Tiles][tiles] level 9\n\nEach `(Region, quadkey)` pair will have one or more geoparquet files, depending on the density of the of the buildings in that area.\n\nNote that older items in this dataset are *not* spatially partitioned. We recommend using data with a processing date\nof 2023-04-25 or newer. This processing date is part of the URL for each parquet file and is captured in the STAC metadata\nfor each item (see below).\n\n## Delta Format\n\nThe collection-level asset under the `delta` key gives you the fsspec-style URL\nto the Delta table. This can be used to efficiently query for matching partitions\nby `Region` and `quadkey`. See the notebook for an example using Python.\n\n## STAC metadata\n\nThis STAC collection has one STAC item per region. The `msbuildings:region`\nproperty can be used to filter items to a specific region, and the `msbuildings:quadkey`\nproperty can be used to filter items to a specific quadkey (though you can also search\nby the `geometry`).\n\nNote that older STAC items are not spatially partitioned. We recommend filtering on\nitems with an `msbuildings:processing-date` of `2023-04-25` or newer. See the collection\nsummary for `msbuildings:processing-date` for a list of valid values.\n\n[delta]: https://delta.io/\n[tiles]: https://learn.microsoft.com/en-us/bingmaps/articles/bing-maps-tile-system\n",
     "links": [
         {
             "rel": "items",
@@ -55,6 +55,7 @@
             }
         }
     },
+    "msft:region": "westeurope",
     "table:columns": [
         {
             "name": "geometry",
@@ -65,7 +66,6 @@
     "msft:container": "footprints",
     "msft:storage_account": "bingmlbuildings",
     "msft:short_description": "Machine learning detected buildings footprints.",
-    "msft:region": "westeurope",
     "title": "Microsoft Building Footprints",
     "extent": {
         "spatial": {
@@ -93,7 +93,8 @@
         "Buildings",
         "geoparquet",
         "Microsoft",
-        "Footprint"
+        "Footprint",
+        "Delta"
     ],
     "providers": [
         {
@@ -106,7 +107,20 @@
             "url": "https://planetarycomputer.microsoft.com"
         }
     ],
+    "summaries": {
+        "msbuildings:processing-date": [
+            "2023-04-25"
+        ]
+    },
     "assets": {
+        "delta": {
+            "href": "az://footprints/delta/2023-04-25/ml-buildings.parquet/",
+            "title": "Delta table",
+            "description": "Delta table with latest buildings footprints partitioned by Region and quadkey.",
+            "table:storage_options": {
+                "account_name": "bingmlbuildings"
+            }
+        },
         "thumbnail": {
             "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/msbuildings-thumbnail.png",
             "type": "image/png",

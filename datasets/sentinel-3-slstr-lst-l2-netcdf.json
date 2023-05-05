@@ -1,0 +1,272 @@
+{
+    "type": "Collection",
+    "id": "sentinel-3-slstr-lst-l2-netcdf",
+    "stac_version": "1.0.0",
+    "description": "This Collection provides Sentinel-3 [SLSTR Level-2 Land Surface Temperature](https://sentinel.esa.int/web/sentinel/user-guides/sentinel-3-slstr/product-types/level-2-lst) products containing data on land surface temperature measurements on a 1km grid. Radiance is measured in two channels to determine the temperature of the Earth's surface skin in the instrument field of view, where the term \"skin\" refers to the top surface of bare soil or the effective emitting temperature of vegetation canopies as viewed from above.\n\n## Data files\n\nThe dataset includes data on the primary measurement variable, land surface temperature, in a single NetCDF file, `LST_in.nc`. A second file, `LST_ancillary.nc`, contains several ancillary variables:\n\n- Normalized Difference Vegetation Index\n- Surface biome classification\n- Fractional vegetation cover\n- Total water vapor column\n\nIn addition to the primary and ancillary data files, a standard set of annotation data files provide meteorological information, geolocation and time coordinates, geometry information, and quality flags. More information about the product and data processing can be found in the [User Guide](https://sentinels.copernicus.eu/web/sentinel/user-guides/sentinel-3-slstr/product-types/level-2-lst) and [Technical Guide](https://sentinel.esa.int/web/sentinel/technical-guides/sentinel-3-slstr/level-2/lst-processing).\n\nThis Collection contains Level-2 data in NetCDF files from April 2016 to present.\n\n## STAC Item geometries\n\nThe Collection contains small \"chips\" and long \"stripes\" of data collected along the satellite direction of travel. Approximately five percent of the STAC Items describing long stripes of data contain geometries that encompass a larger area than an exact concave hull of the data extents. This may require additional filtering when searching the Collection for Items that spatially intersect an area of interest.\n",
+    "links": [
+        {
+            "rel": "items",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/sentinel-3-slstr-lst-l2-netcdf/items",
+            "type": "application/geo+json"
+        },
+        {
+            "rel": "parent",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/",
+            "type": "application/json"
+        },
+        {
+            "rel": "root",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1",
+            "type": "application/json",
+            "title": "Microsoft Planetary Computer STAC API"
+        },
+        {
+            "rel": "self",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/sentinel-3-slstr-lst-l2-netcdf",
+            "type": "application/json"
+        },
+        {
+            "rel": "license",
+            "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice",
+            "type": "application/pdf",
+            "title": "Sentinel Data License"
+        },
+        {
+            "rel": "about",
+            "href": "https://sentinel.esa.int/web/sentinel/user-guides/sentinel-3-slstr/product-types/level-2-lst",
+            "type": "text/html",
+            "title": "Sentinel-3 Land Surface Temperature Product User Guide"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://planetarycomputer.microsoft.com/dataset/sentinel-3-slstr-lst-l2-netcdf",
+            "type": "text/html",
+            "title": "Human readable dataset overview and reference"
+        }
+    ],
+    "stac_extensions": [
+        "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
+        "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+        "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
+        "https://stac-extensions.github.io/eo/v1.1.0/schema.json"
+    ],
+    "item_assets": {
+        "lst-in": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "eo:bands": [
+                {
+                    "name": "S8",
+                    "description": "Band 8 - SST, LST, Active fire",
+                    "center_wavelength": 10.854,
+                    "full_width_half_max": 0.776
+                },
+                {
+                    "name": "S9",
+                    "description": "Band 9 - SST, LST",
+                    "center_wavelength": 12.0225,
+                    "full_width_half_max": 0.905
+                }
+            ],
+            "description": "Land Surface Temperature (LST) values"
+        },
+        "slstr-met-tx": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "description": "Meteorological parameters regridded onto the 16km tie points"
+        },
+        "safe-manifest": {
+            "type": "application/xml",
+            "roles": [
+                "metadata"
+            ],
+            "description": "SAFE product manifest"
+        },
+        "slstr-time-in": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "description": "Time annotations for the 1km grid"
+        },
+        "slstr-flags-in": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "description": "Global flags for the 1km TIR grid, nadir view"
+        },
+        "lst-ancillary-ds": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "description": "LST ancillary measurement dataset"
+        },
+        "slstr-indices-in": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "description": "Scan, pixel and detector indices annotations for the 1km TIR grid, nadir view"
+        },
+        "slstr-geodetic-in": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "description": "Full resolution geodetic coordinates for the 1km TIR grid, nadir view"
+        },
+        "slstr-geodetic-tx": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "description": "16km geodetic coordinates"
+        },
+        "slstr-geometry-tn": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "description": "16km solar and satellite geometry annotations, nadir view"
+        },
+        "slstr-cartesian-in": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "description": "Full resolution cartesian coordinates for the 1km TIR grid, nadir view"
+        },
+        "slstr-cartesian-tx": {
+            "type": "application/x-netcdf",
+            "roles": [
+                "data"
+            ],
+            "description": "16km cartesian coordinates"
+        }
+    },
+    "msft:region": "westeurope",
+    "msft:group_id": "sentinel-3",
+    "msft:container": "sentinel-3",
+    "msft:storage_account": "sentinel3euwest",
+    "msft:short_description": "Sentinel-3 land surface temperature (SLSTR LST).",
+    "title": "Sentinel-3 Land Surface Temperature",
+    "extent": {
+        "spatial": {
+            "bbox": [
+                [
+                    -180,
+                    -90,
+                    180,
+                    90
+                ]
+            ]
+        },
+        "temporal": {
+            "interval": [
+                [
+                    "2016-04-19T01:35:17.188500Z",
+                    null
+                ]
+            ]
+        }
+    },
+    "license": "proprietary",
+    "keywords": [
+        "Sentinel",
+        "Copernicus",
+        "ESA",
+        "Satellite",
+        "Temperature",
+        "Land"
+    ],
+    "providers": [
+        {
+            "name": "ESA",
+            "roles": [
+                "producer",
+                "processor",
+                "licensor"
+            ],
+            "url": "https://earth.esa.int/web/guest/home"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        }
+    ],
+    "summaries": {
+        "eo:bands": [
+            {
+                "name": "S8",
+                "description": "Band 8 - SST, LST, Active fire",
+                "center_wavelength": 10.854,
+                "full_width_half_max": 0.776
+            },
+            {
+                "name": "S9",
+                "description": "Band 9 - SST, LST",
+                "center_wavelength": 12.0225,
+                "full_width_half_max": 0.905
+            }
+        ],
+        "platform": [
+            "Sentinel-3A",
+            "Sentinel-3B"
+        ],
+        "instruments": [
+            "SLSTR"
+        ],
+        "constellation": [
+            "Sentinel-3"
+        ],
+        "s3:product_name": [
+            "slstr-lst"
+        ],
+        "s3:product_type": [
+            "SL_2_LST___"
+        ],
+        "sat:orbit_state": [
+            "ascending",
+            "descending"
+        ],
+        "s3:processing_timeliness": [
+            "NT"
+        ],
+        "sat:platform_international_designator": [
+            "2016-011A",
+            "2018-039A"
+        ]
+    },
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/sentinel-3-slstr-lst-l2-netcdf-thumb.png",
+            "title": "Sentinel-3 Land Surface Temperature Thumbnail",
+            "media_type": "image/png"
+        },
+        "geoparquet-items": {
+            "href": "abfs://items/sentinel-3-slstr-lst-l2-netcdf.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC Items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "msft:partition_info": {
+                "is_partitioned": true,
+                "partition_frequency": "W"
+            },
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
+            ]
+        }
+    }
+}
